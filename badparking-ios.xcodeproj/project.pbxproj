@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E73134011D1D482200C3B886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134001D1D482200C3B886 /* AppDelegate.swift */; };
+		E73134031D1D482200C3B886 /* MyClaimsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134021D1D482200C3B886 /* MyClaimsViewController.swift */; };
+		E73134051D1D482200C3B886 /* FixationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134041D1D482200C3B886 /* FixationViewController.swift */; };
+		E73134081D1D482300C3B886 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E73134061D1D482300C3B886 /* Main.storyboard */; };
+		E731340A1D1D482300C3B886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E73134091D1D482300C3B886 /* Assets.xcassets */; };
+		E731340D1D1D482300C3B886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E731340B1D1D482300C3B886 /* LaunchScreen.storyboard */; };
+		E73134181D1D482300C3B886 /* badparking_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134171D1D482300C3B886 /* badparking_iosUITests.swift */; };
+		E7AE3A3E1D21772E000B7F31 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE3A3D1D21772E000B7F31 /* HistoryViewController.swift */; };
+		E7AE3A421D217AF8000B7F31 /* crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE3A411D217AF8000B7F31 /* crypto.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E73134141D1D482300C3B886 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E73133F51D1D482200C3B886 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E73133FC1D1D482200C3B886;
+			remoteInfo = "badparking-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E73133FD1D1D482200C3B886 /* badparking-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "badparking-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73134001D1D482200C3B886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E73134021D1D482200C3B886 /* MyClaimsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClaimsViewController.swift; sourceTree = "<group>"; };
+		E73134041D1D482200C3B886 /* FixationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixationViewController.swift; sourceTree = "<group>"; };
+		E73134071D1D482300C3B886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E73134091D1D482300C3B886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E731340C1D1D482300C3B886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E731340E1D1D482300C3B886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E73134131D1D482300C3B886 /* badparking-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "badparking-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73134171D1D482300C3B886 /* badparking_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = badparking_iosUITests.swift; sourceTree = "<group>"; };
+		E73134191D1D482300C3B886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7AE3A3D1D21772E000B7F31 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = "badparking-ios/History Screen/HistoryViewController.swift"; sourceTree = SOURCE_ROOT; };
+		E7AE3A411D217AF8000B7F31 /* crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crypto.swift; sourceTree = "<group>"; };
+		E7B580611D1DCF8F00560F63 /* badparking-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "badparking-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E73133FA1D1D482200C3B886 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E73134101D1D482300C3B886 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E73133F41D1D482200C3B886 = {
+			isa = PBXGroup;
+			children = (
+				E73133FF1D1D482200C3B886 /* badparking-ios */,
+				E73134161D1D482300C3B886 /* badparking-iosUITests */,
+				E73133FE1D1D482200C3B886 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E73133FE1D1D482200C3B886 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E73133FD1D1D482200C3B886 /* badparking-ios.app */,
+				E73134131D1D482300C3B886 /* badparking-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E73133FF1D1D482200C3B886 /* badparking-ios */ = {
+			isa = PBXGroup;
+			children = (
+				E7AE3A3B1D21727C000B7F31 /* MyClaims Screen */,
+				E7AE3A3C1D21728E000B7F31 /* Fixation Screen */,
+				E7AE3A3F1D21773F000B7F31 /* History Screen */,
+				E73134001D1D482200C3B886 /* AppDelegate.swift */,
+				E73134061D1D482300C3B886 /* Main.storyboard */,
+				E73134091D1D482300C3B886 /* Assets.xcassets */,
+				E731340B1D1D482300C3B886 /* LaunchScreen.storyboard */,
+				E731340E1D1D482300C3B886 /* Info.plist */,
+				E7AE3A401D217ABB000B7F31 /* utils */,
+			);
+			path = "badparking-ios";
+			sourceTree = "<group>";
+		};
+		E73134161D1D482300C3B886 /* badparking-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E73134171D1D482300C3B886 /* badparking_iosUITests.swift */,
+				E73134191D1D482300C3B886 /* Info.plist */,
+			);
+			path = "badparking-iosUITests";
+			sourceTree = "<group>";
+		};
+		E7AE3A3B1D21727C000B7F31 /* MyClaims Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E73134021D1D482200C3B886 /* MyClaimsViewController.swift */,
+			);
+			path = "MyClaims Screen";
+			sourceTree = "<group>";
+		};
+		E7AE3A3C1D21728E000B7F31 /* Fixation Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E73134041D1D482200C3B886 /* FixationViewController.swift */,
+			);
+			path = "Fixation Screen";
+			sourceTree = "<group>";
+		};
+		E7AE3A3F1D21773F000B7F31 /* History Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E7AE3A3D1D21772E000B7F31 /* HistoryViewController.swift */,
+			);
+			path = "History Screen";
+			sourceTree = "<group>";
+		};
+		E7AE3A401D217ABB000B7F31 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E7B580611D1DCF8F00560F63 /* badparking-ios-Bridging-Header.h */,
+				E7AE3A411D217AF8000B7F31 /* crypto.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E73133FC1D1D482200C3B886 /* badparking-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E731341C1D1D482300C3B886 /* Build configuration list for PBXNativeTarget "badparking-ios" */;
+			buildPhases = (
+				E73133F91D1D482200C3B886 /* Sources */,
+				E73133FA1D1D482200C3B886 /* Frameworks */,
+				E73133FB1D1D482200C3B886 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "badparking-ios";
+			productName = "badparking-ios";
+			productReference = E73133FD1D1D482200C3B886 /* badparking-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E73134121D1D482300C3B886 /* badparking-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E731341F1D1D482300C3B886 /* Build configuration list for PBXNativeTarget "badparking-iosUITests" */;
+			buildPhases = (
+				E731340F1D1D482300C3B886 /* Sources */,
+				E73134101D1D482300C3B886 /* Frameworks */,
+				E73134111D1D482300C3B886 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E73134151D1D482300C3B886 /* PBXTargetDependency */,
+			);
+			name = "badparking-iosUITests";
+			productName = "badparking-iosUITests";
+			productReference = E73134131D1D482300C3B886 /* badparking-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E73133F51D1D482200C3B886 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Eugene Nagorny";
+				TargetAttributes = {
+					E73133FC1D1D482200C3B886 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 6UQZRBX8C7;
+						DevelopmentTeamName = "Eugene Nagorny (Personal Team)";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					E73134121D1D482300C3B886 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 6UQZRBX8C7;
+						DevelopmentTeamName = "Eugene Nagorny (Personal Team)";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E73133FC1D1D482200C3B886;
+					};
+				};
+			};
+			buildConfigurationList = E73133F81D1D482200C3B886 /* Build configuration list for PBXProject "badparking-ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E73133F41D1D482200C3B886;
+			productRefGroup = E73133FE1D1D482200C3B886 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E73133FC1D1D482200C3B886 /* badparking-ios */,
+				E73134121D1D482300C3B886 /* badparking-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E73133FB1D1D482200C3B886 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E731340D1D1D482300C3B886 /* LaunchScreen.storyboard in Resources */,
+				E731340A1D1D482300C3B886 /* Assets.xcassets in Resources */,
+				E73134081D1D482300C3B886 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E73134111D1D482300C3B886 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E73133F91D1D482200C3B886 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E73134051D1D482200C3B886 /* FixationViewController.swift in Sources */,
+				E73134011D1D482200C3B886 /* AppDelegate.swift in Sources */,
+				E73134031D1D482200C3B886 /* MyClaimsViewController.swift in Sources */,
+				E7AE3A421D217AF8000B7F31 /* crypto.swift in Sources */,
+				E7AE3A3E1D21772E000B7F31 /* HistoryViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E731340F1D1D482300C3B886 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E73134181D1D482300C3B886 /* badparking_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E73134151D1D482300C3B886 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E73133FC1D1D482200C3B886 /* badparking-ios */;
+			targetProxy = E73134141D1D482300C3B886 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E73134061D1D482300C3B886 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E73134071D1D482300C3B886 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E731340B1D1D482300C3B886 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E731340C1D1D482300C3B886 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E731341A1D1D482300C3B886 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E731341B1D1D482300C3B886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E731341D1D1D482300C3B886 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "badparking-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enagory.badparking-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "badparking-ios/utils/badparking-ios-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E731341E1D1D482300C3B886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "badparking-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enagory.badparking-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "badparking-ios/utils/badparking-ios-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E73134201D1D482300C3B886 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "badparking-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enagory.badparking-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "badparking-ios";
+			};
+			name = Debug;
+		};
+		E73134211D1D482300C3B886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "badparking-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enagory.badparking-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "badparking-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E73133F81D1D482200C3B886 /* Build configuration list for PBXProject "badparking-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E731341A1D1D482300C3B886 /* Debug */,
+				E731341B1D1D482300C3B886 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E731341C1D1D482300C3B886 /* Build configuration list for PBXNativeTarget "badparking-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E731341D1D1D482300C3B886 /* Debug */,
+				E731341E1D1D482300C3B886 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E731341F1D1D482300C3B886 /* Build configuration list for PBXNativeTarget "badparking-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E73134201D1D482300C3B886 /* Debug */,
+				E73134211D1D482300C3B886 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E73133F51D1D482200C3B886 /* Project object */;
+}
