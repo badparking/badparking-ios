@@ -50,6 +50,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="QxN-fd-fNM"/>
                                     <barButtonItem image="Settings" id="QpH-BS-v73"/>
                                 </items>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
