@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +17,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -41,7 +42,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBL-DS-9Ex">
@@ -71,17 +72,51 @@
                                     <constraint firstAttribute="width" secondItem="v0f-zr-HCF" secondAttribute="height" multiplier="343:343" id="Pzd-16-g1Y"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5q-NU-F8E">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBY-yq-jQd">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="eBY-yq-jQd" firstAttribute="centerY" secondItem="q5q-NU-F8E" secondAttribute="centerY" id="2R2-sv-pjU"/>
+                                    <constraint firstAttribute="height" constant="62" id="UcD-ZJ-CmS"/>
+                                    <constraint firstItem="eBY-yq-jQd" firstAttribute="centerX" secondItem="q5q-NU-F8E" secondAttribute="centerX" id="WCx-QH-15r"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6D-p7-Ch0">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74O-27-Xdy">
+                                        <state key="normal" title="Next"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="74O-27-Xdy" firstAttribute="centerX" secondItem="N6D-p7-Ch0" secondAttribute="centerX" id="QwL-jD-QNc"/>
+                                    <constraint firstItem="74O-27-Xdy" firstAttribute="centerY" secondItem="N6D-p7-Ch0" secondAttribute="centerY" id="XzE-mP-yPB"/>
+                                    <constraint firstAttribute="height" constant="62" id="f63-IU-ngW"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GBL-DS-9Ex" secondAttribute="trailing" id="0bs-WY-qco"/>
                             <constraint firstItem="ZuF-y2-DrT" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="1ov-y7-aw4"/>
                             <constraint firstItem="GBL-DS-9Ex" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="4Td-mh-Hpp"/>
+                            <constraint firstItem="q5q-NU-F8E" firstAttribute="centerY" secondItem="ZuF-y2-DrT" secondAttribute="centerY" id="KwT-XN-E2L"/>
+                            <constraint firstItem="ZuF-y2-DrT" firstAttribute="leading" secondItem="q5q-NU-F8E" secondAttribute="trailing" constant="8" id="Q0g-6v-onC"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="ZuF-y2-DrT" secondAttribute="bottom" constant="8" id="T1j-M2-xd4"/>
+                            <constraint firstItem="N6D-p7-Ch0" firstAttribute="leading" secondItem="ZuF-y2-DrT" secondAttribute="trailing" constant="8" id="THW-IO-YHy"/>
+                            <constraint firstItem="q5q-NU-F8E" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="U82-0D-shY"/>
                             <constraint firstItem="v0f-zr-HCF" firstAttribute="top" secondItem="GBL-DS-9Ex" secondAttribute="bottom" id="ehv-6j-xQg"/>
                             <constraint firstItem="GBL-DS-9Ex" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="jBL-lb-zVD"/>
+                            <constraint firstItem="N6D-p7-Ch0" firstAttribute="centerY" secondItem="ZuF-y2-DrT" secondAttribute="centerY" id="mbQ-2m-45y"/>
                             <constraint firstAttribute="trailing" secondItem="v0f-zr-HCF" secondAttribute="trailing" id="n1u-nd-Swf"/>
                             <constraint firstItem="v0f-zr-HCF" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="pYV-Ni-uwV"/>
+                            <constraint firstItem="N6D-p7-Ch0" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="ymz-wI-FHQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Claim" image="Claim" selectedImage="Claim" id="cPa-gy-q4n">
@@ -97,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="781.60000000000002" y="-166.8665667166417"/>
+            <point key="canvasLocation" x="781.15942028985512" y="-167.11956521739131"/>
         </scene>
         <!--History-->
         <scene sceneID="9gz-aP-oAg">
@@ -108,7 +143,7 @@
                         <viewControllerLayoutGuide type="bottom" id="td3-ga-z4j"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1av-6N-xbW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="History of claims" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3ce-lt-bx1">
