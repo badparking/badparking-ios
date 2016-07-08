@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Alamofire
 
 class HistoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("ONE")
+        
+
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -19,7 +24,13 @@ class HistoryViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("\n\n\n\n\n\n\n\n\n\n")
+        print("HELLO WORLD WORLD WORLD!")
+        print("\n\n\n\n\n\n\n\n\n\n")
+    }
     
 }
 
