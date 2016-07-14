@@ -18,6 +18,7 @@
 		E731340A1D1D482300C3B886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E73134091D1D482300C3B886 /* Assets.xcassets */; };
 		E731340D1D1D482300C3B886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E731340B1D1D482300C3B886 /* LaunchScreen.storyboard */; };
 		E73134181D1D482300C3B886 /* badparking_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134171D1D482300C3B886 /* badparking_iosUITests.swift */; };
+		E73343251D3790F800A5A9DE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73343241D3790F800A5A9DE /* Alamofire.framework */; };
 		E735533D1D35166A00718E04 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E735533C1D35166A00718E04 /* UserRouter.swift */; };
 		E7AE3A3E1D21772E000B7F31 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE3A3D1D21772E000B7F31 /* HistoryViewController.swift */; };
 		E7AE3A421D217AF8000B7F31 /* crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE3A411D217AF8000B7F31 /* crypto.swift */; };
@@ -62,6 +63,7 @@
 		E73134131D1D482300C3B886 /* badparking-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "badparking-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73134171D1D482300C3B886 /* badparking_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = badparking_iosUITests.swift; sourceTree = "<group>"; };
 		E73134191D1D482300C3B886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E73343241D3790F800A5A9DE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		E735533C1D35166A00718E04 /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRouter.swift; path = API/UserRouter.swift; sourceTree = "<group>"; };
 		E7AE3A3D1D21772E000B7F31 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = "badparking-ios/History Screen/HistoryViewController.swift"; sourceTree = SOURCE_ROOT; };
 		E7AE3A411D217AF8000B7F31 /* crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crypto.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E73343251D3790F800A5A9DE /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +106,7 @@
 				E73133FF1D1D482200C3B886 /* badparking-ios */,
 				E73134161D1D482300C3B886 /* badparking-iosUITests */,
 				E73133FE1D1D482200C3B886 /* Products */,
+				E73343231D3790F800A5A9DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +144,14 @@
 				E73134191D1D482300C3B886 /* Info.plist */,
 			);
 			path = "badparking-iosUITests";
+			sourceTree = "<group>";
+		};
+		E73343231D3790F800A5A9DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E73343241D3790F800A5A9DE /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E7AE3A3B1D21727C000B7F31 /* MyClaims Screen */ = {
@@ -186,6 +198,7 @@
 				E73133FA1D1D482200C3B886 /* Frameworks */,
 				E73133FB1D1D482200C3B886 /* Resources */,
 				E7A1C16A1D3000DB006D2972 /* Embed Frameworks */,
+				E7CC1DF91D3793110030C4FC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -279,6 +292,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E7CC1DF91D3793110030C4FC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E73133F91D1D482200C3B886 /* Sources */ = {
@@ -430,6 +460,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "badparking-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -445,6 +479,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "badparking-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
