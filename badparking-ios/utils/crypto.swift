@@ -31,7 +31,7 @@ public extension String {
 
      - returns: A encryped string based on HMAC algorithm and secret string.
      */
-    func hmac(algorithm:HMACAlgorithm, secret:String) -> String {
+    func hmac(_ algorithm:HMACAlgorithm, secret:String) -> String {
         return SweetHMAC(message: self, secret: secret).HMAC(algorithm)
     }
 

@@ -11,14 +11,14 @@ import Alamofire
 
 
 enum CrimeTypesRouter : URLRequestConvertible {
-    case Get(Int)
-    case GetAll
+    case get(Int)
+    case getAll
 
     var path: String {
         switch self {
-        case .Get(let pk):
+        case .get(let pk):
             return "/types/\(pk)"
-        case .GetAll:
+        case .getAll:
             return "/types"
         }
     }

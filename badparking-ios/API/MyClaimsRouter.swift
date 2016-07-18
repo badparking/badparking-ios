@@ -11,33 +11,33 @@ import Alamofire
 
 
 enum MyClaimsRouter: URLRequestConvertible {
-    case Create([String: AnyObject])
-    case Get(String)
-    case GetAll
-    case Update(String, [String: AnyObject])
+    case create([String: AnyObject])
+    case get(String)
+    case getAll
+    case update(String, [String: AnyObject])
 
     static var JWToken: String?
 
     var method: Alamofire.Method {
         switch self {
-        case .Create:
+        case .create:
             return .POST
-        case .Get,
-             .GetAll:
+        case .get,
+             .getAll:
             return .GET
-        case .Update:
+        case .update:
             return .PATCH
         }
     }
 
     var path: String {
         switch self {
-        case .Create,
-             .GetAll:
+        case .create,
+             .getAll:
             return "/claims/my"
-        case .Get(let pk):
+        case .get(let pk):
             return "/claim/my/\(pk)"
-        case .Update(let pk, _):
+        case .update(let pk, _):
             return "/claims/my/\(pk)"
         }
     }

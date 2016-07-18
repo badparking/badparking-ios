@@ -11,14 +11,14 @@ import Alamofire
 
 
 enum TokenRouter : URLRequestConvertible {
-    case Verify(String)
-    case Refresh(String)
+    case verify(String)
+    case refresh(String)
 
     var path: String {
         switch self {
-        case .Refresh(_):
+        case .refresh(_):
             return "/token/refresh"
-        case .Verify(_):
+        case .verify(_):
             return "/token/verify"
         }
     }
@@ -31,9 +31,9 @@ enum TokenRouter : URLRequestConvertible {
 
         var token: String
         switch self {
-        case .Verify(let tkn):
+        case .verify(let tkn):
             token = tkn
-        case .Refresh(let tkn):
+        case .refresh(let tkn):
             token = tkn
         }
 

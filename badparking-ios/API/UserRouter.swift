@@ -10,11 +10,11 @@ import Foundation
 import Alamofire
 
 enum UserRouter : URLRequestConvertible {
-    case Me
+    case me
 
     var path: String {
         switch self {
-        case .Me:
+        case .me:
             return "/user/me"
         }
     }

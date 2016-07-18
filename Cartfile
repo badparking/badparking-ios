@@ -1,1 +1,2 @@
 github "Alamofire/Alamofire" "swift3"
+github "krzyzanowskim/CryptoSwift" "swift3"
