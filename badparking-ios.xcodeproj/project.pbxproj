@@ -11,6 +11,12 @@
 		E714EE6C1D33AB66006A9217 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714EE6B1D33AB66006A9217 /* Constants.swift */; };
 		E714EE6E1D3504A3006A9217 /* TokenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714EE6D1D3504A3006A9217 /* TokenRouter.swift */; };
 		E714EE701D3504E7006A9217 /* CrimeTypesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714EE6F1D3504E7006A9217 /* CrimeTypesRouter.swift */; };
+		E7158AED1D4268AE00E8AE18 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7158AEA1D4268AE00E8AE18 /* Bolts.framework */; };
+		E7158AEE1D4268AE00E8AE18 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7158AEA1D4268AE00E8AE18 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E7158AEF1D4268AE00E8AE18 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7158AEB1D4268AE00E8AE18 /* FBSDKCoreKit.framework */; };
+		E7158AF01D4268AE00E8AE18 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7158AEB1D4268AE00E8AE18 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E7158AF11D4268AE00E8AE18 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7158AEC1D4268AE00E8AE18 /* FBSDKLoginKit.framework */; };
+		E7158AF21D4268AE00E8AE18 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7158AEC1D4268AE00E8AE18 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E73134011D1D482200C3B886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134001D1D482200C3B886 /* AppDelegate.swift */; };
 		E73134031D1D482200C3B886 /* MyClaimsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134021D1D482200C3B886 /* MyClaimsViewController.swift */; };
 		E73134051D1D482200C3B886 /* FixationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134041D1D482200C3B886 /* FixationViewController.swift */; };
@@ -47,6 +53,9 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E7EA39051D3E0BBD009EF4CD /* Alamofire.framework in Embed Frameworks */,
+				E7158AF01D4268AE00E8AE18 /* FBSDKCoreKit.framework in Embed Frameworks */,
+				E7158AF21D4268AE00E8AE18 /* FBSDKLoginKit.framework in Embed Frameworks */,
+				E7158AEE1D4268AE00E8AE18 /* Bolts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,6 +67,9 @@
 		E714EE6B1D33AB66006A9217 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E714EE6D1D3504A3006A9217 /* TokenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenRouter.swift; path = API/TokenRouter.swift; sourceTree = "<group>"; };
 		E714EE6F1D3504E7006A9217 /* CrimeTypesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrimeTypesRouter.swift; path = API/CrimeTypesRouter.swift; sourceTree = "<group>"; };
+		E7158AEA1D4268AE00E8AE18 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
+		E7158AEB1D4268AE00E8AE18 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Carthage/Build/iOS/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		E7158AEC1D4268AE00E8AE18 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Carthage/Build/iOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		E73133FD1D1D482200C3B886 /* badparking-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "badparking-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73134001D1D482200C3B886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E73134021D1D482200C3B886 /* MyClaimsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClaimsViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +98,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7EA39041D3E0BBD009EF4CD /* Alamofire.framework in Frameworks */,
+				E7158AEF1D4268AE00E8AE18 /* FBSDKCoreKit.framework in Frameworks */,
+				E7158AF11D4268AE00E8AE18 /* FBSDKLoginKit.framework in Frameworks */,
+				E7158AED1D4268AE00E8AE18 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +175,9 @@
 		E73343231D3790F800A5A9DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7158AEA1D4268AE00E8AE18 /* Bolts.framework */,
+				E7158AEB1D4268AE00E8AE18 /* FBSDKCoreKit.framework */,
+				E7158AEC1D4268AE00E8AE18 /* FBSDKLoginKit.framework */,
 				E7EA39031D3E0BBD009EF4CD /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -347,6 +365,9 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Bolts.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FBSDKCoreKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FBSDKLoginKit.framework",
 			);
 			name = "Carthage copy frameworks";
 			outputPaths = (
@@ -513,11 +534,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/badparking-ios/Vendor/FacebookSDKs-iOS-4",
 				);
 				INFOPLIST_FILE = "badparking-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks $(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enagory.badparking-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.badparking.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "badparking-ios/utils/badparking-ios-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -531,11 +553,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/badparking-ios/Vendor/FacebookSDKs-iOS-4",
 				);
 				INFOPLIST_FILE = "badparking-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks $(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enagory.badparking-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.badparking.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "badparking-ios/utils/badparking-ios-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
