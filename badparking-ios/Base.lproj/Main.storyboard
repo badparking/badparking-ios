@@ -33,7 +33,7 @@
             </objects>
             <point key="canvasLocation" x="782" y="-818"/>
         </scene>
-        <!--Claim-->
+        <!--Fixation View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="FixationViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,20 +133,14 @@
                             <constraint firstItem="N6D-p7-Ch0" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="ymz-wI-FHQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Claim" image="Claim" selectedImage="Claim" id="cPa-gy-q4n">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.38823529410000002" green="0.7843137255" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="M5n-Wt-VBm"/>
                     <connections>
                         <outlet property="bigImageView" destination="v0f-zr-HCF" id="jFC-g0-GuB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="-167.76611694152925"/>
+            <point key="canvasLocation" x="1719.2" y="-167.76611694152925"/>
         </scene>
         <!--History-->
         <scene sceneID="9gz-aP-oAg">
@@ -198,13 +192,38 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="0PF-74-oe8" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="M2i-m3-0d1" kind="relationship" relationship="viewControllers" id="1x7-k7-OiD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Claim-->
+        <scene sceneID="DqL-r8-jDV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="0PF-74-oe8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Claim" image="Claim" selectedImage="Claim" id="cPa-gy-q4n">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.38823529410000002" green="0.7843137255" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m61-gt-Sa1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="d19-v8-0S8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CFu-jF-Nyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="-167.76611694152925"/>
         </scene>
     </scenes>
     <resources>
