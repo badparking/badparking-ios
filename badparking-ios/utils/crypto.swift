@@ -134,7 +134,7 @@ public class SweetHMAC {
         let key   = UTF8EncodedString(string: secret)
 
         let digestLength = algorithm.digestLength()
-        let result = UnsafeMutablePointer<CUnsignedChar>.init(allocatingCapacity: digestLength)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
 
         CCHmac(algorithm.toNative(), key.data, key.length, seed.data, seed.length, result)
 
@@ -165,7 +165,7 @@ public class SweetHMAC {
     private class func digest (_ algorithm: HMACAlgorithm, input: String) -> String {
         let seed  = UTF8EncodedString(string: input)
         let digestLength = algorithm.digestLength()
-        let result = UnsafeMutablePointer<UInt8>.init(allocatingCapacity: digestLength)
+        let result = UnsafeMutablePointer<UInt8>.allocate(capacity: digestLength)
 
         switch algorithm {
         case .sha256:

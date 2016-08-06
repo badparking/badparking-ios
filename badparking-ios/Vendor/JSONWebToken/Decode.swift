@@ -2,7 +2,7 @@ import Foundation
 
 
 /// Failure reasons from decoding a JWT
-public enum InvalidToken : CustomStringConvertible, ErrorProtocol {
+public enum InvalidToken : CustomStringConvertible, Error {
     /// Decoding the JWT itself failed
     case decodeError(String)
 

@@ -28,15 +28,12 @@ class MyClaimsViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        print("Did LogOut")
-    }
-
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         print("Login")
         if ((error) != nil)
         {
             // Process error
+            print(error);
         } else if result.isCancelled {
             print("Login cancelled")
         } else {
@@ -44,14 +41,11 @@ class MyClaimsViewController: UIViewController, FBSDKLoginButtonDelegate {
             print("token \(token)")
             print(FBSDKAccessToken.current().tokenString)
         }
-
     }
 
-    func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
-        print("About to login")
-        return true
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("Did LogOut")
     }
-
 
 }
 
