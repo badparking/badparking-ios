@@ -32,7 +32,7 @@
             </objects>
             <point key="canvasLocation" x="782" y="-818"/>
         </scene>
-        <!--Fixation View Controller-->
+        <!--Фіксація порушення-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="FixationViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,7 +107,7 @@
                             <constraint firstItem="N6D-p7-Ch0" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="ymz-wI-FHQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="M5n-Wt-VBm">
+                    <navigationItem key="navigationItem" title="Фіксація порушення" id="M5n-Wt-VBm">
                         <barButtonItem key="rightBarButtonItem" image="Settings" id="xRg-M9-pO8"/>
                     </navigationItem>
                     <connections>
@@ -324,9 +324,12 @@
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m61-gt-Sa1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="m61-gt-Sa1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
