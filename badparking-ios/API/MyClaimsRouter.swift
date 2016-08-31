@@ -5,7 +5,7 @@
 //  Created by Eugene Nagorny on 7/11/16.
 //  Copyright © 2016 Eugene Nagorny. All rights reserved.
 //
-
+/*
 import Foundation
 import Alamofire
 
@@ -60,3 +60,4 @@ enum MyClaimsRouter: URLRequestConvertible {
     }
 }
 
+*/

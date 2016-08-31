@@ -37,9 +37,9 @@ public enum InvalidToken : CustomStringConvertible, Error {
             return "The token is not yet valid (not before claim)"
         case .invalidIssuedAt:
             return "Issued at claim (iat) is in the future"
-        case invalidAudience:
+        case .invalidAudience:
             return "Invalid Audience"
-        case invalidAlgorithm:
+        case .invalidAlgorithm:
             return "Unsupported algorithm or incorrect key"
         }
     }

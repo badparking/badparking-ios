@@ -7,7 +7,7 @@ import Foundation
  https://github.com/kylef/JSONWebToken.swift
  */
 
-public typealias Payload = [String:AnyObject]
+public typealias Payload = [String:Any]
 
 /// The supported Algorithms
 public enum Algorithm : CustomStringConvertible {
@@ -178,7 +178,7 @@ public class PayloadBuilder {
         }
     }
     
-    public subscript(key: String) -> AnyObject? {
+    public subscript(key: String) -> Any? {
         get {
             return payload[key]
         }

@@ -40,7 +40,7 @@ func validateIssuer(_ payload:Payload, issuer:String?) -> InvalidToken? {
 }
 
 func validateDate(_ payload:Payload, key:String, comparison:ComparisonResult, failure:InvalidToken, decodeError:String) -> InvalidToken? {
-    if let timestamp = payload[key] as? TimeInterval ?? payload[key]?.doubleValue as TimeInterval? {
+    if let timestamp = payload[key] as? TimeInterval ?? (payload[key] as AnyObject).doubleValue as TimeInterval? {
         let date = Date(timeIntervalSince1970: timestamp)
         if date.compare(Date()) == comparison {
             return failure

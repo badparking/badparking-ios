@@ -5,7 +5,7 @@
 //  Created by Eugene Nagorny on 7/12/16.
 //  Copyright © 2016 Eugene Nagorny. All rights reserved.
 //
-
+/*
 import Foundation
 import Alamofire
 
@@ -42,3 +42,4 @@ enum TokenRouter : URLRequestConvertible {
     }
     
 }
+*/
