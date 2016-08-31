@@ -13,6 +13,7 @@ class FixationViewController: UIViewController, UINavigationControllerDelegate {
 
     @IBOutlet weak var previewView: UIView!
     @IBOutlet weak var capturedImage: UIImageView!
+    @IBOutlet weak var capturedImage2: UIImageView!
     @IBOutlet weak var takePicButton: UIButton!
 
 
@@ -63,10 +64,14 @@ class FixationViewController: UIViewController, UINavigationControllerDelegate {
                 if (sampleBuffer != nil) {
                     let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
                     let dataProvider = CGDataProvider(data: imageData! as CFData)
-                    _ = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.defaultIntent)
+                    let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.defaultIntent)
 
-                    // let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.right)
-                    // self.capturedImage.image = image
+                    let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.right)
+                    if self.capturedImage.image == nil {
+                        self.capturedImage.image = image
+                    } else {
+                        self.capturedImage2.image = image
+                    }
                     self.takePicButton.isEnabled = true
                 }
             })

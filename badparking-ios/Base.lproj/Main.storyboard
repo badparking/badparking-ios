@@ -56,17 +56,26 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5q-NU-F8E">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBY-yq-jQd">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ock-Wb-MOC">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="6xT-dq-Su4"/>
+                                            <constraint firstAttribute="height" constant="46" id="ANq-Nf-lX7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wJN-V3-6MT">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="1Qd-Sn-eUo"/>
+                                            <constraint firstAttribute="height" constant="46" id="Mbi-oG-PPf"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="eBY-yq-jQd" firstAttribute="centerY" secondItem="q5q-NU-F8E" secondAttribute="centerY" id="2R2-sv-pjU"/>
+                                    <constraint firstItem="Ock-Wb-MOC" firstAttribute="leading" secondItem="q5q-NU-F8E" secondAttribute="leading" constant="8" id="EIx-Qn-L2K"/>
+                                    <constraint firstItem="Ock-Wb-MOC" firstAttribute="top" secondItem="q5q-NU-F8E" secondAttribute="top" constant="8" id="Fwf-jW-EGY"/>
+                                    <constraint firstItem="wJN-V3-6MT" firstAttribute="leading" secondItem="Ock-Wb-MOC" secondAttribute="trailing" constant="8" id="NKe-hn-l57"/>
                                     <constraint firstAttribute="height" constant="62" id="UcD-ZJ-CmS"/>
-                                    <constraint firstItem="eBY-yq-jQd" firstAttribute="centerX" secondItem="q5q-NU-F8E" secondAttribute="centerX" id="WCx-QH-15r"/>
+                                    <constraint firstItem="wJN-V3-6MT" firstAttribute="top" secondItem="q5q-NU-F8E" secondAttribute="top" constant="8" id="mam-4v-IPB"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6D-p7-Ch0">
@@ -111,6 +120,8 @@
                         <barButtonItem key="rightBarButtonItem" image="Settings" id="xRg-M9-pO8"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="capturedImage" destination="Ock-Wb-MOC" id="0M2-9a-qTp"/>
+                        <outlet property="capturedImage2" destination="wJN-V3-6MT" id="eGv-0z-lMX"/>
                         <outlet property="previewView" destination="DjX-8f-L2L" id="jq6-Ed-X1O"/>
                         <outlet property="takePicButton" destination="ZuF-y2-DrT" id="VXX-Mu-F2I"/>
                     </connections>
