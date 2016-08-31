@@ -245,7 +245,6 @@
 				E73133FA1D1D482200C3B886 /* Frameworks */,
 				E73133FB1D1D482200C3B886 /* Resources */,
 				E7DCA5DB1D3E0044000F0B1C /* Embed Frameworks */,
-				E7158AD41D4243AB00E8AE18 /* Fix XCode 8 beta 3 issues */,
 				E7EA39061D3E0BC7009EF4CD /* Carthage copy frameworks */,
 			);
 			buildRules = (
@@ -347,20 +346,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		E7158AD41D4243AB00E8AE18 /* Fix XCode 8 beta 3 issues */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Fix XCode 8 beta 3 issues";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "$TOOLCHAIN_DIR/usr/bin/swift-stdlib-tool \\\n--copy --verbose --sign ${EXPANDED_CODE_SIGN_IDENTITY} \\\n--scan-executable ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH} \\\n--scan-folder ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH} \\\n--scan-folder ${TARGET_BUILD_DIR}/${PLUGINS_FOLDER_PATH} \\\n--platform ${PLATFORM_NAME} \\\n--toolchain $TOOLCHAIN_DIR \\\n--destination ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH} \\\n--strip-bitcode --resource-destination ${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME} \\\n--resource-library libswiftRemoteMirror.dylib";
-		};
 		E7EA39061D3E0BC7009EF4CD /* Carthage copy frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,7 +522,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/badparking-ios/Vendor/FacebookSDKs-iOS-4",
 				);
 				INFOPLIST_FILE = "badparking-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -557,7 +541,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/badparking-ios/Vendor/FacebookSDKs-iOS-4",
 				);
 				INFOPLIST_FILE = "badparking-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
