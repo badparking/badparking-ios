@@ -25,8 +25,10 @@
 		E731340D1D1D482300C3B886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E731340B1D1D482300C3B886 /* LaunchScreen.storyboard */; };
 		E73134181D1D482300C3B886 /* badparking_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134171D1D482300C3B886 /* badparking_iosUITests.swift */; };
 		E735533D1D35166A00718E04 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E735533C1D35166A00718E04 /* UserRouter.swift */; };
+		E799C7371D7710020082ADFD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E799C7361D7710020082ADFD /* MapKit.framework */; };
 		E7AE3A3E1D21772E000B7F31 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE3A3D1D21772E000B7F31 /* HistoryViewController.swift */; };
 		E7AE3A421D217AF8000B7F31 /* crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE3A411D217AF8000B7F31 /* crypto.swift */; };
+		E7C5822F1D785B800061F4F4 /* Claim.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5822E1D785B800061F4F4 /* Claim.swift */; };
 		E7CA7E331D3C0D2500BB1950 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA7E2F1D3C0D2500BB1950 /* Base64.swift */; };
 		E7CA7E341D3C0D2500BB1950 /* Claims.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA7E301D3C0D2500BB1950 /* Claims.swift */; };
 		E7CA7E351D3C0D2500BB1950 /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA7E311D3C0D2500BB1950 /* Decode.swift */; };
@@ -80,9 +82,11 @@
 		E73134191D1D482300C3B886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E735533C1D35166A00718E04 /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRouter.swift; path = API/UserRouter.swift; sourceTree = "<group>"; };
 		E76E7B291D563F8C008BEEAB /* badparking-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "badparking-ios.entitlements"; sourceTree = "<group>"; };
+		E799C7361D7710020082ADFD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E7AE3A3D1D21772E000B7F31 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = "badparking-ios/History Screen/HistoryViewController.swift"; sourceTree = SOURCE_ROOT; };
 		E7AE3A411D217AF8000B7F31 /* crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crypto.swift; sourceTree = "<group>"; };
 		E7B580611D1DCF8F00560F63 /* badparking-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "badparking-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		E7C5822E1D785B800061F4F4 /* Claim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Claim.swift; path = models/Claim.swift; sourceTree = "<group>"; };
 		E7CA7E2F1D3C0D2500BB1950 /* Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
 		E7CA7E301D3C0D2500BB1950 /* Claims.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Claims.swift; sourceTree = "<group>"; };
 		E7CA7E311D3C0D2500BB1950 /* Decode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decode.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E799C7371D7710020082ADFD /* MapKit.framework in Frameworks */,
 				E7158AEF1D4268AE00E8AE18 /* FBSDKCoreKit.framework in Frameworks */,
 				E7158AF11D4268AE00E8AE18 /* FBSDKLoginKit.framework in Frameworks */,
 				E7158AED1D4268AE00E8AE18 /* Bolts.framework in Frameworks */,
@@ -147,6 +152,7 @@
 			children = (
 				E76E7B291D563F8C008BEEAB /* badparking-ios.entitlements */,
 				E714EE621D33AB02006A9217 /* API */,
+				E7C582301D785B870061F4F4 /* model */,
 				E7AE3A3B1D21727C000B7F31 /* MyClaims Screen */,
 				E7AE3A3C1D21728E000B7F31 /* Fixation Screen */,
 				E7AE3A3F1D21773F000B7F31 /* History Screen */,
@@ -173,6 +179,7 @@
 		E73343231D3790F800A5A9DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E799C7361D7710020082ADFD /* MapKit.framework */,
 				E7158AEA1D4268AE00E8AE18 /* Bolts.framework */,
 				E7158AEB1D4268AE00E8AE18 /* FBSDKCoreKit.framework */,
 				E7158AEC1D4268AE00E8AE18 /* FBSDKLoginKit.framework */,
@@ -212,6 +219,14 @@
 				E7AE3A411D217AF8000B7F31 /* crypto.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		E7C582301D785B870061F4F4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E7C5822E1D785B800061F4F4 /* Claim.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 		E7CA7E2D1D3C0D2500BB1950 /* Vendor */ = {
@@ -383,6 +398,7 @@
 				E714EE6E1D3504A3006A9217 /* TokenRouter.swift in Sources */,
 				E7AE3A3E1D21772E000B7F31 /* HistoryViewController.swift in Sources */,
 				E735533D1D35166A00718E04 /* UserRouter.swift in Sources */,
+				E7C5822F1D785B800061F4F4 /* Claim.swift in Sources */,
 				E7CA7E351D3C0D2500BB1950 /* Decode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,8 @@ class FixationViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var takePicButton: UIButton!
 
 
+    var claim = Claim()
+
     var captureSession: AVCaptureSession?
     var stillImageOutput: AVCaptureStillImageOutput?
     var previewLayer: AVCaptureVideoPreviewLayer?
@@ -61,23 +63,39 @@ class FixationViewController: UIViewController, UINavigationControllerDelegate {
         if let videoConnection = stillImageOutput!.connection(withMediaType: AVMediaTypeVideo) {
             videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
             stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(sampleBuffer, error) in
-                if (sampleBuffer != nil) {
+                if (sampleBuffer != nil && self.claim.photos.count < 2) {
                     let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
                     let dataProvider = CGDataProvider(data: imageData! as CFData)
                     let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.defaultIntent)
 
                     let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.right)
-                    if self.capturedImage.image == nil {
-                        self.capturedImage.image = image
-                    } else {
-                        self.capturedImage2.image = image
+
+
+                    self.claim.photos.append((Date().description, image))
+                    self.updatePhotosUI()
+
+                    if self.claim.photos.count < 2 {
+                        self.takePicButton.isEnabled = true
                     }
-                    self.takePicButton.isEnabled = true
                 }
             })
         }
     }
 
+    func updatePhotosUI() {
+        if self.claim.photos.count > 0 {
+            self.capturedImage.image = self.claim.photos[0].image
+        } else {
+            self.capturedImage.image = #imageLiteral(resourceName: "photo-placeholder")
+        }
+
+        if self.claim.photos.count > 1 {
+            self.capturedImage2.image = self.claim.photos[1].image
+        } else {
+            self.capturedImage2.image = #imageLiteral(resourceName: "photo-placeholder")
+        }
+
+    }
 
     // MARK - configurators
     func setupCameraCapture() {
