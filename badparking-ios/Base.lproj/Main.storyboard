@@ -91,18 +91,19 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6D-p7-Ch0">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74O-27-Xdy">
-                                        <state key="normal" title="Next"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74O-27-Xdy" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
+                                        <state key="normal" title="Далі"/>
                                         <connections>
                                             <segue destination="1u0-Mf-7PQ" kind="show" id="9ub-S2-VGf"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="74O-27-Xdy" firstAttribute="centerX" secondItem="N6D-p7-Ch0" secondAttribute="centerX" id="QwL-jD-QNc"/>
-                                    <constraint firstItem="74O-27-Xdy" firstAttribute="centerY" secondItem="N6D-p7-Ch0" secondAttribute="centerY" id="XzE-mP-yPB"/>
+                                    <constraint firstAttribute="trailing" secondItem="74O-27-Xdy" secondAttribute="trailing" id="ME0-Fa-iZ0"/>
                                     <constraint firstAttribute="height" constant="62" id="f63-IU-ngW"/>
+                                    <constraint firstItem="74O-27-Xdy" firstAttribute="top" secondItem="N6D-p7-Ch0" secondAttribute="top" id="iC3-rU-LLB"/>
+                                    <constraint firstAttribute="bottom" secondItem="74O-27-Xdy" secondAttribute="bottom" id="pXL-FE-fVM"/>
+                                    <constraint firstItem="74O-27-Xdy" firstAttribute="leading" secondItem="N6D-p7-Ch0" secondAttribute="leading" id="qCr-1y-ndi"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DjX-8f-L2L">
@@ -155,19 +156,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9HY-7s-adu">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYi-YC-HkH">
-                                        <state key="normal" title="Next"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYi-YC-HkH" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
+                                        <state key="normal" title="Далі"/>
                                         <connections>
                                             <segue destination="QpO-pL-ZOX" kind="show" id="clX-BK-RQC"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="jYi-YC-HkH" firstAttribute="centerX" secondItem="9HY-7s-adu" secondAttribute="centerX" id="BhY-xf-lF8"/>
-                                    <constraint firstItem="jYi-YC-HkH" firstAttribute="centerY" secondItem="9HY-7s-adu" secondAttribute="centerY" id="I1N-00-sFS"/>
+                                    <constraint firstAttribute="bottom" secondItem="jYi-YC-HkH" secondAttribute="bottom" id="LXD-rh-x31"/>
+                                    <constraint firstAttribute="trailing" secondItem="jYi-YC-HkH" secondAttribute="trailing" id="W12-x2-nxj"/>
+                                    <constraint firstItem="jYi-YC-HkH" firstAttribute="top" secondItem="9HY-7s-adu" secondAttribute="top" id="dKL-li-CTd"/>
                                     <constraint firstAttribute="width" constant="125" id="fjw-05-KCk"/>
                                     <constraint firstAttribute="height" constant="62" id="gLQ-2g-Gj9"/>
+                                    <constraint firstItem="jYi-YC-HkH" firstAttribute="leading" secondItem="9HY-7s-adu" secondAttribute="leading" id="hAh-rt-z03"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="zvy-Zo-1UF"/>
                                 </constraints>
                             </view>
@@ -205,20 +207,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2K-O7-IdV">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRC-WO-mCT">
-                                        <state key="normal" title="Next"/>
-                                        <connections>
-                                            <segue destination="lv6-mJ-osw" kind="show" id="T1f-kE-B0y"/>
-                                        </connections>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27R-bZ-Baw" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
+                                        <state key="normal" title="Далі"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="WRC-WO-mCT" firstAttribute="centerX" secondItem="B2K-O7-IdV" secondAttribute="centerX" id="8P4-m5-bNY"/>
+                                    <constraint firstItem="27R-bZ-Baw" firstAttribute="leading" secondItem="B2K-O7-IdV" secondAttribute="leading" id="U4G-KF-S4y"/>
+                                    <constraint firstAttribute="bottom" secondItem="27R-bZ-Baw" secondAttribute="bottom" id="VZy-Ue-Ebc"/>
                                     <constraint firstAttribute="height" constant="62" id="YnY-Kg-6JK"/>
                                     <constraint firstAttribute="width" constant="125" id="aSl-Je-nfc"/>
+                                    <constraint firstAttribute="trailing" secondItem="27R-bZ-Baw" secondAttribute="trailing" id="dRf-Sd-7Yn"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="hke-1e-Oeq"/>
-                                    <constraint firstItem="WRC-WO-mCT" firstAttribute="centerY" secondItem="B2K-O7-IdV" secondAttribute="centerY" id="i1g-N4-m0u"/>
+                                    <constraint firstItem="27R-bZ-Baw" firstAttribute="top" secondItem="B2K-O7-IdV" secondAttribute="top" id="uvx-2h-wSJ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -232,24 +232,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVE-AK-73B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3421.5999999999999" y="-169.56521739130437"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ceB-1v-nvZ">
-            <objects>
-                <viewController id="lv6-mJ-osw" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tUx-Ji-vLZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="Pqd-vq-71Q"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ckl-Gv-sUj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MNh-zZ-ThO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4220" y="-170"/>
         </scene>
         <!--History-->
         <scene sceneID="9gz-aP-oAg">

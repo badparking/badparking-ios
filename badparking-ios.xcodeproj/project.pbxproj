@@ -29,6 +29,7 @@
 		E7AE3A3E1D21772E000B7F31 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE3A3D1D21772E000B7F31 /* HistoryViewController.swift */; };
 		E7AE3A421D217AF8000B7F31 /* crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE3A411D217AF8000B7F31 /* crypto.swift */; };
 		E7C5822F1D785B800061F4F4 /* Claim.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5822E1D785B800061F4F4 /* Claim.swift */; };
+		E7C582321D78838D0061F4F4 /* ButtonNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C582311D78838D0061F4F4 /* ButtonNext.swift */; };
 		E7CA7E331D3C0D2500BB1950 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA7E2F1D3C0D2500BB1950 /* Base64.swift */; };
 		E7CA7E341D3C0D2500BB1950 /* Claims.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA7E301D3C0D2500BB1950 /* Claims.swift */; };
 		E7CA7E351D3C0D2500BB1950 /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA7E311D3C0D2500BB1950 /* Decode.swift */; };
@@ -87,6 +88,7 @@
 		E7AE3A411D217AF8000B7F31 /* crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crypto.swift; sourceTree = "<group>"; };
 		E7B580611D1DCF8F00560F63 /* badparking-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "badparking-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		E7C5822E1D785B800061F4F4 /* Claim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Claim.swift; path = models/Claim.swift; sourceTree = "<group>"; };
+		E7C582311D78838D0061F4F4 /* ButtonNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonNext.swift; path = controls/ButtonNext.swift; sourceTree = "<group>"; };
 		E7CA7E2F1D3C0D2500BB1950 /* Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
 		E7CA7E301D3C0D2500BB1950 /* Claims.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Claims.swift; sourceTree = "<group>"; };
 		E7CA7E311D3C0D2500BB1950 /* Decode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decode.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				E731340B1D1D482300C3B886 /* LaunchScreen.storyboard */,
 				E731340E1D1D482300C3B886 /* Info.plist */,
 				E714EE6B1D33AB66006A9217 /* Constants.swift */,
+				E7C582331D7883910061F4F4 /* controls */,
 				E7AE3A401D217ABB000B7F31 /* utils */,
 			);
 			path = "badparking-ios";
@@ -227,6 +230,14 @@
 				E7C5822E1D785B800061F4F4 /* Claim.swift */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		E7C582331D7883910061F4F4 /* controls */ = {
+			isa = PBXGroup;
+			children = (
+				E7C582311D78838D0061F4F4 /* ButtonNext.swift */,
+			);
+			name = controls;
 			sourceTree = "<group>";
 		};
 		E7CA7E2D1D3C0D2500BB1950 /* Vendor */ = {
@@ -391,6 +402,7 @@
 				E7CA7E331D3C0D2500BB1950 /* Base64.swift in Sources */,
 				E73134031D1D482200C3B886 /* MyClaimsViewController.swift in Sources */,
 				E7AE3A421D217AF8000B7F31 /* crypto.swift in Sources */,
+				E7C582321D78838D0061F4F4 /* ButtonNext.swift in Sources */,
 				E714EE701D3504E7006A9217 /* CrimeTypesRouter.swift in Sources */,
 				E714EE6C1D33AB66006A9217 /* Constants.swift in Sources */,
 				E714EE6A1D33AB38006A9217 /* MyClaimsRouter.swift in Sources */,
