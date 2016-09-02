@@ -20,6 +20,7 @@ class FixationViewController: UIViewController, UINavigationControllerDelegate {
     var claim = Claim()
 
     var captureSession: AVCaptureSession?
+    var backCamera: AVCaptureDevice?
     var stillImageOutput: AVCaptureStillImageOutput?
     var previewLayer: AVCaptureVideoPreviewLayer?
 
@@ -49,12 +50,32 @@ class FixationViewController: UIViewController, UINavigationControllerDelegate {
 
     }
 
-
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let screenSize = previewView.bounds.size
+        if let touchPoint = touches.first {
+            let x = touchPoint.location(in: previewView).y / screenSize.height
+            let y = 1.0 - touchPoint.location(in: previewView).x / screenSize.width
+            let focusPoint = CGPoint(x: x, y: y)
+
+            if let device = self.backCamera {
+                do {
+                    try device.lockForConfiguration()
+                    device.focusPointOfInterest = focusPoint
+                    device.focusMode = .continuousAutoFocus
+                    device.exposurePointOfInterest = focusPoint
+                    device.exposureMode = AVCaptureExposureMode.continuousAutoExposure
+                    device.unlockForConfiguration()
+                }
+                catch {
+                    // just ignore
+                }
+            }
+        }
+    }
 
     // MARK: - IBActions
     @IBAction func takePhoto(_ sender: AnyObject) {
@@ -102,7 +123,7 @@ class FixationViewController: UIViewController, UINavigationControllerDelegate {
         captureSession = AVCaptureSession()
         captureSession!.sessionPreset = AVCaptureSessionPresetPhoto
 
-        let backCamera = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+        backCamera = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
 
         let input = try? AVCaptureDeviceInput(device: backCamera)
 
