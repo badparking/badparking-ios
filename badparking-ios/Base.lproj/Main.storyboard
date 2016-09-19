@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -142,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="1719.2" y="-167.76611694152925"/>
         </scene>
-        <!--View Controller-->
+        <!--Location View Controller-->
         <scene sceneID="Aai-fT-s9H">
             <objects>
-                <viewController id="1u0-Mf-7PQ" sceneMemberID="viewController">
+                <viewController id="1u0-Mf-7PQ" customClass="LocationViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iLl-kY-3mM"/>
                         <viewControllerLayoutGuide type="bottom" id="wQf-qb-4Ub"/>
@@ -188,6 +189,9 @@
                             <constraint firstItem="9HY-7s-adu" firstAttribute="trailing" secondItem="Hzo-dq-a4N" secondAttribute="trailingMargin" id="uyo-6r-AJ1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="J80-dK-1IM" id="fYr-hn-tdX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIp-3D-qrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

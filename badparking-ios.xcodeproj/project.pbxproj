@@ -25,6 +25,7 @@
 		E731340D1D1D482300C3B886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E731340B1D1D482300C3B886 /* LaunchScreen.storyboard */; };
 		E73134181D1D482300C3B886 /* badparking_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134171D1D482300C3B886 /* badparking_iosUITests.swift */; };
 		E735533D1D35166A00718E04 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E735533C1D35166A00718E04 /* UserRouter.swift */; };
+		E7978C021D8EEAF400E5480F /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7978C011D8EEAF400E5480F /* LocationViewController.swift */; };
 		E799C7371D7710020082ADFD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E799C7361D7710020082ADFD /* MapKit.framework */; };
 		E7AE3A3E1D21772E000B7F31 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE3A3D1D21772E000B7F31 /* HistoryViewController.swift */; };
 		E7AE3A421D217AF8000B7F31 /* crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE3A411D217AF8000B7F31 /* crypto.swift */; };
@@ -83,6 +84,7 @@
 		E73134191D1D482300C3B886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E735533C1D35166A00718E04 /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRouter.swift; path = API/UserRouter.swift; sourceTree = "<group>"; };
 		E76E7B291D563F8C008BEEAB /* badparking-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "badparking-ios.entitlements"; sourceTree = "<group>"; };
+		E7978C011D8EEAF400E5480F /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		E799C7361D7710020082ADFD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E7AE3A3D1D21772E000B7F31 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = "badparking-ios/History Screen/HistoryViewController.swift"; sourceTree = SOURCE_ROOT; };
 		E7AE3A411D217AF8000B7F31 /* crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crypto.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				E73134041D1D482200C3B886 /* FixationViewController.swift */,
+				E7978C011D8EEAF400E5480F /* LocationViewController.swift */,
 			);
 			path = "Fixation Screen";
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				E73134051D1D482200C3B886 /* FixationViewController.swift in Sources */,
 				E73134011D1D482200C3B886 /* AppDelegate.swift in Sources */,
 				E7CA7E331D3C0D2500BB1950 /* Base64.swift in Sources */,
+				E7978C021D8EEAF400E5480F /* LocationViewController.swift in Sources */,
 				E73134031D1D482200C3B886 /* MyClaimsViewController.swift in Sources */,
 				E7AE3A421D217AF8000B7F31 /* crypto.swift in Sources */,
 				E7C582321D78838D0061F4F4 /* ButtonNext.swift in Sources */,
