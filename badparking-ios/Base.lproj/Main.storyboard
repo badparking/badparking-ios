@@ -174,22 +174,62 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="zvy-Zo-1UF"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="J80-dK-1IM">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlQ-wi-8cc">
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J80-dK-1IM"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="current_location" translatesAutoresizingMaskIntoConstraints="NO" id="mRj-wI-bCI">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="k7B-Cg-Z7M"/>
+                                            <constraint firstAttribute="width" constant="60" id="qNL-Lf-TAo"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xy1-i6-661">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="LaC-X7-pOI"/>
+                                            <constraint firstAttribute="width" constant="34" id="yHH-AN-xKa"/>
+                                        </constraints>
+                                        <state key="normal" image="locate_user"/>
+                                        <connections>
+                                            <action selector="showUserLocation:" destination="1u0-Mf-7PQ" eventType="touchUpInside" id="SZP-dA-WMJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="J80-dK-1IM" secondAttribute="height" multiplier="1:1" id="KRc-up-usA"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xy1-i6-661" secondAttribute="bottom" constant="8" id="BbE-Pg-Cd4"/>
+                                    <constraint firstItem="mRj-wI-bCI" firstAttribute="centerY" secondItem="xlQ-wi-8cc" secondAttribute="centerY" id="FGM-VF-6zm"/>
+                                    <constraint firstItem="J80-dK-1IM" firstAttribute="leading" secondItem="xlQ-wi-8cc" secondAttribute="leading" id="FGa-kP-NL4"/>
+                                    <constraint firstAttribute="bottom" secondItem="J80-dK-1IM" secondAttribute="bottom" id="cq4-gp-Gv7"/>
+                                    <constraint firstItem="J80-dK-1IM" firstAttribute="top" secondItem="xlQ-wi-8cc" secondAttribute="top" id="gq1-k0-iac"/>
+                                    <constraint firstAttribute="trailing" secondItem="J80-dK-1IM" secondAttribute="trailing" id="hMw-ed-5KU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xy1-i6-661" secondAttribute="trailing" constant="8" id="reQ-5T-xIH"/>
+                                    <constraint firstAttribute="width" secondItem="xlQ-wi-8cc" secondAttribute="height" multiplier="1:1" id="uRA-ad-eeZ"/>
+                                    <constraint firstItem="mRj-wI-bCI" firstAttribute="centerX" secondItem="xlQ-wi-8cc" secondAttribute="centerX" id="wqE-R0-EPE"/>
                                 </constraints>
-                            </mapView>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tra-Nt-tsB">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">one
+two</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wQf-qb-4Ub" firstAttribute="top" secondItem="9HY-7s-adu" secondAttribute="bottom" constant="8" id="01o-nu-k6R"/>
-                            <constraint firstAttribute="trailing" secondItem="J80-dK-1IM" secondAttribute="trailing" id="3pi-9G-j14"/>
-                            <constraint firstItem="J80-dK-1IM" firstAttribute="top" secondItem="iLl-kY-3mM" secondAttribute="bottom" id="aCb-aS-7Sl"/>
-                            <constraint firstItem="J80-dK-1IM" firstAttribute="leading" secondItem="Hzo-dq-a4N" secondAttribute="leading" id="nCi-kw-Oh6"/>
+                            <constraint firstItem="Tra-Nt-tsB" firstAttribute="top" secondItem="xlQ-wi-8cc" secondAttribute="bottom" constant="8" id="3Ev-vE-dZB"/>
+                            <constraint firstItem="xlQ-wi-8cc" firstAttribute="top" secondItem="iLl-kY-3mM" secondAttribute="bottom" id="Hhy-Yg-Z8X"/>
+                            <constraint firstItem="9HY-7s-adu" firstAttribute="top" secondItem="Tra-Nt-tsB" secondAttribute="bottom" constant="8" id="J38-Hh-Mz3"/>
+                            <constraint firstItem="Tra-Nt-tsB" firstAttribute="leading" secondItem="Hzo-dq-a4N" secondAttribute="leadingMargin" id="eRh-Ln-DUc"/>
+                            <constraint firstItem="xlQ-wi-8cc" firstAttribute="leading" secondItem="Hzo-dq-a4N" secondAttribute="leading" id="miD-mb-wrx"/>
+                            <constraint firstItem="Tra-Nt-tsB" firstAttribute="trailing" secondItem="Hzo-dq-a4N" secondAttribute="trailingMargin" id="qRX-JN-71k"/>
+                            <constraint firstAttribute="trailing" secondItem="xlQ-wi-8cc" secondAttribute="trailing" id="s8c-I0-dtp"/>
                             <constraint firstItem="9HY-7s-adu" firstAttribute="trailing" secondItem="Hzo-dq-a4N" secondAttribute="trailingMargin" id="uyo-6r-AJ1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addresView" destination="Tra-Nt-tsB" id="hAZ-bm-P7G"/>
                         <outlet property="mapView" destination="J80-dK-1IM" id="fYr-hn-tdX"/>
                     </connections>
                 </viewController>
@@ -335,6 +375,8 @@
         <image name="My Log" width="25" height="21"/>
         <image name="Photo Button" width="76" height="76"/>
         <image name="Settings" width="22" height="22"/>
+        <image name="current_location" width="21" height="33"/>
+        <image name="locate_user" width="34" height="34"/>
         <image name="photo-placeholder" width="38" height="38"/>
     </resources>
     <color key="tintColor" red="0.38823529411764707" green="0.78431372549019607" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

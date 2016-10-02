@@ -9,8 +9,9 @@
 import UIKit
 import MapKit
 
-class LocationViewController: UIViewController, CLLocationManagerDelegate {
+class LocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var addresView: UITextView!
 
     var locationManager = CLLocationManager()
 
@@ -23,15 +24,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
         checkLocationAuthorizationStatus()
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
-        centerMapOnLocation(location: initialLocation)
-    }
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.last!
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-
-        mapView.setRegion(region, animated: true)
+        mapView.delegate = self
     }
 
     func centerMapOnLocation(location: CLLocation) {
@@ -46,6 +39,51 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             locationManager.requestWhenInUseAuthorization()
         }
+    }
+
+    func geoCode(_ location : CLLocation!){
+        /* Only one reverse geocoding can be in progress at a time hence we need to cancel existing
+         one if we are getting location updates */
+        let geoCoder = CLGeocoder()
+        geoCoder.cancelGeocode()
+        geoCoder.reverseGeocodeLocation(location) { (data, error) in
+            guard let placeMarks = data as [CLPlacemark]! else {
+                return
+            }
+            let loc: CLPlacemark = placeMarks[0]
+            let addressDict : [NSString:NSObject] = loc.addressDictionary as! [NSString: NSObject]
+            let addrList = addressDict["FormattedAddressLines"] as! [String]
+            let address = addrList.joined(separator: ", ")
+            self.addresView.text = address
+        }
+
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location: CLLocation = locations.first!
+        self.mapView.centerCoordinate = location.coordinate
+        let reg = MKCoordinateRegionMakeWithDistance(location.coordinate, 1500, 1500)
+        self.mapView.setRegion(reg, animated: true)
+        geoCode(location)
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        locationManager.stopUpdatingLocation()
+        let location = CLLocation(latitude: mapView.centerCoordinate.latitude,
+                                  longitude: mapView.centerCoordinate.longitude)
+        geoCode(location)
+    }
+
+    @IBAction func showUserLocation(_ sender: AnyObject) {
+        var mapRegion = MKCoordinateRegion()
+        mapRegion.center = mapView.userLocation.coordinate
+        mapRegion.span.latitudeDelta = 0.01
+        mapRegion.span.longitudeDelta = 0.01
+        mapView.setRegion(mapRegion, animated: true)
     }
 
     /*
