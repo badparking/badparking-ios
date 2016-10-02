@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0PF-74-oe8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Claims-->
+        <!--Title-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="MyClaimsViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="PreferencesViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -19,6 +19,21 @@
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzY-jw-8QQ">
+                                <frame key="frameInset" minY="20" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Налаштування" id="B26-vE-WjH">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7qf-CX-nGi">
+                                            <connections>
+                                                <action selector="closeWasPressed:" destination="9pv-A4-QxB" id="mUX-Ft-Rwn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Claims" image="My Log" selectedImage="My Log" id="acW-dT-cKf">
@@ -28,10 +43,11 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" title="Title" id="5fq-8g-Y9R"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="782" y="-818"/>
+            <point key="canvasLocation" x="2609" y="-831"/>
         </scene>
         <!--Фіксація порушення-->
         <scene sceneID="wg7-f3-ORb">
@@ -130,7 +146,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Фіксація порушення" id="M5n-Wt-VBm">
-                        <barButtonItem key="rightBarButtonItem" image="Settings" id="xRg-M9-pO8"/>
+                        <barButtonItem key="rightBarButtonItem" image="Settings" id="xRg-M9-pO8">
+                            <connections>
+                                <segue destination="9pv-A4-QxB" kind="presentation" id="d8f-K9-5Uj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="capturedImage" destination="Ock-Wb-MOC" id="0M2-9a-qTp"/>
@@ -277,69 +297,6 @@ two</string>
             </objects>
             <point key="canvasLocation" x="3421.5999999999999" y="-169.56521739130437"/>
         </scene>
-        <!--History-->
-        <scene sceneID="9gz-aP-oAg">
-            <objects>
-                <viewController id="M2i-m3-0d1" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3ZT-m9-zkg"/>
-                        <viewControllerLayoutGuide type="bottom" id="td3-ga-z4j"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1av-6N-xbW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="History of claims" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3ce-lt-bx1">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="3ce-lt-bx1" firstAttribute="centerY" secondItem="1av-6N-xbW" secondAttribute="centerY" id="H3L-Dx-GNe"/>
-                            <constraint firstItem="3ce-lt-bx1" firstAttribute="centerX" secondItem="1av-6N-xbW" secondAttribute="centerX" id="nfS-89-Kx1"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="History" image="History" selectedImage="History" id="xen-zI-1il">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.38823529410000002" green="0.7843137255" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H02-4h-dAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="782" y="502"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="0PF-74-oe8" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="M2i-m3-0d1" kind="relationship" relationship="viewControllers" id="1x7-k7-OiD"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
-        </scene>
         <!--Claim-->
         <scene sceneID="DqL-r8-jDV">
             <objects>
@@ -371,7 +328,6 @@ two</string>
     </scenes>
     <resources>
         <image name="Claim" width="26" height="21"/>
-        <image name="History" width="25" height="21"/>
         <image name="My Log" width="25" height="21"/>
         <image name="Photo Button" width="76" height="76"/>
         <image name="Settings" width="22" height="22"/>

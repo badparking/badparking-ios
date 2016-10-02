@@ -18,7 +18,7 @@
 		E7158AF11D4268AE00E8AE18 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7158AEC1D4268AE00E8AE18 /* FBSDKLoginKit.framework */; };
 		E7158AF21D4268AE00E8AE18 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7158AEC1D4268AE00E8AE18 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E73134011D1D482200C3B886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134001D1D482200C3B886 /* AppDelegate.swift */; };
-		E73134031D1D482200C3B886 /* MyClaimsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134021D1D482200C3B886 /* MyClaimsViewController.swift */; };
+		E73134031D1D482200C3B886 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134021D1D482200C3B886 /* PreferencesViewController.swift */; };
 		E73134051D1D482200C3B886 /* FixationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134041D1D482200C3B886 /* FixationViewController.swift */; };
 		E73134081D1D482300C3B886 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E73134061D1D482300C3B886 /* Main.storyboard */; };
 		E731340A1D1D482300C3B886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E73134091D1D482300C3B886 /* Assets.xcassets */; };
@@ -27,7 +27,6 @@
 		E735533D1D35166A00718E04 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E735533C1D35166A00718E04 /* UserRouter.swift */; };
 		E7978C021D8EEAF400E5480F /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7978C011D8EEAF400E5480F /* LocationViewController.swift */; };
 		E799C7371D7710020082ADFD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E799C7361D7710020082ADFD /* MapKit.framework */; };
-		E7AE3A3E1D21772E000B7F31 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE3A3D1D21772E000B7F31 /* HistoryViewController.swift */; };
 		E7AE3A421D217AF8000B7F31 /* crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE3A411D217AF8000B7F31 /* crypto.swift */; };
 		E7C5822F1D785B800061F4F4 /* Claim.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5822E1D785B800061F4F4 /* Claim.swift */; };
 		E7C582321D78838D0061F4F4 /* ButtonNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C582311D78838D0061F4F4 /* ButtonNext.swift */; };
@@ -73,7 +72,7 @@
 		E7158AEC1D4268AE00E8AE18 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Carthage/Build/iOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		E73133FD1D1D482200C3B886 /* badparking-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "badparking-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73134001D1D482200C3B886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E73134021D1D482200C3B886 /* MyClaimsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClaimsViewController.swift; sourceTree = "<group>"; };
+		E73134021D1D482200C3B886 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PreferencesViewController.swift; path = "../Preferences Screen/PreferencesViewController.swift"; sourceTree = "<group>"; };
 		E73134041D1D482200C3B886 /* FixationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixationViewController.swift; sourceTree = "<group>"; };
 		E73134071D1D482300C3B886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E73134091D1D482300C3B886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,7 +85,6 @@
 		E76E7B291D563F8C008BEEAB /* badparking-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "badparking-ios.entitlements"; sourceTree = "<group>"; };
 		E7978C011D8EEAF400E5480F /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		E799C7361D7710020082ADFD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		E7AE3A3D1D21772E000B7F31 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = "badparking-ios/History Screen/HistoryViewController.swift"; sourceTree = SOURCE_ROOT; };
 		E7AE3A411D217AF8000B7F31 /* crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crypto.swift; sourceTree = "<group>"; };
 		E7B580611D1DCF8F00560F63 /* badparking-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "badparking-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		E7C5822E1D785B800061F4F4 /* Claim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Claim.swift; path = models/Claim.swift; sourceTree = "<group>"; };
@@ -156,9 +154,8 @@
 				E76E7B291D563F8C008BEEAB /* badparking-ios.entitlements */,
 				E714EE621D33AB02006A9217 /* API */,
 				E7C582301D785B870061F4F4 /* model */,
-				E7AE3A3B1D21727C000B7F31 /* MyClaims Screen */,
+				E7AE3A3B1D21727C000B7F31 /* Preferences Screen */,
 				E7AE3A3C1D21728E000B7F31 /* Fixation Screen */,
-				E7AE3A3F1D21773F000B7F31 /* History Screen */,
 				E73134001D1D482200C3B886 /* AppDelegate.swift */,
 				E73134061D1D482300C3B886 /* Main.storyboard */,
 				E73134091D1D482300C3B886 /* Assets.xcassets */,
@@ -191,11 +188,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E7AE3A3B1D21727C000B7F31 /* MyClaims Screen */ = {
+		E7AE3A3B1D21727C000B7F31 /* Preferences Screen */ = {
 			isa = PBXGroup;
 			children = (
-				E73134021D1D482200C3B886 /* MyClaimsViewController.swift */,
+				E73134021D1D482200C3B886 /* PreferencesViewController.swift */,
 			);
+			name = "Preferences Screen";
 			path = "MyClaims Screen";
 			sourceTree = "<group>";
 		};
@@ -206,14 +204,6 @@
 				E7978C011D8EEAF400E5480F /* LocationViewController.swift */,
 			);
 			path = "Fixation Screen";
-			sourceTree = "<group>";
-		};
-		E7AE3A3F1D21773F000B7F31 /* History Screen */ = {
-			isa = PBXGroup;
-			children = (
-				E7AE3A3D1D21772E000B7F31 /* HistoryViewController.swift */,
-			);
-			path = "History Screen";
 			sourceTree = "<group>";
 		};
 		E7AE3A401D217ABB000B7F31 /* utils */ = {
@@ -402,7 +392,7 @@
 				E73134011D1D482200C3B886 /* AppDelegate.swift in Sources */,
 				E7CA7E331D3C0D2500BB1950 /* Base64.swift in Sources */,
 				E7978C021D8EEAF400E5480F /* LocationViewController.swift in Sources */,
-				E73134031D1D482200C3B886 /* MyClaimsViewController.swift in Sources */,
+				E73134031D1D482200C3B886 /* PreferencesViewController.swift in Sources */,
 				E7AE3A421D217AF8000B7F31 /* crypto.swift in Sources */,
 				E7C582321D78838D0061F4F4 /* ButtonNext.swift in Sources */,
 				E714EE701D3504E7006A9217 /* CrimeTypesRouter.swift in Sources */,
@@ -410,7 +400,6 @@
 				E714EE6A1D33AB38006A9217 /* MyClaimsRouter.swift in Sources */,
 				E7CA7E361D3C0D2500BB1950 /* JWT.swift in Sources */,
 				E714EE6E1D3504A3006A9217 /* TokenRouter.swift in Sources */,
-				E7AE3A3E1D21772E000B7F31 /* HistoryViewController.swift in Sources */,
 				E735533D1D35166A00718E04 /* UserRouter.swift in Sources */,
 				E7C5822F1D785B800061F4F4 /* Claim.swift in Sources */,
 				E7CA7E351D3C0D2500BB1950 /* Decode.swift in Sources */,
