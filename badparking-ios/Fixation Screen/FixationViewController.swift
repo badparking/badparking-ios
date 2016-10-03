@@ -28,7 +28,7 @@ class FixationViewController: UIViewController, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupCameraCapture()
+        setupCameraCapture()
         // self.navigationItem.setHidesBackButton(true, animated: true)
     }
 

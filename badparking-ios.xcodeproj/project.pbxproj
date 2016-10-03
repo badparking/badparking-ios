@@ -72,7 +72,7 @@
 		E7158AEC1D4268AE00E8AE18 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Carthage/Build/iOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		E73133FD1D1D482200C3B886 /* badparking-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "badparking-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73134001D1D482200C3B886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E73134021D1D482200C3B886 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PreferencesViewController.swift; path = "../Preferences Screen/PreferencesViewController.swift"; sourceTree = "<group>"; };
+		E73134021D1D482200C3B886 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		E73134041D1D482200C3B886 /* FixationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixationViewController.swift; sourceTree = "<group>"; };
 		E73134071D1D482300C3B886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E73134091D1D482300C3B886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -193,8 +193,7 @@
 			children = (
 				E73134021D1D482200C3B886 /* PreferencesViewController.swift */,
 			);
-			name = "Preferences Screen";
-			path = "MyClaims Screen";
+			path = "Preferences Screen";
 			sourceTree = "<group>";
 		};
 		E7AE3A3C1D21728E000B7F31 /* Fixation Screen */ = {
