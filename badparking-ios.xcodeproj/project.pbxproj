@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E714EE6A1D33AB38006A9217 /* MyClaimsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714EE691D33AB38006A9217 /* MyClaimsRouter.swift */; };
-		E714EE6C1D33AB66006A9217 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714EE6B1D33AB66006A9217 /* Constants.swift */; };
-		E714EE6E1D3504A3006A9217 /* TokenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714EE6D1D3504A3006A9217 /* TokenRouter.swift */; };
-		E714EE701D3504E7006A9217 /* CrimeTypesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714EE6F1D3504E7006A9217 /* CrimeTypesRouter.swift */; };
+		30EBF74E1DAF9AF1008DF5E9 /* CrimeTypesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7371DAF9AF1008DF5E9 /* CrimeTypesRouter.swift */; };
+		30EBF74F1DAF9AF1008DF5E9 /* MyClaimsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7381DAF9AF1008DF5E9 /* MyClaimsRouter.swift */; };
+		30EBF7501DAF9AF1008DF5E9 /* TokenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7391DAF9AF1008DF5E9 /* TokenRouter.swift */; };
+		30EBF7511DAF9AF1008DF5E9 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF73A1DAF9AF1008DF5E9 /* UserRouter.swift */; };
+		30EBF7521DAF9AF1008DF5E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF73B1DAF9AF1008DF5E9 /* Constants.swift */; };
+		30EBF7531DAF9AF1008DF5E9 /* ButtonNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF73D1DAF9AF1008DF5E9 /* ButtonNext.swift */; };
+		30EBF7541DAF9AF1008DF5E9 /* FixationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF73F1DAF9AF1008DF5E9 /* FixationViewController.swift */; };
+		30EBF7551DAF9AF1008DF5E9 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7401DAF9AF1008DF5E9 /* LocationViewController.swift */; };
+		30EBF7561DAF9AF1008DF5E9 /* Claim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7421DAF9AF1008DF5E9 /* Claim.swift */; };
+		30EBF7571DAF9AF1008DF5E9 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7441DAF9AF1008DF5E9 /* PreferencesViewController.swift */; };
+		30EBF7581DAF9AF1008DF5E9 /* crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7471DAF9AF1008DF5E9 /* crypto.swift */; };
+		30EBF7591DAF9AF1008DF5E9 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF74A1DAF9AF1008DF5E9 /* Base64.swift */; };
+		30EBF75A1DAF9AF1008DF5E9 /* Claims.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF74B1DAF9AF1008DF5E9 /* Claims.swift */; };
+		30EBF75B1DAF9AF1008DF5E9 /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF74C1DAF9AF1008DF5E9 /* Decode.swift */; };
+		30EBF75C1DAF9AF1008DF5E9 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF74D1DAF9AF1008DF5E9 /* JWT.swift */; };
 		E7158AED1D4268AE00E8AE18 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7158AEA1D4268AE00E8AE18 /* Bolts.framework */; };
 		E7158AEE1D4268AE00E8AE18 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7158AEA1D4268AE00E8AE18 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E7158AEF1D4268AE00E8AE18 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7158AEB1D4268AE00E8AE18 /* FBSDKCoreKit.framework */; };
@@ -18,33 +29,11 @@
 		E7158AF11D4268AE00E8AE18 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7158AEC1D4268AE00E8AE18 /* FBSDKLoginKit.framework */; };
 		E7158AF21D4268AE00E8AE18 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7158AEC1D4268AE00E8AE18 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E73134011D1D482200C3B886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134001D1D482200C3B886 /* AppDelegate.swift */; };
-		E73134031D1D482200C3B886 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134021D1D482200C3B886 /* PreferencesViewController.swift */; };
-		E73134051D1D482200C3B886 /* FixationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134041D1D482200C3B886 /* FixationViewController.swift */; };
 		E73134081D1D482300C3B886 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E73134061D1D482300C3B886 /* Main.storyboard */; };
 		E731340A1D1D482300C3B886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E73134091D1D482300C3B886 /* Assets.xcassets */; };
 		E731340D1D1D482300C3B886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E731340B1D1D482300C3B886 /* LaunchScreen.storyboard */; };
-		E73134181D1D482300C3B886 /* badparking_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73134171D1D482300C3B886 /* badparking_iosUITests.swift */; };
-		E735533D1D35166A00718E04 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E735533C1D35166A00718E04 /* UserRouter.swift */; };
-		E7978C021D8EEAF400E5480F /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7978C011D8EEAF400E5480F /* LocationViewController.swift */; };
 		E799C7371D7710020082ADFD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E799C7361D7710020082ADFD /* MapKit.framework */; };
-		E7AE3A421D217AF8000B7F31 /* crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE3A411D217AF8000B7F31 /* crypto.swift */; };
-		E7C5822F1D785B800061F4F4 /* Claim.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5822E1D785B800061F4F4 /* Claim.swift */; };
-		E7C582321D78838D0061F4F4 /* ButtonNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C582311D78838D0061F4F4 /* ButtonNext.swift */; };
-		E7CA7E331D3C0D2500BB1950 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA7E2F1D3C0D2500BB1950 /* Base64.swift */; };
-		E7CA7E341D3C0D2500BB1950 /* Claims.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA7E301D3C0D2500BB1950 /* Claims.swift */; };
-		E7CA7E351D3C0D2500BB1950 /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA7E311D3C0D2500BB1950 /* Decode.swift */; };
-		E7CA7E361D3C0D2500BB1950 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA7E321D3C0D2500BB1950 /* JWT.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E73134141D1D482300C3B886 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E73133F51D1D482200C3B886 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E73133FC1D1D482200C3B886;
-			remoteInfo = "badparking-ios";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E7DCA5DB1D3E0044000F0B1C /* Embed Frameworks */ = {
@@ -63,36 +52,33 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E714EE691D33AB38006A9217 /* MyClaimsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyClaimsRouter.swift; path = API/MyClaimsRouter.swift; sourceTree = "<group>"; };
-		E714EE6B1D33AB66006A9217 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E714EE6D1D3504A3006A9217 /* TokenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenRouter.swift; path = API/TokenRouter.swift; sourceTree = "<group>"; };
-		E714EE6F1D3504E7006A9217 /* CrimeTypesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrimeTypesRouter.swift; path = API/CrimeTypesRouter.swift; sourceTree = "<group>"; };
+		30EBF7371DAF9AF1008DF5E9 /* CrimeTypesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrimeTypesRouter.swift; sourceTree = "<group>"; };
+		30EBF7381DAF9AF1008DF5E9 /* MyClaimsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClaimsRouter.swift; sourceTree = "<group>"; };
+		30EBF7391DAF9AF1008DF5E9 /* TokenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenRouter.swift; sourceTree = "<group>"; };
+		30EBF73A1DAF9AF1008DF5E9 /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		30EBF73B1DAF9AF1008DF5E9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		30EBF73D1DAF9AF1008DF5E9 /* ButtonNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNext.swift; sourceTree = "<group>"; };
+		30EBF73F1DAF9AF1008DF5E9 /* FixationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixationViewController.swift; sourceTree = "<group>"; };
+		30EBF7401DAF9AF1008DF5E9 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		30EBF7421DAF9AF1008DF5E9 /* Claim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Claim.swift; sourceTree = "<group>"; };
+		30EBF7441DAF9AF1008DF5E9 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		30EBF7461DAF9AF1008DF5E9 /* badparking-ios-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "badparking-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		30EBF7471DAF9AF1008DF5E9 /* crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crypto.swift; sourceTree = "<group>"; };
+		30EBF74A1DAF9AF1008DF5E9 /* Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
+		30EBF74B1DAF9AF1008DF5E9 /* Claims.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Claims.swift; sourceTree = "<group>"; };
+		30EBF74C1DAF9AF1008DF5E9 /* Decode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decode.swift; sourceTree = "<group>"; };
+		30EBF74D1DAF9AF1008DF5E9 /* JWT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
 		E7158AEA1D4268AE00E8AE18 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
 		E7158AEB1D4268AE00E8AE18 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Carthage/Build/iOS/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		E7158AEC1D4268AE00E8AE18 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Carthage/Build/iOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		E73133FD1D1D482200C3B886 /* badparking-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "badparking-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73134001D1D482200C3B886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E73134021D1D482200C3B886 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
-		E73134041D1D482200C3B886 /* FixationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixationViewController.swift; sourceTree = "<group>"; };
 		E73134071D1D482300C3B886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E73134091D1D482300C3B886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E731340C1D1D482300C3B886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E731340E1D1D482300C3B886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E73134131D1D482300C3B886 /* badparking-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "badparking-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E73134171D1D482300C3B886 /* badparking_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = badparking_iosUITests.swift; sourceTree = "<group>"; };
-		E73134191D1D482300C3B886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E735533C1D35166A00718E04 /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRouter.swift; path = API/UserRouter.swift; sourceTree = "<group>"; };
 		E76E7B291D563F8C008BEEAB /* badparking-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "badparking-ios.entitlements"; sourceTree = "<group>"; };
-		E7978C011D8EEAF400E5480F /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		E799C7361D7710020082ADFD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		E7AE3A411D217AF8000B7F31 /* crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crypto.swift; sourceTree = "<group>"; };
-		E7B580611D1DCF8F00560F63 /* badparking-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "badparking-ios-Bridging-Header.h"; sourceTree = "<group>"; };
-		E7C5822E1D785B800061F4F4 /* Claim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Claim.swift; path = models/Claim.swift; sourceTree = "<group>"; };
-		E7C582311D78838D0061F4F4 /* ButtonNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonNext.swift; path = controls/ButtonNext.swift; sourceTree = "<group>"; };
-		E7CA7E2F1D3C0D2500BB1950 /* Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
-		E7CA7E301D3C0D2500BB1950 /* Claims.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Claims.swift; sourceTree = "<group>"; };
-		E7CA7E311D3C0D2500BB1950 /* Decode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decode.swift; sourceTree = "<group>"; };
-		E7CA7E321D3C0D2500BB1950 /* JWT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,33 +93,111 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E73134101D1D482300C3B886 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E714EE621D33AB02006A9217 /* API */ = {
+		30EBF7341DAF9ADC008DF5E9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E714EE691D33AB38006A9217 /* MyClaimsRouter.swift */,
-				E714EE6D1D3504A3006A9217 /* TokenRouter.swift */,
-				E714EE6F1D3504E7006A9217 /* CrimeTypesRouter.swift */,
-				E735533C1D35166A00718E04 /* UserRouter.swift */,
+				E76E7B291D563F8C008BEEAB /* badparking-ios.entitlements */,
+				E73134091D1D482300C3B886 /* Assets.xcassets */,
+				E731340B1D1D482300C3B886 /* LaunchScreen.storyboard */,
+				E731340E1D1D482300C3B886 /* Info.plist */,
 			);
-			name = API;
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		30EBF7351DAF9AF1008DF5E9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				30EBF73E1DAF9AF1008DF5E9 /* Fixation Screen */,
+				30EBF7431DAF9AF1008DF5E9 /* Preferences Screen */,
+				30EBF7361DAF9AF1008DF5E9 /* API */,
+				30EBF73B1DAF9AF1008DF5E9 /* Constants.swift */,
+				30EBF73C1DAF9AF1008DF5E9 /* controls */,
+				30EBF7411DAF9AF1008DF5E9 /* models */,
+				30EBF7451DAF9AF1008DF5E9 /* utils */,
+				30EBF7481DAF9AF1008DF5E9 /* Vendor */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		30EBF7361DAF9AF1008DF5E9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				30EBF7371DAF9AF1008DF5E9 /* CrimeTypesRouter.swift */,
+				30EBF7381DAF9AF1008DF5E9 /* MyClaimsRouter.swift */,
+				30EBF7391DAF9AF1008DF5E9 /* TokenRouter.swift */,
+				30EBF73A1DAF9AF1008DF5E9 /* UserRouter.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		30EBF73C1DAF9AF1008DF5E9 /* controls */ = {
+			isa = PBXGroup;
+			children = (
+				30EBF73D1DAF9AF1008DF5E9 /* ButtonNext.swift */,
+			);
+			path = controls;
+			sourceTree = "<group>";
+		};
+		30EBF73E1DAF9AF1008DF5E9 /* Fixation Screen */ = {
+			isa = PBXGroup;
+			children = (
+				30EBF73F1DAF9AF1008DF5E9 /* FixationViewController.swift */,
+				30EBF7401DAF9AF1008DF5E9 /* LocationViewController.swift */,
+			);
+			path = "Fixation Screen";
+			sourceTree = "<group>";
+		};
+		30EBF7411DAF9AF1008DF5E9 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				30EBF7421DAF9AF1008DF5E9 /* Claim.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		30EBF7431DAF9AF1008DF5E9 /* Preferences Screen */ = {
+			isa = PBXGroup;
+			children = (
+				30EBF7441DAF9AF1008DF5E9 /* PreferencesViewController.swift */,
+			);
+			path = "Preferences Screen";
+			sourceTree = "<group>";
+		};
+		30EBF7451DAF9AF1008DF5E9 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				30EBF7461DAF9AF1008DF5E9 /* badparking-ios-Bridging-Header.h */,
+				30EBF7471DAF9AF1008DF5E9 /* crypto.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		30EBF7481DAF9AF1008DF5E9 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				30EBF7491DAF9AF1008DF5E9 /* JSONWebToken */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		30EBF7491DAF9AF1008DF5E9 /* JSONWebToken */ = {
+			isa = PBXGroup;
+			children = (
+				30EBF74A1DAF9AF1008DF5E9 /* Base64.swift */,
+				30EBF74B1DAF9AF1008DF5E9 /* Claims.swift */,
+				30EBF74C1DAF9AF1008DF5E9 /* Decode.swift */,
+				30EBF74D1DAF9AF1008DF5E9 /* JWT.swift */,
+			);
+			path = JSONWebToken;
 			sourceTree = "<group>";
 		};
 		E73133F41D1D482200C3B886 = {
 			isa = PBXGroup;
 			children = (
 				E73133FF1D1D482200C3B886 /* badparking-ios */,
-				E7CA7E2D1D3C0D2500BB1950 /* Vendor */,
-				E73134161D1D482300C3B886 /* badparking-iosUITests */,
 				E73133FE1D1D482200C3B886 /* Products */,
 				E73343231D3790F800A5A9DE /* Frameworks */,
 			);
@@ -143,7 +207,6 @@
 			isa = PBXGroup;
 			children = (
 				E73133FD1D1D482200C3B886 /* badparking-ios.app */,
-				E73134131D1D482300C3B886 /* badparking-iosUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,30 +214,12 @@
 		E73133FF1D1D482200C3B886 /* badparking-ios */ = {
 			isa = PBXGroup;
 			children = (
-				E76E7B291D563F8C008BEEAB /* badparking-ios.entitlements */,
-				E714EE621D33AB02006A9217 /* API */,
-				E7C582301D785B870061F4F4 /* model */,
-				E7AE3A3B1D21727C000B7F31 /* Preferences Screen */,
-				E7AE3A3C1D21728E000B7F31 /* Fixation Screen */,
+				30EBF7351DAF9AF1008DF5E9 /* Classes */,
 				E73134001D1D482200C3B886 /* AppDelegate.swift */,
 				E73134061D1D482300C3B886 /* Main.storyboard */,
-				E73134091D1D482300C3B886 /* Assets.xcassets */,
-				E731340B1D1D482300C3B886 /* LaunchScreen.storyboard */,
-				E731340E1D1D482300C3B886 /* Info.plist */,
-				E714EE6B1D33AB66006A9217 /* Constants.swift */,
-				E7C582331D7883910061F4F4 /* controls */,
-				E7AE3A401D217ABB000B7F31 /* utils */,
+				30EBF7341DAF9ADC008DF5E9 /* Support Files */,
 			);
 			path = "badparking-ios";
-			sourceTree = "<group>";
-		};
-		E73134161D1D482300C3B886 /* badparking-iosUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E73134171D1D482300C3B886 /* badparking_iosUITests.swift */,
-				E73134191D1D482300C3B886 /* Info.plist */,
-			);
-			path = "badparking-iosUITests";
 			sourceTree = "<group>";
 		};
 		E73343231D3790F800A5A9DE /* Frameworks */ = {
@@ -186,68 +231,6 @@
 				E7158AEC1D4268AE00E8AE18 /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E7AE3A3B1D21727C000B7F31 /* Preferences Screen */ = {
-			isa = PBXGroup;
-			children = (
-				E73134021D1D482200C3B886 /* PreferencesViewController.swift */,
-			);
-			path = "Preferences Screen";
-			sourceTree = "<group>";
-		};
-		E7AE3A3C1D21728E000B7F31 /* Fixation Screen */ = {
-			isa = PBXGroup;
-			children = (
-				E73134041D1D482200C3B886 /* FixationViewController.swift */,
-				E7978C011D8EEAF400E5480F /* LocationViewController.swift */,
-			);
-			path = "Fixation Screen";
-			sourceTree = "<group>";
-		};
-		E7AE3A401D217ABB000B7F31 /* utils */ = {
-			isa = PBXGroup;
-			children = (
-				E7B580611D1DCF8F00560F63 /* badparking-ios-Bridging-Header.h */,
-				E7AE3A411D217AF8000B7F31 /* crypto.swift */,
-			);
-			path = utils;
-			sourceTree = "<group>";
-		};
-		E7C582301D785B870061F4F4 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				E7C5822E1D785B800061F4F4 /* Claim.swift */,
-			);
-			name = model;
-			sourceTree = "<group>";
-		};
-		E7C582331D7883910061F4F4 /* controls */ = {
-			isa = PBXGroup;
-			children = (
-				E7C582311D78838D0061F4F4 /* ButtonNext.swift */,
-			);
-			name = controls;
-			sourceTree = "<group>";
-		};
-		E7CA7E2D1D3C0D2500BB1950 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				E7CA7E2E1D3C0D2500BB1950 /* JSONWebToken */,
-			);
-			name = Vendor;
-			path = "badparking-ios/Vendor";
-			sourceTree = "<group>";
-		};
-		E7CA7E2E1D3C0D2500BB1950 /* JSONWebToken */ = {
-			isa = PBXGroup;
-			children = (
-				E7CA7E2F1D3C0D2500BB1950 /* Base64.swift */,
-				E7CA7E301D3C0D2500BB1950 /* Claims.swift */,
-				E7CA7E311D3C0D2500BB1950 /* Decode.swift */,
-				E7CA7E321D3C0D2500BB1950 /* JWT.swift */,
-			);
-			path = JSONWebToken;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,24 +255,6 @@
 			productReference = E73133FD1D1D482200C3B886 /* badparking-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E73134121D1D482300C3B886 /* badparking-iosUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E731341F1D1D482300C3B886 /* Build configuration list for PBXNativeTarget "badparking-iosUITests" */;
-			buildPhases = (
-				E731340F1D1D482300C3B886 /* Sources */,
-				E73134101D1D482300C3B886 /* Frameworks */,
-				E73134111D1D482300C3B886 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E73134151D1D482300C3B886 /* PBXTargetDependency */,
-			);
-			name = "badparking-iosUITests";
-			productName = "badparking-iosUITests";
-			productReference = E73134131D1D482300C3B886 /* badparking-iosUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -312,14 +277,6 @@
 							};
 						};
 					};
-					E73134121D1D482300C3B886 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 6UQZRBX8C7;
-						DevelopmentTeamName = "Eugene Nagorny (Personal Team)";
-						LastSwiftMigration = 0800;
-						ProvisioningStyle = Automatic;
-						TestTargetID = E73133FC1D1D482200C3B886;
-					};
 				};
 			};
 			buildConfigurationList = E73133F81D1D482200C3B886 /* Build configuration list for PBXProject "badparking-ios" */;
@@ -336,7 +293,6 @@
 			projectRoot = "";
 			targets = (
 				E73133FC1D1D482200C3B886 /* badparking-ios */,
-				E73134121D1D482300C3B886 /* badparking-iosUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -349,13 +305,6 @@
 				E731340D1D1D482300C3B886 /* LaunchScreen.storyboard in Resources */,
 				E731340A1D1D482300C3B886 /* Assets.xcassets in Resources */,
 				E73134081D1D482300C3B886 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E73134111D1D482300C3B886 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,42 +335,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7CA7E341D3C0D2500BB1950 /* Claims.swift in Sources */,
-				E73134051D1D482200C3B886 /* FixationViewController.swift in Sources */,
+				30EBF7541DAF9AF1008DF5E9 /* FixationViewController.swift in Sources */,
+				30EBF74F1DAF9AF1008DF5E9 /* MyClaimsRouter.swift in Sources */,
 				E73134011D1D482200C3B886 /* AppDelegate.swift in Sources */,
-				E7CA7E331D3C0D2500BB1950 /* Base64.swift in Sources */,
-				E7978C021D8EEAF400E5480F /* LocationViewController.swift in Sources */,
-				E73134031D1D482200C3B886 /* PreferencesViewController.swift in Sources */,
-				E7AE3A421D217AF8000B7F31 /* crypto.swift in Sources */,
-				E7C582321D78838D0061F4F4 /* ButtonNext.swift in Sources */,
-				E714EE701D3504E7006A9217 /* CrimeTypesRouter.swift in Sources */,
-				E714EE6C1D33AB66006A9217 /* Constants.swift in Sources */,
-				E714EE6A1D33AB38006A9217 /* MyClaimsRouter.swift in Sources */,
-				E7CA7E361D3C0D2500BB1950 /* JWT.swift in Sources */,
-				E714EE6E1D3504A3006A9217 /* TokenRouter.swift in Sources */,
-				E735533D1D35166A00718E04 /* UserRouter.swift in Sources */,
-				E7C5822F1D785B800061F4F4 /* Claim.swift in Sources */,
-				E7CA7E351D3C0D2500BB1950 /* Decode.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E731340F1D1D482300C3B886 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E73134181D1D482300C3B886 /* badparking_iosUITests.swift in Sources */,
+				30EBF7531DAF9AF1008DF5E9 /* ButtonNext.swift in Sources */,
+				30EBF7581DAF9AF1008DF5E9 /* crypto.swift in Sources */,
+				30EBF7501DAF9AF1008DF5E9 /* TokenRouter.swift in Sources */,
+				30EBF74E1DAF9AF1008DF5E9 /* CrimeTypesRouter.swift in Sources */,
+				30EBF7551DAF9AF1008DF5E9 /* LocationViewController.swift in Sources */,
+				30EBF75A1DAF9AF1008DF5E9 /* Claims.swift in Sources */,
+				30EBF75C1DAF9AF1008DF5E9 /* JWT.swift in Sources */,
+				30EBF7511DAF9AF1008DF5E9 /* UserRouter.swift in Sources */,
+				30EBF75B1DAF9AF1008DF5E9 /* Decode.swift in Sources */,
+				30EBF7561DAF9AF1008DF5E9 /* Claim.swift in Sources */,
+				30EBF7591DAF9AF1008DF5E9 /* Base64.swift in Sources */,
+				30EBF7521DAF9AF1008DF5E9 /* Constants.swift in Sources */,
+				30EBF7571DAF9AF1008DF5E9 /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E73134151D1D482300C3B886 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E73133FC1D1D482200C3B886 /* badparking-ios */;
-			targetProxy = E73134141D1D482300C3B886 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E73134061D1D482300C3B886 /* Main.storyboard */ = {
@@ -570,30 +503,6 @@
 			};
 			name = Release;
 		};
-		E73134201D1D482300C3B886 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "badparking-iosUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enagory.badparking-iosUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "badparking-ios";
-			};
-			name = Debug;
-		};
-		E73134211D1D482300C3B886 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "badparking-iosUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enagory.badparking-iosUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "badparking-ios";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -611,15 +520,6 @@
 			buildConfigurations = (
 				E731341D1D1D482300C3B886 /* Debug */,
 				E731341E1D1D482300C3B886 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E731341F1D1D482300C3B886 /* Build configuration list for PBXNativeTarget "badparking-iosUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E73134201D1D482300C3B886 /* Debug */,
-				E73134211D1D482300C3B886 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
