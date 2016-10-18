@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3077E4281DB61B4600C817DF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077E4271DB61B4600C817DF /* MainViewController.swift */; };
+		3077E42A1DB61D6B00C817DF /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077E4291DB61D6B00C817DF /* PageViewController.swift */; };
+		3077E42C1DB6283600C817DF /* ViolationTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077E42B1DB6283600C817DF /* ViolationTypeViewController.swift */; };
+		3077E42E1DB628AB00C817DF /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077E42D1DB628AB00C817DF /* SendViewController.swift */; };
+		3077E4321DB62E4D00C817DF /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077E4311DB62E4D00C817DF /* BasePageViewController.swift */; };
 		30EBF74E1DAF9AF1008DF5E9 /* CrimeTypesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7371DAF9AF1008DF5E9 /* CrimeTypesRouter.swift */; };
 		30EBF74F1DAF9AF1008DF5E9 /* MyClaimsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7381DAF9AF1008DF5E9 /* MyClaimsRouter.swift */; };
 		30EBF7501DAF9AF1008DF5E9 /* TokenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7391DAF9AF1008DF5E9 /* TokenRouter.swift */; };
@@ -16,7 +21,7 @@
 		30EBF7541DAF9AF1008DF5E9 /* FixationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF73F1DAF9AF1008DF5E9 /* FixationViewController.swift */; };
 		30EBF7551DAF9AF1008DF5E9 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7401DAF9AF1008DF5E9 /* LocationViewController.swift */; };
 		30EBF7561DAF9AF1008DF5E9 /* Claim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7421DAF9AF1008DF5E9 /* Claim.swift */; };
-		30EBF7571DAF9AF1008DF5E9 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7441DAF9AF1008DF5E9 /* PreferencesViewController.swift */; };
+		30EBF7571DAF9AF1008DF5E9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7441DAF9AF1008DF5E9 /* SettingsViewController.swift */; };
 		30EBF7581DAF9AF1008DF5E9 /* crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF7471DAF9AF1008DF5E9 /* crypto.swift */; };
 		30EBF7591DAF9AF1008DF5E9 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF74A1DAF9AF1008DF5E9 /* Base64.swift */; };
 		30EBF75A1DAF9AF1008DF5E9 /* Claims.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBF74B1DAF9AF1008DF5E9 /* Claims.swift */; };
@@ -52,6 +57,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3077E4271DB61B4600C817DF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3077E4291DB61D6B00C817DF /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		3077E42B1DB6283600C817DF /* ViolationTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViolationTypeViewController.swift; sourceTree = "<group>"; };
+		3077E42D1DB628AB00C817DF /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
+		3077E4311DB62E4D00C817DF /* BasePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
 		30EBF7371DAF9AF1008DF5E9 /* CrimeTypesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrimeTypesRouter.swift; sourceTree = "<group>"; };
 		30EBF7381DAF9AF1008DF5E9 /* MyClaimsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClaimsRouter.swift; sourceTree = "<group>"; };
 		30EBF7391DAF9AF1008DF5E9 /* TokenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenRouter.swift; sourceTree = "<group>"; };
@@ -61,7 +71,7 @@
 		30EBF73F1DAF9AF1008DF5E9 /* FixationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixationViewController.swift; sourceTree = "<group>"; };
 		30EBF7401DAF9AF1008DF5E9 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		30EBF7421DAF9AF1008DF5E9 /* Claim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Claim.swift; sourceTree = "<group>"; };
-		30EBF7441DAF9AF1008DF5E9 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		30EBF7441DAF9AF1008DF5E9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		30EBF7461DAF9AF1008DF5E9 /* badparking-ios-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "badparking-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		30EBF7471DAF9AF1008DF5E9 /* crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crypto.swift; sourceTree = "<group>"; };
 		30EBF74A1DAF9AF1008DF5E9 /* Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
@@ -110,8 +120,10 @@
 		30EBF7351DAF9AF1008DF5E9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				30EBF73E1DAF9AF1008DF5E9 /* Fixation Screen */,
-				30EBF7431DAF9AF1008DF5E9 /* Preferences Screen */,
+				3077E4271DB61B4600C817DF /* MainViewController.swift */,
+				3077E4291DB61D6B00C817DF /* PageViewController.swift */,
+				30EBF73E1DAF9AF1008DF5E9 /* Pages */,
+				30EBF7431DAF9AF1008DF5E9 /* Settings Screen */,
 				30EBF7361DAF9AF1008DF5E9 /* API */,
 				30EBF73B1DAF9AF1008DF5E9 /* Constants.swift */,
 				30EBF73C1DAF9AF1008DF5E9 /* controls */,
@@ -141,13 +153,16 @@
 			path = controls;
 			sourceTree = "<group>";
 		};
-		30EBF73E1DAF9AF1008DF5E9 /* Fixation Screen */ = {
+		30EBF73E1DAF9AF1008DF5E9 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				3077E4311DB62E4D00C817DF /* BasePageViewController.swift */,
 				30EBF73F1DAF9AF1008DF5E9 /* FixationViewController.swift */,
 				30EBF7401DAF9AF1008DF5E9 /* LocationViewController.swift */,
+				3077E42B1DB6283600C817DF /* ViolationTypeViewController.swift */,
+				3077E42D1DB628AB00C817DF /* SendViewController.swift */,
 			);
-			path = "Fixation Screen";
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		30EBF7411DAF9AF1008DF5E9 /* models */ = {
@@ -158,12 +173,12 @@
 			path = models;
 			sourceTree = "<group>";
 		};
-		30EBF7431DAF9AF1008DF5E9 /* Preferences Screen */ = {
+		30EBF7431DAF9AF1008DF5E9 /* Settings Screen */ = {
 			isa = PBXGroup;
 			children = (
-				30EBF7441DAF9AF1008DF5E9 /* PreferencesViewController.swift */,
+				30EBF7441DAF9AF1008DF5E9 /* SettingsViewController.swift */,
 			);
-			path = "Preferences Screen";
+			path = "Settings Screen";
 			sourceTree = "<group>";
 		};
 		30EBF7451DAF9AF1008DF5E9 /* utils */ = {
@@ -267,7 +282,7 @@
 				TargetAttributes = {
 					E73133FC1D1D482200C3B886 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 6UQZRBX8C7;
+						DevelopmentTeam = LM458ZQR67;
 						DevelopmentTeamName = "Eugene Nagorny (Personal Team)";
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
@@ -342,15 +357,20 @@
 				30EBF7581DAF9AF1008DF5E9 /* crypto.swift in Sources */,
 				30EBF7501DAF9AF1008DF5E9 /* TokenRouter.swift in Sources */,
 				30EBF74E1DAF9AF1008DF5E9 /* CrimeTypesRouter.swift in Sources */,
+				3077E4281DB61B4600C817DF /* MainViewController.swift in Sources */,
+				3077E42E1DB628AB00C817DF /* SendViewController.swift in Sources */,
 				30EBF7551DAF9AF1008DF5E9 /* LocationViewController.swift in Sources */,
+				3077E42C1DB6283600C817DF /* ViolationTypeViewController.swift in Sources */,
 				30EBF75A1DAF9AF1008DF5E9 /* Claims.swift in Sources */,
 				30EBF75C1DAF9AF1008DF5E9 /* JWT.swift in Sources */,
 				30EBF7511DAF9AF1008DF5E9 /* UserRouter.swift in Sources */,
 				30EBF75B1DAF9AF1008DF5E9 /* Decode.swift in Sources */,
 				30EBF7561DAF9AF1008DF5E9 /* Claim.swift in Sources */,
+				3077E4321DB62E4D00C817DF /* BasePageViewController.swift in Sources */,
 				30EBF7591DAF9AF1008DF5E9 /* Base64.swift in Sources */,
+				3077E42A1DB61D6B00C817DF /* PageViewController.swift in Sources */,
 				30EBF7521DAF9AF1008DF5E9 /* Constants.swift in Sources */,
-				30EBF7571DAF9AF1008DF5E9 /* PreferencesViewController.swift in Sources */,
+				30EBF7571DAF9AF1008DF5E9 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -456,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -470,17 +490,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "badparking-ios/badparking-ios.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LM458ZQR67;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "badparking-ios/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks $(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.badparking.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesprod.badparkingios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "badparking-ios/utils/badparking-ios-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "badparking-ios/Classes/utils/badparking-ios-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -489,17 +512,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "badparking-ios/badparking-ios.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LM458ZQR67;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "badparking-ios/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks $(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.badparking.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesprod.badparkingios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "badparking-ios/utils/badparking-ios-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "badparking-ios/Classes/utils/badparking-ios-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

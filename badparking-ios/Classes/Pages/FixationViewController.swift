@@ -9,13 +9,12 @@
 import UIKit
 import AVFoundation
 
-class FixationViewController: UIViewController, UINavigationControllerDelegate {
-
+class FixationViewController: BasePageViewController, UINavigationControllerDelegate {
+    
     @IBOutlet weak var previewView: UIView!
     @IBOutlet weak var capturedImage: UIImageView!
     @IBOutlet weak var capturedImage2: UIImageView!
     @IBOutlet weak var takePicButton: UIButton!
-
 
     var claim = Claim()
 
@@ -28,30 +27,29 @@ class FixationViewController: UIViewController, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.index = 0
         setupCameraCapture()
-        // self.navigationItem.setHidesBackButton(true, animated: true)
+        
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        previewLayer?.frame = previewView.bounds
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
         previewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
-        previewLayer?.frame = previewView.bounds
         captureSession?.startRunning()
-
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         captureSession?.stopRunning()
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -78,7 +76,7 @@ class FixationViewController: UIViewController, UINavigationControllerDelegate {
     }
 
     // MARK: - IBActions
-    @IBAction func takePhoto(_ sender: AnyObject) {
+    @IBAction func takePhoto(_ sender: UIButton) {
         takePicButton.isEnabled = false
 
         if let videoConnection = stillImageOutput!.connection(withMediaType: AVMediaTypeVideo) {
@@ -118,7 +116,7 @@ class FixationViewController: UIViewController, UINavigationControllerDelegate {
 
     }
 
-    // MARK - configurators
+    // MARK: - configurators
     func setupCameraCapture() {
         captureSession = AVCaptureSession()
         captureSession!.sessionPreset = AVCaptureSessionPresetPhoto
@@ -142,6 +140,4 @@ class FixationViewController: UIViewController, UINavigationControllerDelegate {
             }
         }
     }
-
 }
-
