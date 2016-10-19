@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0PF-74-oe8">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0PF-74-oe8">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Налаштування-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="PreferencesViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="SettingsViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -25,41 +24,36 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Налаштування" id="B26-vE-WjH">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7qf-CX-nGi">
-                                            <connections>
-                                                <action selector="closeWasPressed:" destination="9pv-A4-QxB" id="mUX-Ft-Rwn"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="7qf-CX-nGi"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Claims" image="My Log" selectedImage="My Log" id="acW-dT-cKf">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.38823529411764707" green="0.78431372549019607" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                    <navigationItem key="navigationItem" title="Title" id="5fq-8g-Y9R"/>
+                    <navigationItem key="navigationItem" title="Налаштування" id="5fq-8g-Y9R">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="DMO-Ia-ARO">
+                            <connections>
+                                <action selector="closeWasPressed:" destination="9pv-A4-QxB" id="QVs-qH-ryf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2609" y="-831"/>
+            <point key="canvasLocation" x="2319" y="-192"/>
         </scene>
         <!--Фіксація порушення-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="FixationViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="fixation" id="8rJ-Kc-sve" customClass="FixationViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuF-y2-DrT">
                                 <constraints>
@@ -71,12 +65,25 @@
                                     <action selector="takePhoto:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="heg-Xm-ym5"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5q-NU-F8E">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74O-27-Xdy" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1tc-Bw-WI4"/>
+                                    <constraint firstAttribute="height" constant="44" id="Vaf-hO-cBc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Далі"/>
+                                <connections>
+                                    <action selector="nextPagePressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="SBI-Wx-noU"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DjX-8f-L2L">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lrj-3P-GxU">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Ock-Wb-MOC">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="46" id="6xT-dq-Su4"/>
-                                            <constraint firstAttribute="height" constant="46" id="ANq-Nf-lX7"/>
+                                            <constraint firstAttribute="width" secondItem="Ock-Wb-MOC" secondAttribute="height" id="N12-Ga-vAN"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -86,10 +93,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="wJN-V3-6MT">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="46" id="1Qd-Sn-eUo"/>
-                                            <constraint firstAttribute="height" constant="46" id="Mbi-oG-PPf"/>
-                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="6"/>
@@ -98,60 +101,36 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="Ock-Wb-MOC" firstAttribute="leading" secondItem="q5q-NU-F8E" secondAttribute="leading" constant="8" id="EIx-Qn-L2K"/>
-                                    <constraint firstItem="Ock-Wb-MOC" firstAttribute="top" secondItem="q5q-NU-F8E" secondAttribute="top" constant="8" id="Fwf-jW-EGY"/>
-                                    <constraint firstItem="wJN-V3-6MT" firstAttribute="leading" secondItem="Ock-Wb-MOC" secondAttribute="trailing" constant="8" id="NKe-hn-l57"/>
-                                    <constraint firstAttribute="height" constant="62" id="UcD-ZJ-CmS"/>
-                                    <constraint firstItem="wJN-V3-6MT" firstAttribute="top" secondItem="q5q-NU-F8E" secondAttribute="top" constant="8" id="mam-4v-IPB"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6D-p7-Ch0">
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74O-27-Xdy" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
-                                        <state key="normal" title="Далі"/>
-                                        <connections>
-                                            <segue destination="1u0-Mf-7PQ" kind="show" id="9ub-S2-VGf"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="74O-27-Xdy" secondAttribute="trailing" id="ME0-Fa-iZ0"/>
-                                    <constraint firstAttribute="height" constant="62" id="f63-IU-ngW"/>
-                                    <constraint firstItem="74O-27-Xdy" firstAttribute="top" secondItem="N6D-p7-Ch0" secondAttribute="top" id="iC3-rU-LLB"/>
-                                    <constraint firstAttribute="bottom" secondItem="74O-27-Xdy" secondAttribute="bottom" id="pXL-FE-fVM"/>
-                                    <constraint firstItem="74O-27-Xdy" firstAttribute="leading" secondItem="N6D-p7-Ch0" secondAttribute="leading" id="qCr-1y-ndi"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DjX-8f-L2L">
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="DjX-8f-L2L" secondAttribute="height" multiplier="1:1" id="BG8-aW-W5U"/>
-                                </constraints>
-                            </view>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwi-Ku-zmD">
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZuF-y2-DrT" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="1ov-y7-aw4"/>
                             <constraint firstAttribute="trailing" secondItem="DjX-8f-L2L" secondAttribute="trailing" id="5gL-qf-jce"/>
-                            <constraint firstItem="q5q-NU-F8E" firstAttribute="centerY" secondItem="ZuF-y2-DrT" secondAttribute="centerY" id="KwT-XN-E2L"/>
-                            <constraint firstItem="ZuF-y2-DrT" firstAttribute="leading" secondItem="q5q-NU-F8E" secondAttribute="trailing" constant="8" id="Q0g-6v-onC"/>
+                            <constraint firstItem="dwi-Ku-zmD" firstAttribute="top" secondItem="DjX-8f-L2L" secondAttribute="bottom" constant="8" id="CbV-Cb-QvV"/>
+                            <constraint firstItem="Lrj-3P-GxU" firstAttribute="leadingMargin" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="18" id="KXA-Vz-NSY"/>
+                            <constraint firstAttribute="trailing" secondItem="74O-27-Xdy" secondAttribute="trailing" constant="18" id="Lt7-xE-3RH"/>
+                            <constraint firstItem="Lrj-3P-GxU" firstAttribute="centerY" secondItem="ZuF-y2-DrT" secondAttribute="centerY" id="MqT-K0-2uB"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="74O-27-Xdy" secondAttribute="bottom" constant="20" id="RS2-FY-Ap2"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="ZuF-y2-DrT" secondAttribute="bottom" constant="8" id="T1j-M2-xd4"/>
-                            <constraint firstItem="N6D-p7-Ch0" firstAttribute="leading" secondItem="ZuF-y2-DrT" secondAttribute="trailing" constant="8" id="THW-IO-YHy"/>
                             <constraint firstItem="DjX-8f-L2L" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="TJ4-dL-z1P"/>
-                            <constraint firstItem="q5q-NU-F8E" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="U82-0D-shY"/>
-                            <constraint firstItem="N6D-p7-Ch0" firstAttribute="centerY" secondItem="ZuF-y2-DrT" secondAttribute="centerY" id="mbQ-2m-45y"/>
+                            <constraint firstItem="ZuF-y2-DrT" firstAttribute="leading" secondItem="Lrj-3P-GxU" secondAttribute="trailing" constant="8" id="ZRf-xV-g39"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="DjX-8f-L2L" secondAttribute="bottom" constant="120" id="chj-Rm-e7P"/>
+                            <constraint firstItem="dwi-Ku-zmD" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="ptz-WT-HXf"/>
                             <constraint firstItem="DjX-8f-L2L" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="tXm-5X-Hzu"/>
-                            <constraint firstItem="N6D-p7-Ch0" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="ymz-wI-FHQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Фіксація порушення" id="M5n-Wt-VBm">
-                        <barButtonItem key="rightBarButtonItem" image="Settings" id="xRg-M9-pO8">
-                            <connections>
-                                <segue destination="9pv-A4-QxB" kind="presentation" id="d8f-K9-5Uj"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Settings" id="xRg-M9-pO8"/>
                     </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="capturedImage" destination="Ock-Wb-MOC" id="0M2-9a-qTp"/>
                         <outlet property="capturedImage2" destination="wJN-V3-6MT" id="eGv-0z-lMX"/>
@@ -161,12 +140,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1719.2" y="-167.76611694152925"/>
+            <point key="canvasLocation" x="2318" y="569"/>
+        </scene>
+        <!--Фіксація порушення-->
+        <scene sceneID="WM7-EJ-3mz">
+            <objects>
+                <viewController id="ywU-Xx-XXj" customClass="MainViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FoQ-ZW-1CI"/>
+                        <viewControllerLayoutGuide type="bottom" id="S2e-OY-iAp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5nS-w8-mXj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDp-1x-uml">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="QKx-Vd-jTm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oDp-1x-uml" firstAttribute="top" secondItem="FoQ-ZW-1CI" secondAttribute="bottom" id="LCT-o0-lQX"/>
+                            <constraint firstItem="oDp-1x-uml" firstAttribute="leading" secondItem="5nS-w8-mXj" secondAttribute="leading" id="M2x-Z4-vhA"/>
+                            <constraint firstAttribute="trailing" secondItem="oDp-1x-uml" secondAttribute="trailing" id="WUS-ze-pHs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Фіксація порушення" id="Fo1-hX-jyM">
+                        <barButtonItem key="leftBarButtonItem" image="Profile" id="Bf4-bI-VXo">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Settings" id="OJ9-Yn-8cm">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="MSN-0b-gdx" kind="presentation" id="Exa-nX-kL4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pageIndicationView" destination="oDp-1x-uml" id="GdU-RN-jPY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIJ-kf-4zb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569" y="570"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="Aai-fT-s9H">
             <objects>
-                <viewController id="1u0-Mf-7PQ" customClass="LocationViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="location" id="1u0-Mf-7PQ" customClass="LocationViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iLl-kY-3mM"/>
                         <viewControllerLayoutGuide type="bottom" id="wQf-qb-4Ub"/>
@@ -175,79 +199,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9HY-7s-adu">
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYi-YC-HkH" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
-                                        <state key="normal" title="Далі"/>
-                                        <connections>
-                                            <segue destination="QpO-pL-ZOX" kind="show" id="clX-BK-RQC"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J80-dK-1IM"/>
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="current_location" translatesAutoresizingMaskIntoConstraints="NO" id="mRj-wI-bCI"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYi-YC-HkH" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="jYi-YC-HkH" secondAttribute="bottom" id="LXD-rh-x31"/>
-                                    <constraint firstAttribute="trailing" secondItem="jYi-YC-HkH" secondAttribute="trailing" id="W12-x2-nxj"/>
-                                    <constraint firstItem="jYi-YC-HkH" firstAttribute="top" secondItem="9HY-7s-adu" secondAttribute="top" id="dKL-li-CTd"/>
-                                    <constraint firstAttribute="width" constant="125" id="fjw-05-KCk"/>
-                                    <constraint firstAttribute="height" constant="62" id="gLQ-2g-Gj9"/>
-                                    <constraint firstItem="jYi-YC-HkH" firstAttribute="leading" secondItem="9HY-7s-adu" secondAttribute="leading" id="hAh-rt-z03"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="zvy-Zo-1UF"/>
+                                    <constraint firstAttribute="height" constant="44" id="Phf-tq-LhJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="aiu-w7-3Wo"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlQ-wi-8cc">
-                                <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J80-dK-1IM"/>
-                                    <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="current_location" translatesAutoresizingMaskIntoConstraints="NO" id="mRj-wI-bCI">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="k7B-Cg-Z7M"/>
-                                            <constraint firstAttribute="width" constant="60" id="qNL-Lf-TAo"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xy1-i6-661">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="LaC-X7-pOI"/>
-                                            <constraint firstAttribute="width" constant="34" id="yHH-AN-xKa"/>
-                                        </constraints>
-                                        <state key="normal" image="locate_user"/>
-                                        <connections>
-                                            <action selector="showUserLocation:" destination="1u0-Mf-7PQ" eventType="touchUpInside" id="SZP-dA-WMJ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Далі"/>
+                                <connections>
+                                    <action selector="nextPagePressed:" destination="1u0-Mf-7PQ" eventType="touchUpInside" id="9Rn-ci-MFj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6Q-mf-xao" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Xy1-i6-661" secondAttribute="bottom" constant="8" id="BbE-Pg-Cd4"/>
-                                    <constraint firstItem="mRj-wI-bCI" firstAttribute="centerY" secondItem="xlQ-wi-8cc" secondAttribute="centerY" id="FGM-VF-6zm"/>
-                                    <constraint firstItem="J80-dK-1IM" firstAttribute="leading" secondItem="xlQ-wi-8cc" secondAttribute="leading" id="FGa-kP-NL4"/>
-                                    <constraint firstAttribute="bottom" secondItem="J80-dK-1IM" secondAttribute="bottom" id="cq4-gp-Gv7"/>
-                                    <constraint firstItem="J80-dK-1IM" firstAttribute="top" secondItem="xlQ-wi-8cc" secondAttribute="top" id="gq1-k0-iac"/>
-                                    <constraint firstAttribute="trailing" secondItem="J80-dK-1IM" secondAttribute="trailing" id="hMw-ed-5KU"/>
-                                    <constraint firstAttribute="trailing" secondItem="Xy1-i6-661" secondAttribute="trailing" constant="8" id="reQ-5T-xIH"/>
-                                    <constraint firstAttribute="width" secondItem="xlQ-wi-8cc" secondAttribute="height" multiplier="1:1" id="uRA-ad-eeZ"/>
-                                    <constraint firstItem="mRj-wI-bCI" firstAttribute="centerX" secondItem="xlQ-wi-8cc" secondAttribute="centerX" id="wqE-R0-EPE"/>
+                                    <constraint firstAttribute="height" constant="44" id="6rs-4e-Szl"/>
+                                    <constraint firstAttribute="width" constant="100" id="NvY-DU-cAx"/>
                                 </constraints>
-                            </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tra-Nt-tsB">
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Назад"/>
+                                <connections>
+                                    <action selector="previousPagePressed:" destination="1u0-Mf-7PQ" eventType="touchUpInside" id="pUo-2h-4O9"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="one two" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tra-Nt-tsB">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">one
-two</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xy1-i6-661">
+                                <state key="normal" image="locate_user"/>
+                                <connections>
+                                    <action selector="showUserLocation:" destination="1u0-Mf-7PQ" eventType="touchUpInside" id="SZP-dA-WMJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wQf-qb-4Ub" firstAttribute="top" secondItem="9HY-7s-adu" secondAttribute="bottom" constant="8" id="01o-nu-k6R"/>
-                            <constraint firstItem="Tra-Nt-tsB" firstAttribute="top" secondItem="xlQ-wi-8cc" secondAttribute="bottom" constant="8" id="3Ev-vE-dZB"/>
-                            <constraint firstItem="xlQ-wi-8cc" firstAttribute="top" secondItem="iLl-kY-3mM" secondAttribute="bottom" id="Hhy-Yg-Z8X"/>
-                            <constraint firstItem="9HY-7s-adu" firstAttribute="top" secondItem="Tra-Nt-tsB" secondAttribute="bottom" constant="8" id="J38-Hh-Mz3"/>
-                            <constraint firstItem="Tra-Nt-tsB" firstAttribute="leading" secondItem="Hzo-dq-a4N" secondAttribute="leadingMargin" id="eRh-Ln-DUc"/>
-                            <constraint firstItem="xlQ-wi-8cc" firstAttribute="leading" secondItem="Hzo-dq-a4N" secondAttribute="leading" id="miD-mb-wrx"/>
-                            <constraint firstItem="Tra-Nt-tsB" firstAttribute="trailing" secondItem="Hzo-dq-a4N" secondAttribute="trailingMargin" id="qRX-JN-71k"/>
-                            <constraint firstAttribute="trailing" secondItem="xlQ-wi-8cc" secondAttribute="trailing" id="s8c-I0-dtp"/>
-                            <constraint firstItem="9HY-7s-adu" firstAttribute="trailing" secondItem="Hzo-dq-a4N" secondAttribute="trailingMargin" id="uyo-6r-AJ1"/>
+                            <constraint firstAttribute="bottom" secondItem="J80-dK-1IM" secondAttribute="bottom" constant="200" id="Ai3-Rh-4bQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Tra-Nt-tsB" secondAttribute="trailing" constant="16" id="AtK-oJ-4wT"/>
+                            <constraint firstItem="mRj-wI-bCI" firstAttribute="centerX" secondItem="J80-dK-1IM" secondAttribute="centerX" id="Cra-IN-Faa"/>
+                            <constraint firstAttribute="trailing" secondItem="jYi-YC-HkH" secondAttribute="trailing" constant="16" id="FJS-N6-oqP"/>
+                            <constraint firstItem="Tra-Nt-tsB" firstAttribute="top" secondItem="J80-dK-1IM" secondAttribute="bottom" constant="8" id="Jah-k1-Oyv"/>
+                            <constraint firstItem="Xy1-i6-661" firstAttribute="trailing" secondItem="J80-dK-1IM" secondAttribute="trailing" constant="-8" id="PMJ-0B-goe"/>
+                            <constraint firstItem="Xy1-i6-661" firstAttribute="bottom" secondItem="J80-dK-1IM" secondAttribute="bottom" constant="-8" id="UaE-HT-E00"/>
+                            <constraint firstItem="K6Q-mf-xao" firstAttribute="leading" secondItem="Hzo-dq-a4N" secondAttribute="leading" constant="16" id="VzG-wt-kNt"/>
+                            <constraint firstItem="wQf-qb-4Ub" firstAttribute="top" secondItem="K6Q-mf-xao" secondAttribute="bottom" constant="20" id="ag6-S0-v9K"/>
+                            <constraint firstAttribute="trailing" secondItem="J80-dK-1IM" secondAttribute="trailing" id="c9Y-d4-Ggm"/>
+                            <constraint firstItem="mRj-wI-bCI" firstAttribute="centerY" secondItem="J80-dK-1IM" secondAttribute="centerY" constant="-14" id="cID-4r-uH3"/>
+                            <constraint firstItem="Tra-Nt-tsB" firstAttribute="leading" secondItem="Hzo-dq-a4N" secondAttribute="leading" constant="16" id="kec-Pq-5t4"/>
+                            <constraint firstItem="wQf-qb-4Ub" firstAttribute="top" secondItem="jYi-YC-HkH" secondAttribute="bottom" constant="20" id="oGu-fK-YhF"/>
+                            <constraint firstItem="J80-dK-1IM" firstAttribute="top" secondItem="Hzo-dq-a4N" secondAttribute="top" id="tbJ-FY-aOP"/>
+                            <constraint firstItem="wQf-qb-4Ub" firstAttribute="top" secondItem="Tra-Nt-tsB" secondAttribute="bottom" constant="74" id="xAL-ou-E0c"/>
+                            <constraint firstItem="J80-dK-1IM" firstAttribute="leading" secondItem="Hzo-dq-a4N" secondAttribute="leading" id="xbI-Ux-KOY"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="addresView" destination="Tra-Nt-tsB" id="hAZ-bm-P7G"/>
                         <outlet property="mapView" destination="J80-dK-1IM" id="fYr-hn-tdX"/>
@@ -255,12 +263,12 @@ two</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIp-3D-qrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2608.8000000000002" y="-168.6656671664168"/>
+            <point key="canvasLocation" x="3102" y="569"/>
         </scene>
-        <!--View Controller-->
+        <!--Violation Type View Controller-->
         <scene sceneID="Pm6-un-I1Q">
             <objects>
-                <viewController id="QpO-pL-ZOX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="violation" id="QpO-pL-ZOX" customClass="ViolationTypeViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cqq-IY-tOR"/>
                         <viewControllerLayoutGuide type="bottom" id="T7X-Sb-Yyt"/>
@@ -292,10 +300,30 @@ two</string>
                             <constraint firstItem="B2K-O7-IdV" firstAttribute="trailing" secondItem="j0v-ua-dJn" secondAttribute="trailingMargin" id="IB4-BR-8zN"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVE-AK-73B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3421.5999999999999" y="-169.56521739130437"/>
+            <point key="canvasLocation" x="3890" y="570"/>
+        </scene>
+        <!--Send View Controller-->
+        <scene sceneID="QGh-Qj-Cjm">
+            <objects>
+                <viewController storyboardIdentifier="send" id="B3O-IZ-LQs" customClass="SendViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PBq-yX-O19"/>
+                        <viewControllerLayoutGuide type="bottom" id="uCb-Pl-bUM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XzR-LH-uGR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kXm-ge-pnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4620" y="570"/>
         </scene>
         <!--Claim-->
         <scene sceneID="DqL-r8-jDV">
@@ -313,23 +341,53 @@ two</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                             <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="d19-v8-0S8"/>
+                        <segue destination="ywU-Xx-XXj" kind="relationship" relationship="rootViewController" id="LiP-nZ-MYI"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CFu-jF-Nyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="-167.76611694152925"/>
+            <point key="canvasLocation" x="786" y="570"/>
+        </scene>
+        <!--My Claims-->
+        <scene sceneID="YB5-Zu-Qmu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MSN-0b-gdx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Claims" image="My Log" selectedImage="My Log" id="acW-dT-cKf">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.38823529411764707" green="0.78431372549019607" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ndg-RY-lQb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="3Kq-3S-cqE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qcg-UA-ETf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569" y="-192"/>
         </scene>
     </scenes>
     <resources>
         <image name="Claim" width="26" height="21"/>
         <image name="My Log" width="25" height="21"/>
         <image name="Photo Button" width="76" height="76"/>
+        <image name="Profile" width="22" height="24"/>
         <image name="Settings" width="22" height="22"/>
         <image name="current_location" width="21" height="33"/>
         <image name="locate_user" width="34" height="34"/>

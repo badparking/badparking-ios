@@ -1,5 +1,5 @@
 //
-//  MyClaimsViewController.swift
+//  SettingsViewController.swift
 //  badparking-ios
 //
 //  Created by Eugene Nagorny on 6/24/16.
@@ -10,8 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-
-class PreferencesViewController: UIViewController, FBSDKLoginButtonDelegate {
+class SettingsViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     var loginButton : FBSDKLoginButton = FBSDKLoginButton()
 
@@ -21,11 +20,6 @@ class PreferencesViewController: UIViewController, FBSDKLoginButtonDelegate {
         loginButton.center = self.view.center
         self.view.addSubview(loginButton)
         loginButton.delegate = self
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
@@ -47,9 +41,7 @@ class PreferencesViewController: UIViewController, FBSDKLoginButtonDelegate {
         print("Did LogOut")
     }
 
-    @IBAction func closeWasPressed(_ sender: AnyObject) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func closeWasPressed(_ sender: UIBarButtonItem) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
-
 }
-

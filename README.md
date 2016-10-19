@@ -9,5 +9,5 @@ For dependency management Carthage is used.
 Install Carthage
 > brew install carthage
 
-Install projcet dependencies:
-> carthage update --platform iOS
+Install project dependencies:
+> carthage bootstrap --platform iOS

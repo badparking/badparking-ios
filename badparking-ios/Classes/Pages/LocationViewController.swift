@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class LocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class LocationViewController: BasePageViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addresView: UITextView!
 
@@ -18,9 +18,10 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, MKMap
     let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
     let regionRadius: CLLocationDistance = 1000
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.index = 1
         checkLocationAuthorizationStatus()
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
@@ -41,7 +42,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, MKMap
         }
     }
 
-    func geoCode(_ location : CLLocation!){
+    func geoCode(_ location : CLLocation!) {
         /* Only one reverse geocoding can be in progress at a time hence we need to cancel existing
          one if we are getting location updates */
         let geoCoder = CLGeocoder()
@@ -56,7 +57,6 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, MKMap
             let address = addrList.joined(separator: ", ")
             self.addresView.text = address
         }
-
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -78,22 +78,11 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, MKMap
         geoCode(location)
     }
 
-    @IBAction func showUserLocation(_ sender: AnyObject) {
+    @IBAction func showUserLocation(_ sender: UIButton) {
         var mapRegion = MKCoordinateRegion()
         mapRegion.center = mapView.userLocation.coordinate
         mapRegion.span.latitudeDelta = 0.01
         mapRegion.span.longitudeDelta = 0.01
         mapView.setRegion(mapRegion, animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
