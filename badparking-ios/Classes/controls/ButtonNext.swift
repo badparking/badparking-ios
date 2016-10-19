@@ -11,10 +11,23 @@ import UIKit
 
 
 class NextButton: UIButton {
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.layer.cornerRadius = 31
+        self.layer.cornerRadius = 22;
         self.layer.borderWidth = 2
         self.layer.borderColor = UIColor(red:0.39, green:0.78, blue:0.00, alpha:1.0).cgColor
+    }
+    
+    override var isHighlighted: Bool {
+        didSet {
+            
+            if (isHighlighted) {
+                
+            }
+            else {
+                
+            }
+        }
     }
 }

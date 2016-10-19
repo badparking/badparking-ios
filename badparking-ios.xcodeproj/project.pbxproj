@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3077E4281DB61B4600C817DF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077E4271DB61B4600C817DF /* MainViewController.swift */; };
-		3077E42A1DB61D6B00C817DF /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077E4291DB61D6B00C817DF /* PageViewController.swift */; };
 		3077E42C1DB6283600C817DF /* ViolationTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077E42B1DB6283600C817DF /* ViolationTypeViewController.swift */; };
 		3077E42E1DB628AB00C817DF /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077E42D1DB628AB00C817DF /* SendViewController.swift */; };
 		3077E4321DB62E4D00C817DF /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077E4311DB62E4D00C817DF /* BasePageViewController.swift */; };
@@ -56,7 +55,6 @@
 
 /* Begin PBXFileReference section */
 		3077E4271DB61B4600C817DF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		3077E4291DB61D6B00C817DF /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		3077E42B1DB6283600C817DF /* ViolationTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViolationTypeViewController.swift; sourceTree = "<group>"; };
 		3077E42D1DB628AB00C817DF /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		3077E4311DB62E4D00C817DF /* BasePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				3077E4271DB61B4600C817DF /* MainViewController.swift */,
-				3077E4291DB61D6B00C817DF /* PageViewController.swift */,
 				30EBF73E1DAF9AF1008DF5E9 /* Pages */,
 				30EBF7431DAF9AF1008DF5E9 /* Settings Screen */,
 				30EBF7361DAF9AF1008DF5E9 /* API */,
@@ -253,7 +250,6 @@
 				TargetAttributes = {
 					E73133FC1D1D482200C3B886 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 6UQZRBX8C7;
 						DevelopmentTeamName = "Eugene Nagorny (Personal Team)";
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
@@ -337,7 +333,6 @@
 				30EBF7511DAF9AF1008DF5E9 /* UserRouter.swift in Sources */,
 				30EBF7561DAF9AF1008DF5E9 /* Claim.swift in Sources */,
 				3077E4321DB62E4D00C817DF /* BasePageViewController.swift in Sources */,
-				3077E42A1DB61D6B00C817DF /* PageViewController.swift in Sources */,
 				30EBF7521DAF9AF1008DF5E9 /* Constants.swift in Sources */,
 				30EBF7571DAF9AF1008DF5E9 /* SettingsViewController.swift in Sources */,
 			);
@@ -460,7 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "badparking-ios/badparking-ios.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6UQZRBX8C7;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -482,7 +477,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "badparking-ios/badparking-ios.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6UQZRBX8C7;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

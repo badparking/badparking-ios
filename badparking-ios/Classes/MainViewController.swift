@@ -10,7 +10,8 @@ import UIKit
 
 class MainViewController: UIViewController, PageDelegate {
 
-    var pageViewController: PageViewController!
+    @IBOutlet weak var pageIndicationView: UIView!
+    var pageViewController: UIPageViewController!
     
     lazy var fixationViewController: FixationViewController! = {
         let fixationVC = self.storyboard?.instantiateViewController(withIdentifier: "fixation") as! FixationViewController
@@ -33,6 +34,36 @@ class MainViewController: UIViewController, PageDelegate {
         return sendVC
     }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // create pageViewController
+        pageViewController = UIPageViewController.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        
+        // add it's view as childView
+        self.addChildViewController(pageViewController)
+        self.view.addSubview(pageViewController.view)
+        pageViewController.didMove(toParentViewController: self)
+        
+        // disable autoresizing
+        pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        // add constrains
+        let pinTop = NSLayoutConstraint(item: pageIndicationView, attribute: .bottom, relatedBy: .equal,
+                                        toItem: pageViewController.view, attribute: .top, multiplier: 1.0, constant: 0)
+        let pinBottom = NSLayoutConstraint(item: self.view, attribute: .bottom, relatedBy: .equal,
+                                           toItem: pageViewController.view, attribute: .bottom, multiplier: 1.0, constant: 0)
+        let pinLeft = NSLayoutConstraint(item: self.view, attribute: .left, relatedBy: .equal,
+                                         toItem: pageViewController.view, attribute: .left, multiplier: 1.0, constant: 0)
+        let pinRight = NSLayoutConstraint(item: self.view, attribute: .right, relatedBy: .equal,
+                                          toItem: pageViewController.view, attribute: .right, multiplier: 1.0, constant: 0)
+        
+        self.view.addConstraints([pinTop, pinBottom, pinLeft, pinRight])
+        
+        // set default viewController
+        pageViewController.setViewControllers([fixationViewController], direction:.forward, animated: false, completion: nil)
+    }
+    
     func getViewControllerForIndex(index: Int) -> UIViewController? {
         if index == 0 {
             return fixationViewController
@@ -51,13 +82,5 @@ class MainViewController: UIViewController, PageDelegate {
     func showViewControllerAtIndex(index: Int, direction: UIPageViewControllerNavigationDirection) {
         let newPage = getViewControllerForIndex(index: index)!
         pageViewController.setViewControllers([newPage], direction: direction, animated: true, completion: nil)
-    }
-        
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "pagevc" {
-            pageViewController = segue.destination as! PageViewController
-            pageViewController.setViewControllers([fixationViewController], direction:.forward, animated: false, completion: nil)
-        }
     }
 }

@@ -140,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783.75" y="1285.5633802816901"/>
+            <point key="canvasLocation" x="2318" y="569"/>
         </scene>
         <!--Фіксація порушення-->
         <scene sceneID="WM7-EJ-3mz">
@@ -160,21 +160,12 @@
                                     <constraint firstAttribute="height" constant="51" id="QKx-Vd-jTm"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcp-LM-epa">
-                                <connections>
-                                    <segue destination="qfa-7t-B6V" kind="embed" identifier="pagevc" id="0ib-Hc-GZ9"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="S2e-OY-iAp" firstAttribute="top" secondItem="lcp-LM-epa" secondAttribute="bottom" id="0RW-bq-6au"/>
                             <constraint firstItem="oDp-1x-uml" firstAttribute="top" secondItem="FoQ-ZW-1CI" secondAttribute="bottom" id="LCT-o0-lQX"/>
                             <constraint firstItem="oDp-1x-uml" firstAttribute="leading" secondItem="5nS-w8-mXj" secondAttribute="leading" id="M2x-Z4-vhA"/>
-                            <constraint firstItem="lcp-LM-epa" firstAttribute="leading" secondItem="5nS-w8-mXj" secondAttribute="leading" id="QBF-8n-xK1"/>
-                            <constraint firstItem="lcp-LM-epa" firstAttribute="top" secondItem="oDp-1x-uml" secondAttribute="bottom" id="UnN-4m-J4K"/>
                             <constraint firstAttribute="trailing" secondItem="oDp-1x-uml" secondAttribute="trailing" id="WUS-ze-pHs"/>
-                            <constraint firstAttribute="trailing" secondItem="lcp-LM-epa" secondAttribute="trailing" id="vLi-Gy-MRb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Фіксація порушення" id="Fo1-hX-jyM">
@@ -188,6 +179,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pageIndicationView" destination="oDp-1x-uml" id="GdU-RN-jPY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIJ-kf-4zb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIp-3D-qrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1567.5" y="1285.5633802816901"/>
+            <point key="canvasLocation" x="3102" y="569"/>
         </scene>
         <!--Violation Type View Controller-->
         <scene sceneID="Pm6-un-I1Q">
@@ -310,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVE-AK-73B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="1286"/>
+            <point key="canvasLocation" x="3890" y="570"/>
         </scene>
         <!--Send View Controller-->
         <scene sceneID="QGh-Qj-Cjm">
@@ -329,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXm-ge-pnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3086" y="1286"/>
+            <point key="canvasLocation" x="4620" y="570"/>
         </scene>
         <!--Claim-->
         <scene sceneID="DqL-r8-jDV">
@@ -387,24 +381,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcg-UA-ETf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1569" y="-192"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="vnv-vM-dEN">
-            <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="qfa-7t-B6V" customClass="PageViewController" customModule="badparking_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hRE-uy-A8P"/>
-                        <viewControllerLayoutGuide type="bottom" id="GN6-RG-ewQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="W24-v5-kjj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="552"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ef3-1b-0K5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2356" y="622"/>
         </scene>
     </scenes>
     <resources>
