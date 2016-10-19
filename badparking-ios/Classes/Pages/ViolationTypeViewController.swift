@@ -15,4 +15,5 @@ class ViolationTypeViewController: BasePageViewController {
 
         self.index = 2
     }
+    
 }

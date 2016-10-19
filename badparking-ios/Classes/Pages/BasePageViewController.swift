@@ -24,4 +24,5 @@ class BasePageViewController: UIViewController {
     @IBAction func previousPagePressed(_ sender: NextButton) {
         self.delegate?.showViewControllerAtIndex(index: self.index-1, direction: .reverse)
     }
+    
 }

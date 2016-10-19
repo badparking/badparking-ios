@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController, PageDelegate {
 
     @IBOutlet weak var pageIndicationView: UIView!
+    @IBOutlet weak var pagesNumbersStackView: UIStackView!
     var pageViewController: UIPageViewController!
     
     lazy var fixationViewController: FixationViewController! = {
@@ -82,5 +83,13 @@ class MainViewController: UIViewController, PageDelegate {
     func showViewControllerAtIndex(index: Int, direction: UIPageViewControllerNavigationDirection) {
         let newPage = getViewControllerForIndex(index: index)!
         pageViewController.setViewControllers([newPage], direction: direction, animated: true, completion: nil)
+        
+        let number = pagesNumbersStackView.subviews[index] as! UILabel
+        number.backgroundColor = UIColor(red:0.39, green:0.78, blue:0.00, alpha:1.0)
+        number.textColor = UIColor.white
+        let prevNumber = pagesNumbersStackView.subviews[index + (direction == .forward ? -1 : 1)] as! UILabel
+        prevNumber.backgroundColor = UIColor.white
+        prevNumber.textColor = UIColor.black
     }
+    
 }

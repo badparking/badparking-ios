@@ -14,7 +14,9 @@ class FixationViewController: BasePageViewController, UINavigationControllerDele
     @IBOutlet weak var previewView: UIView!
     @IBOutlet weak var capturedImage: UIImageView!
     @IBOutlet weak var capturedImage2: UIImageView!
-    @IBOutlet weak var takePicButton: UIButton!
+    @IBOutlet weak var nextPageButton: NextButton!
+    @IBOutlet weak var takePictureButton: UIButton!
+    @IBOutlet weak var statusLabel: UILabel!
 
     var claim = Claim()
 
@@ -23,14 +25,11 @@ class FixationViewController: BasePageViewController, UINavigationControllerDele
     var stillImageOutput: AVCaptureStillImageOutput?
     var previewLayer: AVCaptureVideoPreviewLayer?
 
-    var imagePicker: UIImagePickerController!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.index = 0
         setupCameraCapture()
-        
     }
     
     override func viewWillLayoutSubviews() {
@@ -77,7 +76,7 @@ class FixationViewController: BasePageViewController, UINavigationControllerDele
 
     // MARK: - IBActions
     @IBAction func takePhoto(_ sender: UIButton) {
-        takePicButton.isEnabled = false
+        takePictureButton.isEnabled = false
 
         if let videoConnection = stillImageOutput!.connection(withMediaType: AVMediaTypeVideo) {
             videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
@@ -94,7 +93,7 @@ class FixationViewController: BasePageViewController, UINavigationControllerDele
                     self.updatePhotosUI()
 
                     if self.claim.photos.count < 2 {
-                        self.takePicButton.isEnabled = true
+                        self.takePictureButton.isEnabled = true
                     }
                 }
             })
@@ -102,18 +101,13 @@ class FixationViewController: BasePageViewController, UINavigationControllerDele
     }
 
     func updatePhotosUI() {
-        if self.claim.photos.count > 0 {
+        if self.claim.photos.count == 1 {
             self.capturedImage.image = self.claim.photos[0].image
-        } else {
-            self.capturedImage.image = #imageLiteral(resourceName: "photo-placeholder")
-        }
-
-        if self.claim.photos.count > 1 {
+            statusLabel.text = "Зробіть фото з іншого ракурсу";
+        } else if self.claim.photos.count == 2 {
             self.capturedImage2.image = self.claim.photos[1].image
-        } else {
-            self.capturedImage2.image = #imageLiteral(resourceName: "photo-placeholder")
+            self.nextPageButton.isEnabled = true
         }
-
     }
 
     // MARK: - configurators
@@ -140,4 +134,5 @@ class FixationViewController: BasePageViewController, UINavigationControllerDele
             }
         }
     }
+    
 }

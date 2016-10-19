@@ -65,13 +65,15 @@
                                     <action selector="takePhoto:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="heg-Xm-ym5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74O-27-Xdy" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74O-27-Xdy" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="1tc-Bw-WI4"/>
                                     <constraint firstAttribute="height" constant="44" id="Vaf-hO-cBc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Далі"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Далі">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="nextPagePressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="SBI-Wx-noU"/>
                                 </connections>
@@ -102,9 +104,9 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwi-Ku-zmD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Зробіть фото авто порушника" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwi-Ku-zmD">
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -114,7 +116,7 @@
                             <constraint firstAttribute="trailing" secondItem="DjX-8f-L2L" secondAttribute="trailing" id="5gL-qf-jce"/>
                             <constraint firstItem="dwi-Ku-zmD" firstAttribute="top" secondItem="DjX-8f-L2L" secondAttribute="bottom" constant="8" id="CbV-Cb-QvV"/>
                             <constraint firstItem="Lrj-3P-GxU" firstAttribute="leadingMargin" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="18" id="KXA-Vz-NSY"/>
-                            <constraint firstAttribute="trailing" secondItem="74O-27-Xdy" secondAttribute="trailing" constant="18" id="Lt7-xE-3RH"/>
+                            <constraint firstAttribute="trailing" secondItem="74O-27-Xdy" secondAttribute="trailing" constant="16" id="Lt7-xE-3RH"/>
                             <constraint firstItem="Lrj-3P-GxU" firstAttribute="centerY" secondItem="ZuF-y2-DrT" secondAttribute="centerY" id="MqT-K0-2uB"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="74O-27-Xdy" secondAttribute="bottom" constant="20" id="RS2-FY-Ap2"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="ZuF-y2-DrT" secondAttribute="bottom" constant="8" id="T1j-M2-xd4"/>
@@ -134,8 +136,10 @@
                     <connections>
                         <outlet property="capturedImage" destination="Ock-Wb-MOC" id="0M2-9a-qTp"/>
                         <outlet property="capturedImage2" destination="wJN-V3-6MT" id="eGv-0z-lMX"/>
+                        <outlet property="nextPageButton" destination="74O-27-Xdy" id="Gin-8o-PVX"/>
                         <outlet property="previewView" destination="DjX-8f-L2L" id="jq6-Ed-X1O"/>
-                        <outlet property="takePicButton" destination="ZuF-y2-DrT" id="VXX-Mu-F2I"/>
+                        <outlet property="statusLabel" destination="dwi-Ku-zmD" id="UBs-hW-Hj9"/>
+                        <outlet property="takePictureButton" destination="ZuF-y2-DrT" id="Rxb-b0-Yn1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -155,9 +159,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDp-1x-uml">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RkR-Mx-e1i">
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2X-Yk-CEN" customClass="NumberLabel" customModule="badparking_ios" customModuleProvider="target">
+                                                <color key="backgroundColor" red="0.39215686274509803" green="0.78431372549019607" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="04j-g5-Get"/>
+                                                    <constraint firstAttribute="width" constant="30" id="IHl-hL-Fed"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dql-Sp-AbG" customClass="NumberLabel" customModule="badparking_ios" customModuleProvider="target">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwO-Xn-ePW" customClass="NumberLabel" customModule="badparking_ios" customModuleProvider="target">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgK-Oc-Gj9" customClass="NumberLabel" customModule="badparking_ios" customModuleProvider="target">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="RkR-Mx-e1i" firstAttribute="centerY" secondItem="oDp-1x-uml" secondAttribute="centerY" id="ERM-LT-T1A"/>
                                     <constraint firstAttribute="height" constant="51" id="QKx-Vd-jTm"/>
+                                    <constraint firstItem="RkR-Mx-e1i" firstAttribute="centerX" secondItem="oDp-1x-uml" secondAttribute="centerX" id="sa3-Rp-Cwg"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -181,6 +218,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="pageIndicationView" destination="oDp-1x-uml" id="GdU-RN-jPY"/>
+                        <outlet property="pagesNumbersStackView" destination="RkR-Mx-e1i" id="WWN-f6-Ch5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIJ-kf-4zb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -201,24 +239,28 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J80-dK-1IM"/>
                             <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="current_location" translatesAutoresizingMaskIntoConstraints="NO" id="mRj-wI-bCI"/>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYi-YC-HkH" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYi-YC-HkH" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Phf-tq-LhJ"/>
                                     <constraint firstAttribute="width" constant="100" id="aiu-w7-3Wo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Далі"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Далі">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="nextPagePressed:" destination="1u0-Mf-7PQ" eventType="touchUpInside" id="9Rn-ci-MFj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6Q-mf-xao" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6Q-mf-xao" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="6rs-4e-Szl"/>
                                     <constraint firstAttribute="width" constant="100" id="NvY-DU-cAx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Назад"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Назад">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="previousPagePressed:" destination="1u0-Mf-7PQ" eventType="touchUpInside" id="pUo-2h-4O9"/>
                                 </connections>
@@ -263,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIp-3D-qrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3102" y="569"/>
+            <point key="canvasLocation" x="3057" y="569"/>
         </scene>
         <!--Violation Type View Controller-->
         <scene sceneID="Pm6-un-I1Q">
@@ -277,34 +319,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2K-O7-IdV">
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27R-bZ-Baw" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
-                                        <state key="normal" title="Далі"/>
-                                    </button>
-                                </subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewn-iQ-rPf" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
                                 <constraints>
-                                    <constraint firstItem="27R-bZ-Baw" firstAttribute="leading" secondItem="B2K-O7-IdV" secondAttribute="leading" id="U4G-KF-S4y"/>
-                                    <constraint firstAttribute="bottom" secondItem="27R-bZ-Baw" secondAttribute="bottom" id="VZy-Ue-Ebc"/>
-                                    <constraint firstAttribute="height" constant="62" id="YnY-Kg-6JK"/>
-                                    <constraint firstAttribute="width" constant="125" id="aSl-Je-nfc"/>
-                                    <constraint firstAttribute="trailing" secondItem="27R-bZ-Baw" secondAttribute="trailing" id="dRf-Sd-7Yn"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="hke-1e-Oeq"/>
-                                    <constraint firstItem="27R-bZ-Baw" firstAttribute="top" secondItem="B2K-O7-IdV" secondAttribute="top" id="uvx-2h-wSJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="Eao-Ga-aIu"/>
+                                    <constraint firstAttribute="height" constant="44" id="mpZ-vd-Xcv"/>
                                 </constraints>
-                            </view>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Далі">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPagePressed:" destination="QpO-pL-ZOX" eventType="touchUpInside" id="5cT-a6-mGJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdA-Jr-eCI" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3WL-jW-sTo"/>
+                                    <constraint firstAttribute="width" constant="100" id="GRd-f9-IyM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Назад">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousPagePressed:" destination="QpO-pL-ZOX" eventType="touchUpInside" id="qcF-I7-84f"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="T7X-Sb-Yyt" firstAttribute="top" secondItem="B2K-O7-IdV" secondAttribute="bottom" constant="8" id="5ZO-XU-QOd"/>
-                            <constraint firstItem="B2K-O7-IdV" firstAttribute="trailing" secondItem="j0v-ua-dJn" secondAttribute="trailingMargin" id="IB4-BR-8zN"/>
+                            <constraint firstAttribute="trailing" secondItem="Ewn-iQ-rPf" secondAttribute="trailing" constant="16" id="8Qf-0I-lVG"/>
+                            <constraint firstItem="T7X-Sb-Yyt" firstAttribute="top" secondItem="MdA-Jr-eCI" secondAttribute="bottom" constant="20" id="BBp-Ki-cwR"/>
+                            <constraint firstItem="T7X-Sb-Yyt" firstAttribute="top" secondItem="Ewn-iQ-rPf" secondAttribute="bottom" constant="20" id="YKA-mn-QHk"/>
+                            <constraint firstItem="MdA-Jr-eCI" firstAttribute="leading" secondItem="j0v-ua-dJn" secondAttribute="leading" constant="16" id="lzF-Zz-IIX"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVE-AK-73B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3890" y="570"/>
+            <point key="canvasLocation" x="3793" y="570"/>
         </scene>
         <!--Send View Controller-->
         <scene sceneID="QGh-Qj-Cjm">
@@ -317,13 +371,44 @@
                     <view key="view" contentMode="scaleToFill" id="XzR-LH-uGR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s09-vY-B56" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="SXn-BV-rup"/>
+                                    <constraint firstAttribute="width" constant="100" id="WbV-1d-r6A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Надіслати">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwm-CO-Aqp" customClass="NextButton" customModule="badparking_ios" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="63F-jV-6HE"/>
+                                    <constraint firstAttribute="height" constant="44" id="64S-es-v5G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Назад">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousPagePressed:" destination="B3O-IZ-LQs" eventType="touchUpInside" id="f4A-2b-jcB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qwm-CO-Aqp" firstAttribute="leading" secondItem="XzR-LH-uGR" secondAttribute="leading" constant="16" id="Nn8-mZ-Lqc"/>
+                            <constraint firstItem="uCb-Pl-bUM" firstAttribute="top" secondItem="s09-vY-B56" secondAttribute="bottom" constant="20" id="p5y-Rz-tKn"/>
+                            <constraint firstItem="uCb-Pl-bUM" firstAttribute="top" secondItem="qwm-CO-Aqp" secondAttribute="bottom" constant="20" id="puP-Dh-HKR"/>
+                            <constraint firstAttribute="trailing" secondItem="s09-vY-B56" secondAttribute="trailing" constant="16" id="qzp-GN-nWp"/>
+                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXm-ge-pnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4620" y="570"/>
+            <point key="canvasLocation" x="4524" y="570"/>
         </scene>
         <!--Claim-->
         <scene sceneID="DqL-r8-jDV">

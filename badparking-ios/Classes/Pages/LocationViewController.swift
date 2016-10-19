@@ -85,4 +85,5 @@ class LocationViewController: BasePageViewController, CLLocationManagerDelegate,
         mapRegion.span.longitudeDelta = 0.01
         mapView.setRegion(mapRegion, animated: true)
     }
+    
 }
