@@ -1,0 +1,29 @@
+//
+//  UserRouter.swift
+//  BadParking
+//
+//  Created by Eugene Nagorny on 7/12/16.
+//  Copyright © 2016 BadParking. All rights reserved.
+//
+/*
+import Foundation
+import Alamofire
+
+enum UserRouter : URLRequestConvertible {
+    case me
+
+    var path: String {
+        switch self {
+        case .me:
+            return "/user/me"
+        }
+    }
+
+    // MARK: URLRequestConvertible
+    var urlRequest: URLRequest {
+        let url = URL(string: Constants.API.URL)!
+        return try! URLRequest(url: url.appendingPathComponent(path))
+    }
+
+}
+*/
