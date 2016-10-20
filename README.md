@@ -17,7 +17,7 @@ $ gem install cocoapods
 
 > CocoaPods 1.1.0+ is required.
 
-To install project dependensies run the following command:
+To install project dependencies run the following command:
 
 ```bash
 $ pod install
