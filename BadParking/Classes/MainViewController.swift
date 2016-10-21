@@ -35,6 +35,7 @@ class MainViewController: UIViewController, PageDelegate {
         return sendVC
     }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
