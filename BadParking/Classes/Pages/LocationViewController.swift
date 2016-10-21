@@ -13,78 +13,50 @@ class LocationViewController: BasePageViewController, CLLocationManagerDelegate,
     
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var addressView: UITextView!
-
-    var locationManager = CLLocationManager()
-
-    let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
-    let regionRadius: CLLocationDistance = 1000
+    var firstLocationUpdate = false
+    let geocoder = GMSGeocoder.init()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.index = 1
         
-        checkLocationAuthorizationStatus()
-        
-        self.mapView.isMyLocationEnabled = true;
+        self.mapView.settings.compassButton = true
         self.mapView.delegate = self
-//        locationManager.startUpdatingLocation()
+        self.mapView.addObserver(self, forKeyPath: "myLocation", options: .new, context: nil)
+        
+        DispatchQueue.main.async {
+            self.mapView.isMyLocationEnabled = true
+        }
     }
-
-//    func centerMapOnLocation(location: CLLocation) {
-//        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-//                                                                  regionRadius * 2.0, regionRadius * 2.0)
-//        mapView.setRegion(coordinateRegion, animated: true)
-//    }
-
-    func checkLocationAuthorizationStatus() {
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-//            mapView.showsUserLocation = true
-        } else {
-            locationManager.requestWhenInUseAuthorization()
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if firstLocationUpdate == false {
+            firstLocationUpdate = true
+            let location = change?[.newKey] as! CLLocation
+            mapView.camera = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
+        }
+    }
+    
+    deinit {
+        self.mapView.removeObserver(self, forKeyPath: "myLocation")
+    }
+    
+    // MARK: Google Maps Delegate
+    
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        let coordinate = mapView.projection.coordinate(for: mapView.center)
+        geocoder.reverseGeocodeCoordinate(coordinate) { (response: GMSReverseGeocodeResponse?, error: Error?) in
+            let address = response?.firstResult()
+            self.addressView.text = address?.lines?.joined(separator: ", ")
         }
     }
 
-//    func geoCode(_ location : CLLocation!) {
-//        /* Only one reverse geocoding can be in progress at a time hence we need to cancel existing
-//         one if we are getting location updates */
-//        let geoCoder = CLGeocoder()
-//        geoCoder.cancelGeocode()
-//        geoCoder.reverseGeocodeLocation(location) { (data, error) in
-//            guard let placeMarks = data as [CLPlacemark]! else {
-//                return
-//            }
-//            let loc: CLPlacemark = placeMarks[0]
-//            let addressDict : [NSString:NSObject] = loc.addressDictionary as! [NSString: NSObject]
-//            let addrList = addressDict["FormattedAddressLines"] as! [String]
-//            let address = addrList.joined(separator: ", ")
-//            self.addresView.text = address
-//        }
-//    }
-//
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        let location: CLLocation = locations.first!
-//        self.mapView.centerCoordinate = location.coordinate
-//        let reg = MKCoordinateRegionMakeWithDistance(location.coordinate, 1500, 1500)
-//        self.mapView.setRegion(reg, animated: true)
-//        geoCode(location)
-//    }
-//
-//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-//        print(error)
-//    }
-//
-//    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-//        locationManager.stopUpdatingLocation()
-//        let location = CLLocation(latitude: mapView.centerCoordinate.latitude,
-//                                  longitude: mapView.centerCoordinate.longitude)
-//        geoCode(location)
-//    }
-
+    // MARK: - IBActions
+    
     @IBAction func showUserLocation(_ sender: UIButton) {
-        if mapView.myLocation != nil {
-            self.mapView.animate(toLocation: (mapView.myLocation?.coordinate)!)
-        }
+        self.mapView.animate(toLocation: mapView.myLocation!.coordinate)
     }
     
 }

@@ -44,5 +44,9 @@
         <string>googlechromes</string>
         <string>comgooglemaps</string>
     </array>
+    <key>NSCameraUsageDescription</key>
+    <string>Камера потрібна щоб зафіксувати правопорущення</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Ми використовуєво ває розашування лише для швидкого отримання адреси правопорушення</string>
 </dict>
 </plist>
