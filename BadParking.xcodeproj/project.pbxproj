@@ -103,7 +103,6 @@
 				30FDBD7F1DB94C5E00603D75 /* MainViewController.swift */,
 				30FDBD821DB94C5E00603D75 /* Pages */,
 				30FDBD881DB94C5E00603D75 /* Settings Screen */,
-				30FDBD7B1DB94C5E00603D75 /* Constants.swift */,
 				30FDBD761DB94C5E00603D75 /* API */,
 				30FDBD7C1DB94C5E00603D75 /* controls */,
 				30FDBD801DB94C5E00603D75 /* models */,
@@ -114,6 +113,7 @@
 		30FDBD761DB94C5E00603D75 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				30FDBD7B1DB94C5E00603D75 /* Constants.swift */,
 				30FDBD771DB94C5E00603D75 /* CrimeTypesRouter.swift */,
 				30FDBD781DB94C5E00603D75 /* MyClaimsRouter.swift */,
 				30FDBD791DB94C5E00603D75 /* TokenRouter.swift */,
