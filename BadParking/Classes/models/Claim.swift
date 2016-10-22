@@ -16,7 +16,7 @@ class Claim {
     var city: String?
     var address: String?
 
-    var crimetypes: [Int]?
+    var crimetypes: [CrimeType]?
     var lat: CLLocationDegrees?
     var long: CLLocationDegrees?
 }

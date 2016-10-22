@@ -5,7 +5,7 @@
 //  Created by Eugene Nagorny on 7/12/16.
 //  Copyright © 2016 BadParking. All rights reserved.
 //
-/*
+
 import Foundation
 import Alamofire
 
@@ -23,11 +23,8 @@ enum CrimeTypesRouter : URLRequestConvertible {
         }
     }
 
-    // MARK: URLRequestConvertible
-    var urlRequest: URLRequest {
-        let url = URL(string: Constants.API.URL)!
-        return try! URLRequest(url: url.appendingPathComponent(path))
+    func asURLRequest() throws -> URLRequest {
+        let url = try Constants.API.URL.asURL()
+        return URLRequest(url: url.appendingPathComponent(path))
     }
-    
 }
-*/
