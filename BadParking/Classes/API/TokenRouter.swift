@@ -5,7 +5,7 @@
 //  Created by Eugene Nagorny on 7/12/16.
 //  Copyright © 2016 BadParking. All rights reserved.
 //
-/*
+
 import Foundation
 import Alamofire
 
@@ -24,10 +24,10 @@ enum TokenRouter : URLRequestConvertible {
     }
 
     // MARK: URLRequestConvertible
-    var urlRequest: URLRequest {
-        let url = URL(string: Constants.API.URL)!
-        var mutableURLRequest = try! URLRequest(url: url.appendingPathComponent(path))
-        mutableURLRequest.httpMethod = Alamofire.Method.POST.rawValue
+    func asURLRequest() throws -> URLRequest {
+        let url = try Constants.API.URL.asURL()
+        var mutableURLRequest = URLRequest(url: url.appendingPathComponent(path))
+        mutableURLRequest.httpMethod = HTTPMethod.post.rawValue
 
         var token: String
         switch self {
@@ -37,9 +37,8 @@ enum TokenRouter : URLRequestConvertible {
             token = tkn
         }
 
-        return Alamofire.ParameterEncoding.json.encode(mutableURLRequest, parameters: ["token": token]).0
-        
+        return try URLEncoding.default.encode(mutableURLRequest, with: ["token": token])
     }
-    
+
 }
-*/
+
