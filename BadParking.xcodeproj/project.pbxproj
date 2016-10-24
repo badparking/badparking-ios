@@ -468,7 +468,7 @@
 				DEVELOPMENT_TEAM = SMG46NAV3S;
 				INFOPLIST_FILE = BadParking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.badparking.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "400131f2-723b-4299-a94a-278b0fdb9100";
 				PROVISIONING_PROFILE_SPECIFIER = Wildcard_Development;
@@ -485,7 +485,7 @@
 				DEVELOPMENT_TEAM = SMG46NAV3S;
 				INFOPLIST_FILE = BadParking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.badparking.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "400131f2-723b-4299-a94a-278b0fdb9100";
 				PROVISIONING_PROFILE_SPECIFIER = Wildcard_Development;
