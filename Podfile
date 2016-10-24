@@ -10,5 +10,6 @@ target 'BadParking' do
   pod 'FBSDKCoreKit', '~> 4.16'
   pod 'FBSDKShareKit', '~> 4.16'
   pod 'SwiftyJSON'
+  pod 'SVProgressHUD'
 
 end

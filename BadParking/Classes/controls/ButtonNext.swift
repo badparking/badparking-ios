@@ -45,6 +45,9 @@ class NextButton: UIButton {
             if isEnabled {
                 self.layer.borderColor = UIColor.darkGray.cgColor
                 mainLayer.fillColor = UIColor(red:0.39, green:0.78, blue:0.00, alpha:1.0).cgColor
+            } else {
+                self.layer.borderColor = UIColor.darkGray.withAlphaComponent(0.4).cgColor
+                mainLayer.fillColor = UIColor(red:0.39, green:0.78, blue:0.00, alpha:0.4).cgColor
             }
         }
     }

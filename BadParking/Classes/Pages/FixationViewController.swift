@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class FixationViewController: BasePageViewController, UINavigationControllerDelegate {
+class FixationViewController: BasePageViewController {
     
     @IBOutlet weak var previewView: UIView!
     @IBOutlet weak var capturedImage: UIImageView!
