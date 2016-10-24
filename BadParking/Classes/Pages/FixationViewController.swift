@@ -14,6 +14,8 @@ class FixationViewController: BasePageViewController, UINavigationControllerDele
     @IBOutlet weak var previewView: UIView!
     @IBOutlet weak var capturedImage: UIImageView!
     @IBOutlet weak var capturedImage2: UIImageView!
+    @IBOutlet weak var imagesStackView: UIStackView!
+    @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var nextPageButton: NextButton!
     @IBOutlet weak var takePictureButton: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
@@ -76,34 +78,56 @@ class FixationViewController: BasePageViewController, UINavigationControllerDele
 
     // MARK: - IBActions
     @IBAction func takePhoto(_ sender: UIButton) {
-        takePictureButton.isEnabled = false
-
-        if let videoConnection = stillImageOutput!.connection(withMediaType: AVMediaTypeVideo) {
-            videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
-            stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(sampleBuffer, error) in
-                if (sampleBuffer != nil && self.claim.photos.count < 2) {
-                    let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
-                    let dataProvider = CGDataProvider(data: imageData! as CFData)
-                    let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.defaultIntent)
-
-                    let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.right)
-
-
-                    self.claim.photos.append((Date().description, image))
-                    self.updatePhotosUI()
-
-                    if self.claim.photos.count < 2 {
-                        self.takePictureButton.isEnabled = true
+        let authStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+        switch authStatus {
+        case .authorized:
+            takePictureButton.isEnabled = false
+            if let videoConnection = stillImageOutput!.connection(withMediaType: AVMediaTypeVideo) {
+                videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
+                stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(sampleBuffer, error) in
+                    if (sampleBuffer != nil && self.claim.photos.count < 2) {
+                        let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
+                        let dataProvider = CGDataProvider(data: imageData! as CFData)
+                        let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.defaultIntent)
+                        
+                        let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.right)
+                        
+                        
+                        self.claim.photos.append((Date().description, image))
+                        self.updatePhotosUI()
+                        
+                        if self.claim.photos.count < 2 {
+                            self.takePictureButton.isEnabled = true
+                        }
                     }
+                })
+            }
+        case .denied, .notDetermined, .restricted:
+            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo, completionHandler: { (granded: Bool) in
+                if granded == false {
+                    let alert = UIAlertController (
+                        title: "Увага",
+                        message: "Для того що б зробити фото перейдіть у налаштування додатку і увімкніть доступ до камери",
+                        preferredStyle: UIAlertControllerStyle.alert
+                    )
+                    alert.addAction(UIAlertAction(title: "Заборонити", style: .default, handler: nil))
+                    alert.addAction(UIAlertAction(title: "Налаштування", style: .cancel, handler: { (alert) -> Void in
+                        UIApplication.shared.openURL(URL.init(string: UIApplicationOpenSettingsURLString)!)
+                    }))
+                    self.present(alert, animated: true, completion: nil)
                 }
             })
         }
     }
-
+    
     func updatePhotosUI() {
         if self.claim.photos.count == 1 {
             self.capturedImage.image = self.claim.photos[0].image
             statusLabel.text = "Зробіть фото з іншого ракурсу";
+            UIView.animate(withDuration: 0.3, animations: { 
+                self.infoView.alpha = 0.0
+                self.imagesStackView.alpha = 1.0
+            })
         } else if self.claim.photos.count == 2 {
             self.capturedImage2.image = self.claim.photos[1].image
             self.nextPageButton.isEnabled = true

@@ -9,14 +9,13 @@
 import UIKit
 import GoogleMaps
 
-class LocationViewController: BasePageViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
+class LocationViewController: BasePageViewController, GMSMapViewDelegate {
     
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var addressView: UITextView!
     var firstLocationUpdate = false
     let geocoder = GMSGeocoder.init()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,7 +55,31 @@ class LocationViewController: BasePageViewController, CLLocationManagerDelegate,
     // MARK: - IBActions
     
     @IBAction func showUserLocation(_ sender: UIButton) {
-        self.mapView.animate(toLocation: mapView.myLocation!.coordinate)
+        if CLLocationManager.locationServicesEnabled() {
+            switch(CLLocationManager.authorizationStatus()) {
+            case .notDetermined, .restricted, .denied:
+                let alert = UIAlertController (
+                    title: "Увага",
+                    message: "Для того що б показати вас на карті перейдіть у налаштування додатку і увімкніть доступ до геоданих",
+                    preferredStyle: UIAlertControllerStyle.alert
+                )
+                alert.addAction(UIAlertAction.init(title: "Заборонити", style: .default, handler: nil))
+                alert.addAction(UIAlertAction.init(title: "Налаштування", style: .cancel, handler: { (acton: UIAlertAction) -> Void in
+                    UIApplication.shared.openURL(URL.init(string: UIApplicationOpenSettingsURLString)!)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            case .authorizedAlways, .authorizedWhenInUse:
+                self.mapView.animate(toLocation: mapView.myLocation!.coordinate)
+            }
+        } else {
+            let alert = UIAlertController (
+                title: "Увага",
+                message: "Доступ до геоданих вимкнений, перейдіть в налаштування вашого пирстрою щоб увімкнути його",
+                preferredStyle: UIAlertControllerStyle.alert
+            )
+            alert.addAction(UIAlertAction.init(title: "Добре", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
 }

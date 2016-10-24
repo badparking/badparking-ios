@@ -90,7 +90,7 @@ class MainViewController: UIViewController, PageDelegate {
         number.textColor = UIColor.white
         let prevNumber = pagesNumbersStackView.subviews[index + (direction == .forward ? -1 : 1)] as! UILabel
         prevNumber.backgroundColor = UIColor.white
-        prevNumber.textColor = UIColor.black
+        prevNumber.textColor = UIColor(red:0.29, green:0.29, blue:0.29, alpha:1.0)
     }
     
 }

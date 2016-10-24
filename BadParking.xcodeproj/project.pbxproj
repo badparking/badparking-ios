@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		308291C61DBBDAF700F770C1 /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308291C51DBBDAF700F770C1 /* AccountTableViewController.swift */; };
 		30FDBD641DB94BCF00603D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FDBD631DB94BCF00603D75 /* AppDelegate.swift */; };
 		30FDBD691DB94BCF00603D75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30FDBD671DB94BCF00603D75 /* Main.storyboard */; };
 		30FDBD6B1DB94BCF00603D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FDBD6A1DB94BCF00603D75 /* Assets.xcassets */; };
@@ -25,11 +26,12 @@
 		30FDBD951DB94C5E00603D75 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FDBD851DB94C5E00603D75 /* LocationViewController.swift */; };
 		30FDBD961DB94C5E00603D75 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FDBD861DB94C5E00603D75 /* SendViewController.swift */; };
 		30FDBD971DB94C5E00603D75 /* ViolationTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FDBD871DB94C5E00603D75 /* ViolationTypeViewController.swift */; };
-		30FDBD981DB94C5E00603D75 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FDBD891DB94C5E00603D75 /* SettingsViewController.swift */; };
+		30FDBD981DB94C5E00603D75 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FDBD891DB94C5E00603D75 /* AboutTableViewController.swift */; };
 		670B3B7F03E68DB13A4E225C /* Pods_BadParking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9228BB043D018CA63B134B /* Pods_BadParking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		308291C51DBBDAF700F770C1 /* AccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
 		30FDBD601DB94BCF00603D75 /* BadParking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadParking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FDBD631DB94BCF00603D75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30FDBD681DB94BCF00603D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +52,7 @@
 		30FDBD851DB94C5E00603D75 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		30FDBD861DB94C5E00603D75 /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		30FDBD871DB94C5E00603D75 /* ViolationTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViolationTypeViewController.swift; sourceTree = "<group>"; };
-		30FDBD891DB94C5E00603D75 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		30FDBD891DB94C5E00603D75 /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		459E0B38004E389508F12C65 /* Pods-BadParking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadParking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BadParking/Pods-BadParking.debug.xcconfig"; sourceTree = "<group>"; };
 		55E96311433CFC64CD43CE26 /* Pods-BadParking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadParking.release.xcconfig"; path = "Pods/Target Support Files/Pods-BadParking/Pods-BadParking.release.xcconfig"; sourceTree = "<group>"; };
 		AA9228BB043D018CA63B134B /* Pods_BadParking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadParking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		308291C41DBBDACB00F770C1 /* Account Screen */ = {
+			isa = PBXGroup;
+			children = (
+				308291C51DBBDAF700F770C1 /* AccountTableViewController.swift */,
+			);
+			path = "Account Screen";
+			sourceTree = "<group>";
+		};
 		30FDBD571DB94BCF00603D75 = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +112,8 @@
 			children = (
 				30FDBD7F1DB94C5E00603D75 /* MainViewController.swift */,
 				30FDBD821DB94C5E00603D75 /* Pages */,
-				30FDBD881DB94C5E00603D75 /* Settings Screen */,
+				308291C41DBBDACB00F770C1 /* Account Screen */,
+				30FDBD881DB94C5E00603D75 /* About Screen */,
 				30FDBD761DB94C5E00603D75 /* API */,
 				30FDBD7C1DB94C5E00603D75 /* controls */,
 				30FDBD801DB94C5E00603D75 /* models */,
@@ -151,12 +162,12 @@
 			path = Pages;
 			sourceTree = "<group>";
 		};
-		30FDBD881DB94C5E00603D75 /* Settings Screen */ = {
+		30FDBD881DB94C5E00603D75 /* About Screen */ = {
 			isa = PBXGroup;
 			children = (
-				30FDBD891DB94C5E00603D75 /* SettingsViewController.swift */,
+				30FDBD891DB94C5E00603D75 /* AboutTableViewController.swift */,
 			);
-			path = "Settings Screen";
+			path = "About Screen";
 			sourceTree = "<group>";
 		};
 		30FDBD991DB94C6500603D75 /* Support Files */ = {
@@ -317,8 +328,9 @@
 				30FDBD8A1DB94C5E00603D75 /* CrimeTypesRouter.swift in Sources */,
 				30FDBD971DB94C5E00603D75 /* ViolationTypeViewController.swift in Sources */,
 				30FDBD931DB94C5E00603D75 /* BasePageViewController.swift in Sources */,
-				30FDBD981DB94C5E00603D75 /* SettingsViewController.swift in Sources */,
+				30FDBD981DB94C5E00603D75 /* AboutTableViewController.swift in Sources */,
 				30FDBD901DB94C5E00603D75 /* NumberLabel.swift in Sources */,
+				308291C61DBBDAF700F770C1 /* AccountTableViewController.swift in Sources */,
 				30FDBD951DB94C5E00603D75 /* LocationViewController.swift in Sources */,
 				30FDBD911DB94C5E00603D75 /* MainViewController.swift in Sources */,
 				30FDBD941DB94C5E00603D75 /* FixationViewController.swift in Sources */,
