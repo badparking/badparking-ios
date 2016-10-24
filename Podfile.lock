@@ -6,8 +6,8 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
-  - CryptoSwift (0.6.1)
-  - FBSDKCoreKit (4.16.0):
+  - CryptoSwift (0.6.2)
+  - FBSDKCoreKit (4.16.1):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.16.1):
     - FBSDKCoreKit
@@ -20,6 +20,7 @@ PODS:
     - GoogleMaps/Base (= 2.1.0)
   - JSONWebToken (2.0.1):
     - CryptoSwift (~> 0.6.0)
+  - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
@@ -28,17 +29,19 @@ DEPENDENCIES:
   - FBSDKShareKit (~> 4.16)
   - GoogleMaps (~> 2.1)
   - JSONWebToken
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  CryptoSwift: abdbc1bf32c89117c6b403810a7b30f742d86e68
-  FBSDKCoreKit: 7a6baaed4a2b2a244ba253346713bdbc74df135b
+  CryptoSwift: aaea32b97aedf4b8fa84ccb022fca95ff56b2ece
+  FBSDKCoreKit: 6feac4e8921ccd7afa83fb1df6291dc6eec42c7c
   FBSDKLoginKit: 469a56cebe2e1ed62b1621d0b155970fd6aac2d8
   FBSDKShareKit: 53af0239b5bd2ebf191f32f75991245a208cc982
   GoogleMaps: 06589b9a38097bce0cd6e90f0fd9b5e4b4a9344c
   JSONWebToken: 37f3666c459ed1a1554663a2741ac7655d488b1f
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: d57c3cc147920189edcc29392f5a28a1801c3613
+PODFILE CHECKSUM: 8d79a8bb53248502c02b6a542cb857b59552b637
 
 COCOAPODS: 1.1.1

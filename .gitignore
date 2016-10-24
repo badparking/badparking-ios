@@ -66,4 +66,4 @@ Pods/
 # BadParking
 #
 # Hide API from public
-BadParking/Classes/API/
+BadParking/Classes/API/Constants.swift

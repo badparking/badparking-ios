@@ -9,5 +9,6 @@ target 'BadParking' do
   pod 'FBSDKLoginKit', '~> 4.16'
   pod 'FBSDKCoreKit', '~> 4.16'
   pod 'FBSDKShareKit', '~> 4.16'
+  pod 'SwiftyJSON'
 
 end
