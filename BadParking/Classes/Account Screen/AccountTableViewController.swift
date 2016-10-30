@@ -10,16 +10,39 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class AccountTableViewController: UITableViewController {
+class AccountTableViewController: UITableViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let loginButton = FBSDKLoginButton()
+        loginButton.readPermissions = ["public_profile", "email"]
+        loginButton.delegate = self
+        loginButton.center = self.view.center
+        self.view.addSubview(loginButton)
 
          self.clearsSelectionOnViewWillAppear = true
     }
 
     @IBAction func closePressed(_ sender: UIBarButtonItem) {
         self.presentingViewController!.dismiss(animated: true, completion: nil)
+    }
+
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if ((error) != nil)
+        {
+            // Process error
+            print(error);
+        } else if result.isCancelled {
+            print("Login cancelled")
+        } else {
+            let token = result.token.tokenString
+            print("token \(token)")
+            print(FBSDKAccessToken.current().tokenString)
+        }
+    }
+
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("Did LogOut")
     }
 
     // MARK: - Table view data source
