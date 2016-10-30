@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
 import SVProgressHUD
 
 class ViolationTypeViewController: BasePageViewController, UITableViewDelegate, UITableViewDataSource {
@@ -29,16 +27,12 @@ class ViolationTypeViewController: BasePageViewController, UITableViewDelegate, 
 
     func loadCrimeTypes() {
         SVProgressHUD.show()
-        Alamofire.request(CrimeTypesRouter.getAll).validate().responseJSON { [unowned self] response in
-            switch response.result {
-            case .success(let value):
-                self.crimeTypes = JSON(value).arrayValue.map( {CrimeType($0["id"].intValue, $0["name"].stringValue)} )
+        APIManager.shared.loadCrimeTypes { [unowned self] (crimeTypes, error) in
+            if crimeTypes != nil {
+                self.crimeTypes = crimeTypes
                 self.tableView.reloadData()
-                SVProgressHUD.dismiss()
-            case .failure(let error):
-                print(error)
-                SVProgressHUD.dismiss()
             }
+            SVProgressHUD.dismiss()
         }
     }
     
