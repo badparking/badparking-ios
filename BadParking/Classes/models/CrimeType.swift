@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import ObjectMapper
 
-class CrimeType: NSObject {
-    let crimeTypeID : Int
-    let name : String
+class CrimeType: Mappable {
+    var crimeTypeID: Int?
+    var name: String?
 
-    init(_ crimeTypeID: Int,_ name: String) {
-        self.crimeTypeID = crimeTypeID
-        self.name = name
+    required init?(map: Map){
+
     }
 
-    override var description:String {
+    func mapping(map: Map) {
+        crimeTypeID <- map["id"]
+        name        <- map["name"]
+    }
+
+    var description:String {
         return "CrimeType(id:\(crimeTypeID) name:\(name)"
     }
 }

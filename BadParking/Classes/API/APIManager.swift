@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import AlamofireObjectMapper
 
 
 class APIManager: NSObject {
@@ -29,14 +30,8 @@ class APIManager: NSObject {
         Alamofire
             .request(CrimeTypesRouter.getAll)
             .validate()
-            .responseJSON { response in
-                switch response.result {
-                case .success(let value):
-                    let crimeTypes = JSON(value).arrayValue.map( {CrimeType($0["id"].intValue, $0["name"].stringValue)} )
-                    complete(crimeTypes, nil)
-                case .failure(let error):
-                    complete(nil, error)
-                }
+            .responseArray { (response:DataResponse<[CrimeType]>) in
+                complete(response.result.value, response.result.error)
         }
     }
 
