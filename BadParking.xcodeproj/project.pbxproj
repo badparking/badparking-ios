@@ -485,7 +485,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 459E0B38004E389508F12C65 /* Pods-BadParking.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BadParking/BadParking.entitlements;
 				DEVELOPMENT_TEAM = SMG46NAV3S;
@@ -504,7 +504,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 55E96311433CFC64CD43CE26 /* Pods-BadParking.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BadParking/BadParking.entitlements;
 				DEVELOPMENT_TEAM = SMG46NAV3S;

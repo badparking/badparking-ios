@@ -8,8 +8,8 @@ target 'BadParking' do
   pod 'JSONWebToken'
   pod 'FBSDKLoginKit', '~> 4.16'
   pod 'FBSDKCoreKit', '~> 4.16'
-  pod 'FBSDKShareKit', '~> 4.16'
   pod 'SwiftyJSON'
+  pod 'AlamofireObjectMapper', '~> 4.0'
   pod 'SVProgressHUD'
 
 end
