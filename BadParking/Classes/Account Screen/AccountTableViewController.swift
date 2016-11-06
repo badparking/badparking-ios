@@ -38,6 +38,9 @@ class AccountTableViewController: UITableViewController, FBSDKLoginButtonDelegat
             let token = result.token.tokenString
             print("token \(token)")
             print(FBSDKAccessToken.current().tokenString)
+            APIManager.shared.facebookAuth(FBSDKAccessToken.current().tokenString) { error in
+                print(error ?? "")
+            }
         }
     }
 

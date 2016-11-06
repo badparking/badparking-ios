@@ -30,6 +30,8 @@
 		670B3B7F03E68DB13A4E225C /* Pods_BadParking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9228BB043D018CA63B134B /* Pods_BadParking.framework */; };
 		E74061061DC4F3790014B801 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74061051DC4F3790014B801 /* APIManager.swift */; };
 		E7A0F4E51DBBB9A000E6E423 /* CrimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0F4E41DBBB9A000E6E423 /* CrimeType.swift */; };
+		E7DBA7E01DC637D900A517D1 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DBA7DF1DC637D900A517D1 /* AuthManager.swift */; };
+		E7DBA7E31DC6804C00A517D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DBA7E21DC6804C00A517D1 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +61,10 @@
 		55E96311433CFC64CD43CE26 /* Pods-BadParking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadParking.release.xcconfig"; path = "Pods/Target Support Files/Pods-BadParking/Pods-BadParking.release.xcconfig"; sourceTree = "<group>"; };
 		AA9228BB043D018CA63B134B /* Pods_BadParking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadParking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74061051DC4F3790014B801 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		E782D64A1DCF72C700490082 /* BadParking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BadParking.entitlements; sourceTree = "<group>"; };
 		E7A0F4E41DBBB9A000E6E423 /* CrimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrimeType.swift; sourceTree = "<group>"; };
+		E7DBA7DF1DC637D900A517D1 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		E7DBA7E21DC6804C00A517D1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +108,7 @@
 		30FDBD621DB94BCF00603D75 /* BadParking */ = {
 			isa = PBXGroup;
 			children = (
+				E782D64A1DCF72C700490082 /* BadParking.entitlements */,
 				30FDBD751DB94C5E00603D75 /* Classes */,
 				30FDBD631DB94BCF00603D75 /* AppDelegate.swift */,
 				30FDBD671DB94BCF00603D75 /* Main.storyboard */,
@@ -129,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				E74061051DC4F3790014B801 /* APIManager.swift */,
+				E7DBA7DF1DC637D900A517D1 /* AuthManager.swift */,
 				30FDBD7B1DB94C5E00603D75 /* Constants.swift */,
 				30FDBD771DB94C5E00603D75 /* CrimeTypesRouter.swift */,
 				30FDBD781DB94C5E00603D75 /* MyClaimsRouter.swift */,
@@ -152,6 +159,7 @@
 			children = (
 				30FDBD811DB94C5E00603D75 /* Claim.swift */,
 				E7A0F4E41DBBB9A000E6E423 /* CrimeType.swift */,
+				E7DBA7E21DC6804C00A517D1 /* User.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -240,6 +248,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = SMG46NAV3S;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -329,6 +342,7 @@
 			files = (
 				30FDBD8B1DB94C5E00603D75 /* MyClaimsRouter.swift in Sources */,
 				E74061061DC4F3790014B801 /* APIManager.swift in Sources */,
+				E7DBA7E01DC637D900A517D1 /* AuthManager.swift in Sources */,
 				30FDBD641DB94BCF00603D75 /* AppDelegate.swift in Sources */,
 				30FDBD8F1DB94C5E00603D75 /* ButtonNext.swift in Sources */,
 				30FDBD8C1DB94C5E00603D75 /* TokenRouter.swift in Sources */,
@@ -346,6 +360,7 @@
 				30FDBD921DB94C5E00603D75 /* Claim.swift in Sources */,
 				30FDBD961DB94C5E00603D75 /* SendViewController.swift in Sources */,
 				30FDBD8E1DB94C5E00603D75 /* Constants.swift in Sources */,
+				E7DBA7E31DC6804C00A517D1 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +487,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BadParking/BadParking.entitlements;
 				DEVELOPMENT_TEAM = SMG46NAV3S;
 				INFOPLIST_FILE = BadParking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -490,6 +506,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BadParking/BadParking.entitlements;
 				DEVELOPMENT_TEAM = SMG46NAV3S;
 				INFOPLIST_FILE = BadParking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
