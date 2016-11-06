@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import AlamofireObjectMapper
+import ObjectMapper
 
 
 class APIManager: NSObject {
@@ -40,16 +41,12 @@ class APIManager: NSObject {
             .request(UserRouter.authFB(fbToken: fbToken, security: AuthManager.shared.generateSecret()))
             .validate()
             .responseJSON { response in
-                switch response.result {
-                case .success(let value):
-                    print(value)
+                if let value = response.result.value {
                     let json = JSON(value)
-                    AuthManager.shared.token = json["token"].string ?? ""
-                    complete(nil)
-                case .failure(let error):
-                    print(error)
-                    complete(error)
+                    self.user = User(JSONString: json.rawString()!)
+                    AuthManager.shared.token = json["token"].string
                 }
+                complete(response.result.error)
         }
     }
 
@@ -60,16 +57,9 @@ class APIManager: NSObject {
         Alamofire
             .request(UserRouter.me(headers: jwtHeaders))
             .validate()
-            .responseJSON { response in
-                switch response.result {
-                case .success(_):
-                    // TODO: parse user here
-                    let user = User()
-                    complete(user, nil)
-                case .failure(let error):
-                    complete(nil, error)
-                }
+            .responseObject { (response:DataResponse<User>) in
+                self.user = response.result.value
+                complete(response.result.value, response.result.error)
         }
-
     }
 }

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import ObjectMapper
 
-class User: NSObject {
+class User: Mappable {
     var first_name: String?
     var middle_name: String?
     var last_name: String?
@@ -17,4 +18,18 @@ class User: NSObject {
     var inn: String?
     var phone: String?
     var is_complete: Bool?
+
+    required init?(map: Map) {
+    }
+
+    func mapping(map: Map) {
+        first_name  <- map["first_name"]
+        middle_name <- map["middle_name"]
+        last_name   <- map["last_name"]
+        full_name   <- map["full_name"]
+        email       <- map["email"]
+        inn         <- map["inn"]
+        phone       <- map["phone"]
+        is_complete <- map["is_complete"]
+    }
 }
