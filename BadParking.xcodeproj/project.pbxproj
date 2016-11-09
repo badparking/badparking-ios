@@ -108,7 +108,6 @@
 		30FDBD621DB94BCF00603D75 /* BadParking */ = {
 			isa = PBXGroup;
 			children = (
-				E782D64A1DCF72C700490082 /* BadParking.entitlements */,
 				30FDBD751DB94C5E00603D75 /* Classes */,
 				30FDBD631DB94BCF00603D75 /* AppDelegate.swift */,
 				30FDBD671DB94BCF00603D75 /* Main.storyboard */,
@@ -187,6 +186,7 @@
 		30FDBD991DB94C6500603D75 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				E782D64A1DCF72C700490082 /* BadParking.entitlements */,
 				30FDBD6A1DB94BCF00603D75 /* Assets.xcassets */,
 				30FDBD6C1DB94BCF00603D75 /* LaunchScreen.storyboard */,
 				30FDBD6F1DB94BCF00603D75 /* Info.plist */,

@@ -21,7 +21,7 @@ class FixationViewController: BasePageViewController {
     @IBOutlet weak var statusLabel: UILabel!
 
     var claim = Claim()
-
+    var carNumber: String = ""
     var captureSession: AVCaptureSession?
     var backCamera: AVCaptureDevice?
     var stillImageOutput: AVCaptureStillImageOutput?
@@ -120,6 +120,43 @@ class FixationViewController: BasePageViewController {
         }
     }
     
+    @IBAction override func nextPagePressed(_ sender: NextButton) {
+        if self.carNumber.isEmpty {
+            let alert = UIAlertController (
+                title: "Увага",
+                message: "Щоб продовжити будь ласка введіть номер машини порушника",
+                preferredStyle: UIAlertControllerStyle.alert
+            )
+            alert.addTextField(configurationHandler: { (textField: UITextField!) in
+                textField.placeholder = "АА0000ВИ"
+            })
+            alert.addAction(UIAlertAction(title: "Далі", style: .default, handler: { (alertAction: UIAlertAction) in
+                self.carNumber = alert.textFields?.first?.text ?? ""
+                
+                // #warning validate car number
+                if self.carNumber.isEmpty {
+                    self.invalidNumberAlert()
+                } else {
+                    super.nextPagePressed(sender)
+                }
+            }))
+            alert.addAction(UIAlertAction(title: "Відміна", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            super.nextPagePressed(sender)
+        }
+    }
+    
+    func invalidNumberAlert() {
+        let alert = UIAlertController (
+            title: "Помилка",
+            message: "Номер занадто короткий",
+            preferredStyle: UIAlertControllerStyle.alert
+        )
+        alert.addAction(UIAlertAction(title: "Добре", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func updatePhotosUI() {
         if self.claim.photos.count == 1 {
             self.capturedImage.image = self.claim.photos[0].image
@@ -134,7 +171,7 @@ class FixationViewController: BasePageViewController {
         }
     }
 
-    // MARK: - configurators
+    // MARK: - Camera configuration
     func setupCameraCapture() {
         captureSession = AVCaptureSession()
         captureSession!.sessionPreset = AVCaptureSessionPresetPhoto
