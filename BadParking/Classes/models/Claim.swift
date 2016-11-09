@@ -11,12 +11,16 @@ import UIKit
 import CoreLocation
 
 class Claim {
+    // fixation screen
     var photos: [(name: String, image: UIImage)] = []
+    var licensePlates: String?
 
-    var city: String?
+    // location screen
+    var city = "Київ"
     var address: String?
-
-    var crimetypes: [CrimeType]?
     var lat: CLLocationDegrees?
     var long: CLLocationDegrees?
+
+    // crime tyeps screen
+    var crimetypes: [CrimeType]?
 }
