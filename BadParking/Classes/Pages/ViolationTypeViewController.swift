@@ -22,6 +22,7 @@ class ViolationTypeViewController: BasePageViewController, UITableViewDelegate, 
         self.index = 2
         self.tableView.estimatedRowHeight = 50
         self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.tableFooterView = UIView.init(frame: CGRect.zero)
         loadCrimeTypes()
     }
 
