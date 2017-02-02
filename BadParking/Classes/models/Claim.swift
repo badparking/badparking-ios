@@ -18,8 +18,7 @@ class Claim {
     // location screen
     var city = "Київ"
     var address: String?
-    var lat: CLLocationDegrees?
-    var long: CLLocationDegrees?
+    var coordinate: CLLocationCoordinate2D?
 
     // crime tyeps screen
     var crimetypes: [CrimeType]?

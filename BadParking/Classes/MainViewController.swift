@@ -95,10 +95,6 @@ class MainViewController: UIViewController, PageDelegate {
     }
  
     // MARK: - Send Data
-    func getViolationAddress() -> String {
-        return locationViewController.addressView.text
-    }
-    
     func getViolations() -> String {
         let selectedViolationIndexes = violationTypeViewController.selectedIndexes
         let crimes = violationTypeViewController.crimeTypes

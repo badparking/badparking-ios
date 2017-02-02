@@ -48,8 +48,7 @@ class SendViewController: BasePageViewController, UITableViewDelegate, UITableVi
             
             let mainViewController = self.parent?.parent as? MainViewController
             let claim = mainViewController?.claim
-//            let fixationData = mainViewController?.getPhotosAndCarNumber()
-            subtitles = [(mainViewController?.getViolationAddress())!, (mainViewController?.getViolations())!]
+            subtitles = [claim?.address ?? "", (mainViewController?.getViolations())!]
             firstImage.image = claim?.photos[0].image
             secondImage.image = claim?.photos[1].image
         } else {

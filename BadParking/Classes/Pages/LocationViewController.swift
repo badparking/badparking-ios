@@ -14,10 +14,12 @@ class LocationViewController: BasePageViewController, GMSMapViewDelegate {
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var addressView: UITextView!
     var firstLocationUpdate = false
+    var claim: Claim?
     let geocoder = GMSGeocoder.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.claim = (self.parent?.parent as! MainViewController).claim
         
         self.index = 1
         
@@ -47,8 +49,10 @@ class LocationViewController: BasePageViewController, GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         let coordinate = mapView.projection.coordinate(for: mapView.center)
         geocoder.reverseGeocodeCoordinate(coordinate) { (response: GMSReverseGeocodeResponse?, error: Error?) in
-            let address = response?.firstResult()
-            self.addressView.text = address?.lines?.joined(separator: ", ")
+            let address = response?.firstResult()?.lines?.joined(separator: ", ")
+            self.addressView.text = address
+            self.claim?.address = address
+            self.claim?.coordinate = coordinate
         }
     }
 
@@ -81,5 +85,4 @@ class LocationViewController: BasePageViewController, GMSMapViewDelegate {
             self.present(alert, animated: true, completion: nil)
         }
     }
-    
 }
