@@ -20,8 +20,7 @@ class FixationViewController: BasePageViewController {
     @IBOutlet weak var takePictureButton: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
 
-    var claim = Claim()
-    var carNumber: String = ""
+    var claim: Claim?
     var captureSession: AVCaptureSession?
     var backCamera: AVCaptureDevice?
     var stillImageOutput: AVCaptureStillImageOutput?
@@ -29,6 +28,7 @@ class FixationViewController: BasePageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.claim = (self.parent?.parent as! MainViewController).claim
         
         self.index = 0
         setupCameraCapture()
@@ -85,7 +85,7 @@ class FixationViewController: BasePageViewController {
             if let videoConnection = stillImageOutput!.connection(withMediaType: AVMediaTypeVideo) {
                 videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
                 stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(sampleBuffer, error) in
-                    if (sampleBuffer != nil && self.claim.photos.count < 2) {
+                    if (sampleBuffer != nil && self.claim!.photos.count < 2) {
                         let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
                         let dataProvider = CGDataProvider(data: imageData! as CFData)
                         let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.defaultIntent)
@@ -93,10 +93,10 @@ class FixationViewController: BasePageViewController {
                         let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.right)
                         
                         
-                        self.claim.photos.append((Date().description, image))
+                        self.claim?.photos.append((Date().description, image))
                         self.updatePhotosUI()
                         
-                        if self.claim.photos.count < 2 {
+                        if self.claim!.photos.count < 2 {
                             self.takePictureButton.isEnabled = true
                         }
                     }
@@ -121,7 +121,7 @@ class FixationViewController: BasePageViewController {
     }
     
     @IBAction override func nextPagePressed(_ sender: NextButton) {
-        if self.carNumber.isEmpty {
+        if (self.claim!.licensePlate ?? "").isEmpty {
             let alert = UIAlertController (
                 title: "Увага",
                 message: "Щоб продовжити будь ласка введіть номер машини порушника",
@@ -131,10 +131,10 @@ class FixationViewController: BasePageViewController {
                 textField.placeholder = "АА0000ВИ"
             })
             alert.addAction(UIAlertAction(title: "Далі", style: .default, handler: { (alertAction: UIAlertAction) in
-                self.carNumber = alert.textFields?.first?.text ?? ""
+                self.claim!.licensePlate = alert.textFields?.first?.text ?? ""
                 
                 // #warning validate car number
-                if self.carNumber.isEmpty {
+                if (self.claim!.licensePlate ?? "").isEmpty {
                     self.invalidNumberAlert()
                 } else {
                     super.nextPagePressed(sender)
@@ -158,15 +158,15 @@ class FixationViewController: BasePageViewController {
     }
     
     func updatePhotosUI() {
-        if self.claim.photos.count == 1 {
-            self.capturedImage.image = self.claim.photos[0].image
+        if self.claim!.photos.count == 1 {
+            self.capturedImage.image = self.claim!.photos[0].image
             statusLabel.text = "Зробіть фото з іншого ракурсу";
             UIView.animate(withDuration: 0.3, animations: { 
                 self.infoView.alpha = 0.0
                 self.imagesStackView.alpha = 1.0
             })
-        } else if self.claim.photos.count == 2 {
-            self.capturedImage2.image = self.claim.photos[1].image
+        } else if self.claim!.photos.count == 2 {
+            self.capturedImage2.image = self.claim!.photos[1].image
             self.nextPageButton.isEnabled = true
         }
     }

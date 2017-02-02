@@ -47,10 +47,11 @@ class SendViewController: BasePageViewController, UITableViewDelegate, UITableVi
             let secondImage = stackView.viewWithTag(4) as! UIImageView
             
             let mainViewController = self.parent?.parent as? MainViewController
-            let fixationData = mainViewController?.getPhotosAndCarNumber()
+            let claim = mainViewController?.claim
+//            let fixationData = mainViewController?.getPhotosAndCarNumber()
             subtitles = [(mainViewController?.getViolationAddress())!, (mainViewController?.getViolations())!]
-            firstImage.image = fixationData?.firstPhoto
-            secondImage.image = fixationData?.secondPhoto
+            firstImage.image = claim?.photos[0].image
+            secondImage.image = claim?.photos[1].image
         } else {
             let icon = cell.viewWithTag(1) as! UIImageView
             icon.image = images[indexPath.row-1]

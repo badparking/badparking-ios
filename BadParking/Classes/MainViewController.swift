@@ -13,6 +13,7 @@ class MainViewController: UIViewController, PageDelegate {
     @IBOutlet weak var pageIndicationView: UIView!
     @IBOutlet weak var pagesNumbersStackView: UIStackView!
     var pageViewController: UIPageViewController!
+    var claim = Claim()
     
     lazy var fixationViewController: FixationViewController! = {
         let fixationVC = self.storyboard?.instantiateViewController(withIdentifier: "fixation") as! FixationViewController
@@ -94,10 +95,6 @@ class MainViewController: UIViewController, PageDelegate {
     }
  
     // MARK: - Send Data
-    func getPhotosAndCarNumber() -> (firstPhoto: UIImage, secondPhoto: UIImage, carNumber: String) {
-        return (fixationViewController.capturedImage.image!, fixationViewController.capturedImage2.image!, fixationViewController.carNumber)
-    }
-    
     func getViolationAddress() -> String {
         return locationViewController.addressView.text
     }

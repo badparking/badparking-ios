@@ -13,7 +13,7 @@ import CoreLocation
 class Claim {
     // fixation screen
     var photos: [(name: String, image: UIImage)] = []
-    var licensePlates: String?
+    var licensePlate: String?
 
     // location screen
     var city = "Київ"
