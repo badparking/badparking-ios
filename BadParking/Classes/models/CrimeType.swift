@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class CrimeType: Mappable {
+class CrimeType: Mappable, Equatable, CustomStringConvertible {
     var crimeTypeID: Int?
     var name: String?
 
@@ -22,7 +22,11 @@ class CrimeType: Mappable {
         name        <- map["name"]
     }
 
-    var description:String {
+    var description: String {
         return "CrimeType(id:\(crimeTypeID) name:\(name)"
+    }
+
+    static func == (lhs: CrimeType, rhs: CrimeType) -> Bool{
+        return lhs.crimeTypeID == rhs.crimeTypeID && lhs.name == rhs.name
     }
 }

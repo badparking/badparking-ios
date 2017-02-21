@@ -12,12 +12,13 @@ import SVProgressHUD
 class ViolationTypeViewController: BasePageViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    var selectedIndexes: [IndexPath] = []
     var crimeTypes: [CrimeType]?
+    var claim: Claim?
     @IBOutlet weak var nextPageButton: NextButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.claim = (self.parent?.parent as! MainViewController).claim
         
         self.index = 2
         self.tableView.estimatedRowHeight = 50
@@ -51,23 +52,26 @@ class ViolationTypeViewController: BasePageViewController, UITableViewDelegate, 
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
         
-        let crime = self.crimeTypes?[indexPath.row]
-        
-        cell.imageView?.image = UIImage.init(named: selectedIndexes.contains(indexPath) ? "violation_selected" : "violation_normal")
-        cell.textLabel?.text = crime?.name
-        
+        if let crime = self.crimeTypes?[indexPath.row] {
+            cell.imageView?.image = UIImage.init(named: (self.claim?.crimetypes.contains(crime))! ? "violation_selected" : "violation_normal")
+            cell.textLabel?.text = crime.name
+        }
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if selectedIndexes.contains(indexPath) {
-            selectedIndexes.remove(at: selectedIndexes.index(of: indexPath)!)
-        } else {
-            selectedIndexes.append(indexPath)
-        }
+        guard let clickedCrimeType = self.crimeTypes?[indexPath.row]
+            else { return }
         
-        self.nextPageButton.isEnabled = selectedIndexes.count  > 0
-        tableView.reloadRows(at: [indexPath], with: .fade)
+        if let index = self.claim?.crimetypes.index(of: clickedCrimeType) {
+            claim?.crimetypes.remove(at: index)
+        } else {
+            claim?.crimetypes.append(clickedCrimeType)
+        }
+
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+        self.nextPageButton.isEnabled = (self.claim?.crimetypes.count) != 0
     }
     
 }

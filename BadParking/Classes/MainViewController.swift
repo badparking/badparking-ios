@@ -93,23 +93,4 @@ class MainViewController: UIViewController, PageDelegate {
         prevNumber.backgroundColor = UIColor.white
         prevNumber.textColor = UIColor(red:0.29, green:0.29, blue:0.29, alpha:1.0)
     }
- 
-    // MARK: - Send Data
-    func getViolations() -> String {
-        let selectedViolationIndexes = violationTypeViewController.selectedIndexes
-        let crimes = violationTypeViewController.crimeTypes
-        
-        var violations = ""
-        for indexPath in selectedViolationIndexes {
-            let crime = crimes![indexPath.row]
-            
-            if violations.isEmpty {
-                violations = "- \(crime.name!)"
-            } else {
-                violations = "\(violations)\n- \(crime.name!)"
-            }
-        }
-        
-        return violations
-    }
 }

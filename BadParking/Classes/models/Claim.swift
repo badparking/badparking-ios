@@ -21,5 +21,5 @@ class Claim {
     var coordinate: CLLocationCoordinate2D?
 
     // crime tyeps screen
-    var crimetypes: [CrimeType]?
+    var crimetypes: [CrimeType] = []
 }

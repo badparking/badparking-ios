@@ -48,7 +48,9 @@ class SendViewController: BasePageViewController, UITableViewDelegate, UITableVi
             
             let mainViewController = self.parent?.parent as? MainViewController
             let claim = mainViewController?.claim
-            subtitles = [claim?.address ?? "", (mainViewController?.getViolations())!]
+            subtitles.append(claim?.address ?? "")
+            let crimeNames = claim?.crimetypes.flatMap {$0.name}
+            subtitles.append(crimeNames?.joined(separator: " - ") ?? "")
             firstImage.image = claim?.photos[0].image
             secondImage.image = claim?.photos[1].image
         } else {
