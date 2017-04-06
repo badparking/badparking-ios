@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0PF-74-oe8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0PF-74-oe8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -452,7 +452,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s09-vY-B56" customClass="NextButton" customModule="BadParking" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s09-vY-B56" customClass="NextButton" customModule="BadParking" customModuleProvider="target">
                                 <rect key="frame" x="259" y="603" width="100" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="SXn-BV-rup"/>
@@ -580,23 +580,32 @@
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJN-XF-kG0">
+                                <rect key="frame" x="16" y="535" width="343" height="65"/>
+                                <color key="backgroundColor" red="0.8249479432322131" green="0.883368809018927" blue="0.97247409326424872" alpha="0.49480083626760563" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="OBd-TN-rdp" secondAttribute="trailing" id="1v6-C2-FOB"/>
                             <constraint firstItem="uCb-Pl-bUM" firstAttribute="top" secondItem="OBd-TN-rdp" secondAttribute="bottom" constant="140" id="D59-Ue-YX5"/>
+                            <constraint firstItem="dJN-XF-kG0" firstAttribute="trailing" secondItem="XzR-LH-uGR" secondAttribute="trailingMargin" id="D7B-z4-3wx"/>
                             <constraint firstItem="OBd-TN-rdp" firstAttribute="top" secondItem="3pV-QZ-dbu" secondAttribute="bottom" constant="8" id="F4s-se-jco"/>
+                            <constraint firstItem="qwm-CO-Aqp" firstAttribute="top" secondItem="dJN-XF-kG0" secondAttribute="bottom" constant="3" id="Mi1-Xc-e3T"/>
                             <constraint firstItem="qwm-CO-Aqp" firstAttribute="leading" secondItem="XzR-LH-uGR" secondAttribute="leading" constant="16" id="Nn8-mZ-Lqc"/>
+                            <constraint firstItem="dJN-XF-kG0" firstAttribute="top" secondItem="OBd-TN-rdp" secondAttribute="bottom" constant="8" id="UvW-7D-KEz"/>
                             <constraint firstItem="3pV-QZ-dbu" firstAttribute="centerX" secondItem="XzR-LH-uGR" secondAttribute="centerX" id="W3I-aC-hpT"/>
                             <constraint firstItem="OBd-TN-rdp" firstAttribute="leading" secondItem="XzR-LH-uGR" secondAttribute="leading" id="j7P-J0-vvi"/>
                             <constraint firstItem="uCb-Pl-bUM" firstAttribute="top" secondItem="s09-vY-B56" secondAttribute="bottom" constant="20" id="p5y-Rz-tKn"/>
                             <constraint firstItem="uCb-Pl-bUM" firstAttribute="top" secondItem="qwm-CO-Aqp" secondAttribute="bottom" constant="20" id="puP-Dh-HKR"/>
                             <constraint firstAttribute="trailing" secondItem="s09-vY-B56" secondAttribute="trailing" constant="16" id="qzp-GN-nWp"/>
                             <constraint firstItem="3pV-QZ-dbu" firstAttribute="top" secondItem="PBq-yX-O19" secondAttribute="bottom" constant="8" id="yhJ-n7-M6F"/>
+                            <constraint firstItem="dJN-XF-kG0" firstAttribute="leading" secondItem="XzR-LH-uGR" secondAttribute="leadingMargin" id="zEi-gX-sGU"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="facebookVIew" destination="dJN-XF-kG0" id="M6P-Ic-Cd8"/>
                         <outlet property="tableView" destination="OBd-TN-rdp" id="vPP-hg-TWK"/>
                     </connections>
                 </viewController>
@@ -802,7 +811,7 @@
         <!--Профіль-->
         <scene sceneID="1OW-am-fFR">
             <objects>
-                <tableViewController id="uMn-Tn-sDn" customClass="AccountTableViewController" customModule="BadParking" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AccountTableViewController" id="uMn-Tn-sDn" customClass="AccountTableViewController" customModule="BadParking" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="50" sectionHeaderHeight="18" sectionFooterHeight="18" id="lm5-mv-vkR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class SendViewController: BasePageViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var facebookVIew: UIView!
     let titles = ["Адреса:", "Порушення:"]
     var subtitles: [String] = []
     let images = [#imageLiteral(resourceName: "locationIcon"), #imageLiteral(resourceName: "violation")]
@@ -24,7 +27,22 @@ class SendViewController: BasePageViewController, UITableViewDelegate, UITableVi
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.tableFooterView = UIView.init(frame: CGRect.zero)
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.layoutSubviews()
+        // check if user logged in with FB and has phone number associated
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let accountVC = storyboard.instantiateViewController(withIdentifier: "AccountTableViewController") as! AccountTableViewController
+        //        self.present(accountVC, animated: true, completion: nil)
+
+        let loginButton = FBSDKLoginButton()
+        loginButton.readPermissions = ["public_profile", "email"]
+        loginButton.delegate = accountVC
+        facebookVIew.addSubview(loginButton)
+        loginButton.center = CGPoint(x: facebookVIew.bounds.width/2, y: facebookVIew.bounds.height/2)
+    }
+
     // MARK: - Table view data source
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
