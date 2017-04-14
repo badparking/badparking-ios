@@ -29,6 +29,11 @@ class SendViewController: BasePageViewController, UITableViewDelegate, UITableVi
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // check if user logged in with FB and has phone number associated
+        guard FBSDKAccessToken.current() == nil else {
+            facebookVIew.isHidden = true
+            return
+        }
+        facebookVIew.isHidden = false
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let accountVC = storyboard.instantiateViewController(withIdentifier: "AccountTableViewController") as! AccountTableViewController
         //        self.present(accountVC, animated: true, completion: nil)
@@ -52,7 +57,6 @@ class SendViewController: BasePageViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("cell for row at index path")
         let cell = tableView.dequeueReusableCell(withIdentifier: indexPath.row == 0 ? "photosCell" : "cell", for: indexPath)
 
         if indexPath.row == 0 {  // photos
