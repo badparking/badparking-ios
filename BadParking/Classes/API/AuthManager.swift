@@ -12,6 +12,7 @@ import JWT
 class AuthManager: NSObject {
     static let shared = AuthManager()
     let defaults = UserDefaults.standard
+    private let DEFAULTS_KEY_TOKEN = "token"
 
     private override init() {
         return;
@@ -19,11 +20,13 @@ class AuthManager: NSObject {
 
     var token: String? {
         get {
-            return defaults.value(forKey: "token") as? String
+            return defaults.value(forKey: DEFAULTS_KEY_TOKEN) as? String
         }
         set {
             if let token = newValue {
-                defaults.set(token, forKey: "token")
+                defaults.set(token, forKey: DEFAULTS_KEY_TOKEN)
+            } else {
+                defaults.removeObject(forKey: DEFAULTS_KEY_TOKEN)
             }
         }
     }

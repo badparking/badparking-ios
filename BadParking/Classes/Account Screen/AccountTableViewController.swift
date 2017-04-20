@@ -35,16 +35,17 @@ class AccountTableViewController: UITableViewController, FBSDKLoginButtonDelegat
         } else if result.isCancelled {
             print("Login cancelled")
         } else {
-            let token = result.token.tokenString
-            print("token \(token)")
+            let fbToken = result.token.tokenString ?? ""
+            print("token \(fbToken)")
             print(FBSDKAccessToken.current().tokenString)
-            APIManager.shared.facebookAuth(FBSDKAccessToken.current().tokenString) { error in
+            APIManager.shared.facebookAuth(fbToken) { error in
                 print(error ?? "")
             }
         }
     }
 
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        AuthManager.shared.token = nil
         print("Did LogOut")
     }
 
