@@ -50,6 +50,20 @@ class APIManager: NSObject {
         }
     }
 
+    func completetUser(phone: String?, email: String?, complete: @escaping (Error?) -> Void) -> Void {
+        Alamofire
+            .request(UserRouter.complete(phone: phone, email: email, token: AuthManager.shared.token!))
+            .validate()
+            .responseJSON { response in
+                if let value = response.result.value {
+                    // TODO: improve converting json to object
+                    let json = JSON(value)
+                    self.user = User(JSONString: json.rawString()!)
+                }
+                complete(response.result.error)
+        }
+    }
+
     func userMe(complete: @escaping (User?, Error?) -> Void) -> Void {
         guard let jwtHeaders = jwtHeaders else {
             return

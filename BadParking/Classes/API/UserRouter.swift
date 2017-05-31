@@ -12,7 +12,7 @@ import Alamofire
 
 enum UserRouter : URLRequestConvertible {
     case me(headers: Dictionary<String, String>)
-    case complete(phone: String?, email: String?, headers: Dictionary<String, String>)
+    case complete(phone: String?, email: String?, token: String)
     case authFB(fbToken: String, security: Dictionary<String, String>)
 
     var path: String {
@@ -22,7 +22,7 @@ enum UserRouter : URLRequestConvertible {
         case .authFB:
             return "/user/auth/facebook"
         case .complete:
-            return "/user/auth/complete"
+            return "/user/me/complete"
         }
     }
 
@@ -51,10 +51,9 @@ enum UserRouter : URLRequestConvertible {
             for (header, value) in headers {
                 urlRequest.setValue(value, forHTTPHeaderField: header)
             }
-        case .complete(let phone, let email, let headers):
-            for (header, value) in headers {
-                urlRequest.setValue(value, forHTTPHeaderField: header)
-            }
+        case .complete(let phone, let email, let token):
+            urlRequest.setValue("JWT " + token, forHTTPHeaderField: "Authorization")
+            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
             var params = Dictionary<String, String>()
             if let phone = phone {
                 params["phone"] = phone
@@ -63,7 +62,7 @@ enum UserRouter : URLRequestConvertible {
                 params["email"] = email
             }
             if params.count > 0 {
-                urlRequest = try! URLEncoding.httpBody.encode(urlRequest, with: params)
+                urlRequest.httpBody = try! JSONSerialization.data(withJSONObject: params, options: [])
             }
         }
 

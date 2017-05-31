@@ -28,8 +28,7 @@ class AccountTableViewController: UITableViewController, FBSDKLoginButtonDelegat
     }
 
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        if ((error) != nil)
-        {
+        if ((error) != nil) {
             // Process error
             print(error);
         } else if result.isCancelled {
@@ -39,7 +38,31 @@ class AccountTableViewController: UITableViewController, FBSDKLoginButtonDelegat
             print("token \(fbToken)")
             print(FBSDKAccessToken.current().tokenString)
             APIManager.shared.facebookAuth(fbToken) { error in
-                print(error ?? "")
+                if let err = error {
+                    print(err);
+                }
+                if (APIManager.shared.user?.phone ?? "").isEmpty {
+                    let alert = UIAlertController (
+                        title: "Увага",
+                        message: "Для того щоб ми могли з вами контактувати введіть будь ласка ваш номер телефону",
+                        preferredStyle: UIAlertControllerStyle.alert
+                    )
+                    alert.addTextField(configurationHandler: { (textField: UITextField!) in
+                        textField.placeholder = "+380xxxxxxxxx"
+                    })
+                    alert.addAction(UIAlertAction(title: "Добре", style: .default, handler: { (alertAction: UIAlertAction) in
+                        var phone = alert.textFields?.first?.text ?? ""
+                        phone = phone.replacingOccurrences(of: " ", with: "")
+                        // Validate number locally
+                        APIManager.shared.completetUser(phone: phone, email: nil, complete: { error in
+                            if let err = error {
+                                print(err)
+                            }
+                        })
+                        return
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
         }
     }
