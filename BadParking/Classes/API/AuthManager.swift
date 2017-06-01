@@ -36,7 +36,7 @@ class AuthManager: NSObject {
             return true
         }
         do {
-            let payload = try JWT.decode(token, algorithm: .hs256(Constants.API.ClientSecret.data(using: .utf8)!))
+            let payload: ClaimSet = try JWT.decode(token, algorithm: .hs256(Constants.API.ClientSecret.data(using: .utf8)!))
             print(payload)
             return false
         } catch {
