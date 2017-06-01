@@ -136,10 +136,7 @@
 				E74061051DC4F3790014B801 /* APIManager.swift */,
 				E7DBA7DF1DC637D900A517D1 /* AuthManager.swift */,
 				30FDBD7B1DB94C5E00603D75 /* Constants.swift */,
-				30FDBD771DB94C5E00603D75 /* CrimeTypesRouter.swift */,
-				30FDBD781DB94C5E00603D75 /* MyClaimsRouter.swift */,
-				30FDBD791DB94C5E00603D75 /* TokenRouter.swift */,
-				30FDBD7A1DB94C5E00603D75 /* UserRouter.swift */,
+				E795535B1EDEE4A700A906A5 /* Routers */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -209,6 +206,17 @@
 				55E96311433CFC64CD43CE26 /* Pods-BadParking.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E795535B1EDEE4A700A906A5 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				30FDBD771DB94C5E00603D75 /* CrimeTypesRouter.swift */,
+				30FDBD781DB94C5E00603D75 /* MyClaimsRouter.swift */,
+				30FDBD791DB94C5E00603D75 /* TokenRouter.swift */,
+				30FDBD7A1DB94C5E00603D75 /* UserRouter.swift */,
+			);
+			name = Routers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
